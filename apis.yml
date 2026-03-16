@@ -8,9 +8,9 @@ apis:
       - Contact Relationship Management
       - CRM
       - Contacts
-    humanURL: ' https://developer.copper.com/'
+    humanURL: https://developer.copper.com/
     properties:
-      - url: ' https://developer.copper.com/'
+      - url: https://developer.copper.com/
         type: Documentation
     description: >-
       Copper is a versatile metal that is widely used in various industries and
@@ -31,7 +31,7 @@ type: Contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2025-01-07'
-modified: '2025-03-01'
+modified: '2026-03-16'
 position: Consuming
 description: >-
   Copper isnt just another CRM. We built it from the ground up to help you
@@ -42,5 +42,5 @@ description: >-
   way: with loyal customers for life.
 maintainers:
   - FN: Kin Lane
-    email: info@apievangelist.com
+    email: kin@apievangelist.com
 specificationVersion: '0.19'
