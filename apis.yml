@@ -6,8 +6,8 @@ apis:
     name: Copper
     tags:
       - Contact Relationship Management
-      - CRM
       - Contacts
+      - CRM
     humanURL: https://developer.copper.com/
     properties:
       - url: https://developer.copper.com/
@@ -25,8 +25,8 @@ apis:
 name: Copper
 tags:
   - Contact Relationship Management
-  - CRM
   - Contacts
+  - CRM
 type: Contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
