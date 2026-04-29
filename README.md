@@ -1,42 +1,71 @@
 # Copper (copper)
-Copper isnt just another CRM. We built it from the ground up to help you cultivate enduring relationships with your clients. We wanted a change from unwieldy databases with legions of custom fields, so we reimagined CRM software to enable purposeful collaboration between you and the people who matter most to your business. With Copper, your business will grow the right way: with loyal customers for life.
+
+Copper is a CRM platform built natively for Google Workspace, designed to help teams cultivate enduring client relationships through purposeful collaboration. The Copper Developer API is a RESTful JSON API providing programmatic access to People, Companies, Leads, Opportunities, Projects, Tasks, Activities, Webhooks, and related resources.
 
 **URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/copper/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Contract 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+- **Type:** Index
+- **Position:** Consuming
+- **Access:** 3rd-Party
+- **x-type:** company
 
-## Tags:
+## Tags
 
- - Contact Relationship Management, CRM, Contacts
+- Activities, Companies, Contact Relationship Management, Contacts, CRM, Customer Relationship Management, Google Workspace, Leads, Opportunities, People, Projects, Sales, Tasks
 
 ## Timestamps
 
-- **Created:** 2025-01-07 
-- **Modified:** 2025-03-01 
+- **Created:** 2025-01-07
+- **Modified:** 2026-04-28
 
 ## APIs
 
-### Copper
-Copper is a versatile metal that is widely used in various industries and applications. It is known for its excellent conductivity of electricity and heat, making it an essential component in electronics, wiring, and plumbing systems. Copper is also valued for its corrosion resistance, making it an ideal material for roofing, piping, and outdoor structures. In addition to its practical applications, copper is also prized for its aesthetic appeal, often used in architectural design and decorative elements. Overall, copper plays a crucial role in modern society, contributing to advancements in technology, infrastructure, and design.
+### Copper Developer API
 
-**Human URL:** [ https://developer.copper.com/]( https://developer.copper.com/)
+The Copper Developer API is a RESTful JSON API providing programmatic access to Copper CRM resources including people, companies, leads, opportunities, projects, tasks, activities, and webhooks. Authentication uses three required headers (`X-PW-AccessToken`, `X-PW-Application`, `X-PW-UserEmail`). Standard rate limit is 180 requests per minute, with 3 requests per second for bulk operations.
 
+**Human URL:** https://developer.copper.com/
+**Base URL:** `https://api.copper.com/developer_api/v1`
 
-#### Tags:
+#### Tags
 
- - Contact Relationship Management, CRM, Contacts
+- Activities, Companies, CRM, Leads, Opportunities, People, Projects, REST, Tasks, Webhooks
 
 #### Properties
 
-- [Documentation]( https://developer.copper.com/)
+- [Documentation](https://developer.copper.com/)
+- [Authentication](https://developer.copper.com/introduction/requests.html)
+- [Getting Started](https://developer.copper.com/introduction/quick-start.html)
+- [OAuth](https://developer.copper.com/introduction/oauth-quickstart.html)
+- [Webhooks](https://developer.copper.com/webhooks/general/list-of-webhook-events.html)
+- [Postman Collection](https://developer.copper.com/introduction/postman-collection.html)
+- [OpenAPI](openapi/copper-developer-api-openapi.yml)
+- [Rules](rules/copper-developer-api-rules.yml)
+- [Capabilities](capabilities/copper-developer-api-capabilities.yml)
+- [Vocabulary](vocabulary/copper-vocabulary.yml)
+- [JSON-LD Context](json-ld/copper-context.jsonld)
+
+## Capabilities
+
+- Search and List CRM Records
+- Manage Contact Records
+- Capture and Convert Leads
+- Track Sales Opportunities
+- Manage Tasks
+- Log Activities
+- Subscribe to Webhooks
+
+## Use Cases
+
+- Sync contacts to marketing automation
+- Inbound lead capture from web forms
+- Sales pipeline reporting and forecasting
+- Sales activity logging from email
+- Real-time CRM event streaming
 
 ## Maintainers
 
 **FN:** Kin Lane
-
-**Email:** info@apievangelist.com
-
+**Email:** kin@apievangelist.com

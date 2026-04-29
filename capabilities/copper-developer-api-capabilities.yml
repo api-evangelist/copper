@@ -1,0 +1,150 @@
+name: Copper Developer API Capabilities
+description: >-
+  Workflow capabilities provided by the Copper Developer API for CRM
+  automation, sales pipeline management, and contact data integration.
+url: https://developer.copper.com/
+version: '1.0'
+modified: '2026-04-28'
+api: Copper Developer API
+baseURL: https://api.copper.com/developer_api/v1
+capabilities:
+  - name: Search and List CRM Records
+    description: >-
+      Query People, Companies, Leads, Opportunities, Tasks, and Activities
+      using filter criteria with pagination, sorting, and tag filtering.
+    operations:
+      - searchPeople
+      - searchCompanies
+      - searchLeads
+      - searchOpportunities
+      - searchTasks
+      - searchActivities
+    inputs:
+      - page_number
+      - page_size
+      - sort_by
+      - tags
+      - name
+    outputs:
+      - resource collections
+  - name: Manage Contact Records
+    description: >-
+      Create, retrieve, update, and delete Person and Company records,
+      including custom fields, tags, addresses, phone numbers, emails, and
+      website associations.
+    operations:
+      - createPerson
+      - getPerson
+      - updatePerson
+      - deletePerson
+      - createCompany
+      - getCompany
+      - updateCompany
+      - deleteCompany
+    inputs:
+      - Person
+      - Company
+    outputs:
+      - Person
+      - Company
+  - name: Capture and Convert Leads
+    description: >-
+      Create new lead records from inbound channels, qualify them by status,
+      and convert qualified leads into linked Person, Company, and
+      Opportunity records.
+    operations:
+      - createLead
+      - getLead
+      - updateLead
+      - deleteLead
+      - searchLeads
+      - convertLead
+    inputs:
+      - Lead
+    outputs:
+      - Person
+      - Company
+      - Opportunity
+  - name: Track Sales Opportunities
+    description: >-
+      Create and update sales opportunities, advance them through pipeline
+      stages, set close dates, win probabilities, and monetary values, and
+      record won, lost, or abandoned outcomes.
+    operations:
+      - createOpportunity
+      - getOpportunity
+      - updateOpportunity
+      - deleteOpportunity
+      - searchOpportunities
+    inputs:
+      - Opportunity
+    outputs:
+      - Opportunity
+  - name: Manage Tasks
+    description: >-
+      Create assignable tasks tied to any CRM resource, set due dates and
+      priorities, and mark tasks complete.
+    operations:
+      - createTask
+      - getTask
+      - updateTask
+      - deleteTask
+      - searchTasks
+    inputs:
+      - Task
+    outputs:
+      - Task
+  - name: Log Activities
+    description: >-
+      Record notes, emails, calls, meetings, and status change activities
+      against any parent CRM resource and search the activity history.
+    operations:
+      - createActivity
+      - searchActivities
+    inputs:
+      - Activity
+    outputs:
+      - Activity
+  - name: Subscribe to Webhooks
+    description: >-
+      Subscribe external systems to CRM event notifications for new, update,
+      and delete events on People, Companies, Leads, Opportunities, Projects,
+      and Tasks.
+    operations:
+      - listWebhooks
+      - createWebhook
+      - deleteWebhook
+    inputs:
+      - target URL
+      - event type
+      - resource type
+    outputs:
+      - Webhook subscription
+useCases:
+  - name: Sync Contacts to Marketing Automation
+    description: Mirror Person and Company records into a marketing automation platform to drive segmented campaigns.
+    capabilities:
+      - Search and List CRM Records
+      - Manage Contact Records
+      - Subscribe to Webhooks
+  - name: Inbound Lead Capture
+    description: Push leads from web forms or chatbots into Copper, qualify them, and convert into Opportunities.
+    capabilities:
+      - Capture and Convert Leads
+      - Manage Contact Records
+      - Track Sales Opportunities
+  - name: Sales Pipeline Reporting
+    description: Pull pipeline data on a schedule to feed BI dashboards and forecasting models.
+    capabilities:
+      - Search and List CRM Records
+      - Track Sales Opportunities
+      - Log Activities
+  - name: Sales Activity Logging from Email
+    description: Log emails, meetings, and calls against the right CRM record automatically.
+    capabilities:
+      - Log Activities
+      - Search and List CRM Records
+  - name: Real-time CRM Event Streaming
+    description: Receive real-time notifications when records change in Copper to keep downstream systems in sync.
+    capabilities:
+      - Subscribe to Webhooks

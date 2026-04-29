@@ -1,0 +1,109 @@
+extends: ["spectral:oas"]
+documentationUrl: https://developer.copper.com/
+rules:
+  copper-info-contact:
+    description: API info object should include contact information.
+    message: "{{description}}: info.contact is required."
+    given: "$.info"
+    severity: error
+    then:
+      field: contact
+      function: truthy
+  copper-info-license:
+    description: API info object should include license information.
+    given: "$.info"
+    severity: warn
+    then:
+      field: license
+      function: truthy
+  copper-server-https:
+    description: All servers must use HTTPS.
+    given: "$.servers[*].url"
+    severity: error
+    then:
+      function: pattern
+      functionOptions:
+        match: "^https://"
+  copper-base-url:
+    description: Servers should reference the Copper Developer API host.
+    given: "$.servers[*].url"
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: "api.copper.com/developer_api"
+  copper-required-auth-headers:
+    description: Operations should be protected by Copper auth headers.
+    given: "$.security"
+    severity: error
+    then:
+      function: truthy
+  copper-operation-tags:
+    description: Every operation must have at least one tag.
+    given: "$.paths.*[get,post,put,delete,patch]"
+    severity: error
+    then:
+      field: tags
+      function: truthy
+  copper-operation-summary:
+    description: Every operation must have a summary.
+    given: "$.paths.*[get,post,put,delete,patch]"
+    severity: error
+    then:
+      field: summary
+      function: truthy
+  copper-operation-description:
+    description: Operations should include a description.
+    given: "$.paths.*[get,post,put,delete,patch]"
+    severity: warn
+    then:
+      field: description
+      function: truthy
+  copper-operation-id:
+    description: Every operation must have an operationId in camelCase.
+    given: "$.paths.*[get,post,put,delete,patch]"
+    severity: error
+    then:
+      field: operationId
+      function: pattern
+      functionOptions:
+        match: "^[a-z][a-zA-Z0-9]+$"
+  copper-pagination-params:
+    description: Search endpoints should support page_number and page_size parameters.
+    given: "$.paths['/people/search','/companies/search','/leads/search','/opportunities/search','/tasks/search','/activities/search'].post.requestBody.content.application/json.schema"
+    severity: warn
+    then:
+      function: truthy
+  copper-tag-pascal-case:
+    description: Tags should use PascalCase plural resource names.
+    given: "$.tags[*].name"
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: "^[A-Z][a-zA-Z]+s?$"
+  copper-rate-limit-documented:
+    description: API description should mention rate limits.
+    given: "$.info.description"
+    severity: info
+    then:
+      function: pattern
+      functionOptions:
+        match: "rate|limit|180|3 requests"
+  copper-error-schema:
+    description: Error responses should reference an Error schema.
+    given: "$.components.schemas"
+    severity: warn
+    then:
+      field: Error
+      function: truthy
+  copper-resource-id-integer:
+    description: Resource id fields should be int64 integers.
+    given: "$.components.schemas.*.properties.id"
+    severity: warn
+    then:
+      field: type
+      function: enumeration
+      functionOptions:
+        values:
+          - integer

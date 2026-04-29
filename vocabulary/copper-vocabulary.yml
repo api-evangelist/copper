@@ -1,0 +1,180 @@
+name: Copper Developer API Vocabulary
+description: >-
+  Controlled vocabulary of resources, fields, and concepts used by the Copper
+  Developer API for CRM data management.
+url: https://developer.copper.com/
+version: '1.0'
+modified: '2026-04-28'
+resources:
+  - name: Person
+    description: A contact record representing an individual associated with one or more companies.
+    fields:
+      - name: id
+        type: integer
+        description: Unique identifier of the person.
+      - name: name
+        type: string
+        description: Full display name of the person.
+      - name: first_name
+        type: string
+        description: Given name.
+      - name: last_name
+        type: string
+        description: Family name.
+      - name: title
+        type: string
+        description: Job title or role.
+      - name: emails
+        type: array
+        description: Array of email addresses with categories such as work or personal.
+      - name: phone_numbers
+        type: array
+        description: Array of phone numbers with categories.
+      - name: address
+        type: object
+        description: Mailing address with street, city, state, postal code, and country.
+      - name: company_id
+        type: integer
+        description: Linked company record identifier.
+      - name: assignee_id
+        type: integer
+        description: User responsible for this contact.
+      - name: tags
+        type: array
+        description: Free-form labels applied to the record.
+      - name: custom_fields
+        type: array
+        description: Custom field values keyed by definition ID.
+  - name: Company
+    description: An organization record representing a business or account.
+    fields:
+      - name: id
+        type: integer
+        description: Unique identifier of the company.
+      - name: name
+        type: string
+        description: Company name.
+      - name: email_domain
+        type: string
+        description: Email domain associated with the company.
+      - name: address
+        type: object
+        description: Postal address.
+      - name: phone_numbers
+        type: array
+        description: Array of phone numbers.
+      - name: websites
+        type: array
+        description: Array of website URLs.
+      - name: assignee_id
+        type: integer
+        description: User responsible for this company.
+  - name: Lead
+    description: A potential customer record before being qualified into a Person, Company, and Opportunity.
+    fields:
+      - name: id
+        type: integer
+        description: Unique identifier of the lead.
+      - name: status
+        type: string
+        description: Current lead status.
+      - name: monetary_value
+        type: number
+        description: Estimated monetary value of the lead.
+      - name: source_id
+        type: integer
+        description: Lead source identifier.
+  - name: Opportunity
+    description: A sales deal in a pipeline progressing toward a won or lost outcome.
+    fields:
+      - name: id
+        type: integer
+        description: Unique identifier of the opportunity.
+      - name: monetary_value
+        type: number
+        description: Deal monetary value.
+      - name: win_probability
+        type: integer
+        description: Probability of winning, expressed as a percentage.
+      - name: pipeline_id
+        type: integer
+        description: Pipeline this opportunity belongs to.
+      - name: pipeline_stage_id
+        type: integer
+        description: Stage of the pipeline.
+      - name: status
+        type: string
+        description: One of Open, Won, Lost, or Abandoned.
+      - name: close_date
+        type: string
+        description: Expected or actual close date.
+      - name: primary_contact_id
+        type: integer
+        description: Person record representing the primary contact.
+  - name: Task
+    description: An actionable item assigned to a user, optionally related to another resource.
+    fields:
+      - name: id
+        type: integer
+        description: Unique identifier of the task.
+      - name: name
+        type: string
+        description: Task title.
+      - name: due_date
+        type: integer
+        description: Unix timestamp for the task due date.
+      - name: status
+        type: string
+        description: Open or Completed.
+      - name: priority
+        type: string
+        description: None or High.
+      - name: related_resource
+        type: object
+        description: Resource this task is associated with.
+  - name: Activity
+    description: A historical event log entry on a parent resource such as a note, email, or status change.
+    fields:
+      - name: id
+        type: integer
+        description: Unique identifier of the activity.
+      - name: parent
+        type: object
+        description: The resource this activity belongs to.
+      - name: type
+        type: object
+        description: Activity type definition.
+      - name: details
+        type: string
+        description: Free-text content of the activity.
+      - name: activity_date
+        type: integer
+        description: Unix timestamp when the activity occurred.
+  - name: Webhook
+    description: An HTTP callback subscription delivering CRM events to an external endpoint.
+    fields:
+      - name: id
+        type: integer
+        description: Unique identifier of the webhook subscription.
+      - name: target
+        type: string
+        description: Destination URL the event payload is delivered to.
+      - name: event
+        type: string
+        description: Event type (new, update, delete).
+      - name: type
+        type: string
+        description: Resource type this subscription monitors.
+concepts:
+  - name: Pipeline
+    description: An ordered set of stages that opportunities move through during the sales process.
+  - name: Pipeline Stage
+    description: A discrete step within a Pipeline.
+  - name: Customer Source
+    description: The origin or channel through which a lead or opportunity was acquired.
+  - name: Custom Field Definition
+    description: An organization-defined field added to a resource type.
+  - name: Tag
+    description: Free-form text label attached to a record for categorization.
+  - name: Assignee
+    description: A Copper user responsible for a record.
