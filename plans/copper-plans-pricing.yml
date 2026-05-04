@@ -1,0 +1,166 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Copper
+providerId: copper
+created: '2026-05-04'
+modified: '2026-05-04'
+reconciled: true
+tags:
+  - CRM
+  - Google Workspace
+description: Copper CRM per-month plans (annual billing rates).
+sources:
+  - https://www.copper.com/pricing
+plans:
+  - id: copper-starter
+    name: Starter
+    type: paid
+    description: $9/month annual ($12 monthly). 1,000 contact limit.
+    entries:
+      - label: Monthly (annual)
+        name: monthly_a
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '9.00'
+        userMultiplied: false
+      - label: Monthly (monthly)
+        name: monthly_m
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '12.00'
+        userMultiplied: false
+      - label: Contacts limit
+        name: contacts
+        type: quota
+        metric: contact
+        limit: 1000
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: Google Workspace integration
+      - name: Tasks + Activity feed
+      - name: Forms
+      - name: Zapier integration
+  - id: copper-basic
+    name: Basic
+    type: paid
+    description: $23/month annual ($29 monthly). 2,500 contact limit.
+    entries:
+      - label: Monthly (annual)
+        name: monthly_a
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '23.00'
+        userMultiplied: false
+      - label: Monthly (monthly)
+        name: monthly_m
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '29.00'
+        userMultiplied: false
+      - label: Contacts limit
+        name: contacts
+        type: quota
+        metric: contact
+        limit: 2500
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: Task automation
+      - name: Pipelines
+      - name: Project Management
+      - name: Contact enrichment
+  - id: copper-professional
+    name: Professional
+    type: paid
+    description: $59/month annual ($69 monthly). 15,000 contact limit.
+    entries:
+      - label: Monthly (annual)
+        name: monthly_a
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '59.00'
+        userMultiplied: false
+      - label: Monthly (monthly)
+        name: monthly_m
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '69.00'
+        userMultiplied: false
+      - label: Contacts limit
+        name: contacts
+        type: quota
+        metric: contact
+        limit: 15000
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: Workflow automation
+      - name: Bulk email
+      - name: Reporting
+      - name: Integrations
+  - id: copper-business
+    name: Business
+    type: paid
+    description: $99/month annual ($134 monthly). Unlimited contacts.
+    entries:
+      - label: Monthly (annual)
+        name: monthly_a
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '99.00'
+        userMultiplied: false
+      - label: Monthly (monthly)
+        name: monthly_m
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '134.00'
+        userMultiplied: false
+    elements:
+      - name: Unlimited contacts
+      - name: Email series
+      - name: Custom reports
+      - name: Multi-currency
+      - name: Premium support
