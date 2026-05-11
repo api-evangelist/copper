@@ -145,6 +145,25 @@ common:
     sources:
       - https://www.copper.com/pricing
     updated: '2026-05-04'
+  - type: Integrations
+    url: https://www.copper.com/integrations
+integrations:
+  - name: Gmail Email
+  - name: Google Calendar Calendar & scheduling
+  - name: Google Drive Documents
+  - name: Mailchimp Email marketing
+  - name: Google Sheets Reporting
+  - name: LinkedIn Social media
+  - name: Zapier Integrations
+  - name: RingCentral Phone & Meetings
+  - name: Docusign Proposals & contracts
+  - name: QuickBooks Accounting & invoicing
+  - name: JustCall Phone & Meetings
+  - name: Dropbox Documents
+  - name: Outfunnel Integrations
+  - name: Calendly Calendar & scheduling
+  - name: PandaDoc Proposals & contracts
+  - name: Slack
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
