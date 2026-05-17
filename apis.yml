@@ -1,6 +1,6 @@
 aid: copper
 name: Copper
-x-type: company
+kind: company
 description: Copper is a CRM platform built natively for Google Workspace, designed to help teams cultivate
   enduring client relationships through purposeful collaboration. Copper offers a RESTful Developer API
   providing programmatic access to People, Companies, Leads, Opportunities, Projects, Tasks, Activities,
@@ -116,7 +116,7 @@ common:
     url: https://www.copper.com/privacy-policy
   - type: TermsOfService
     url: https://www.copper.com/terms-of-service
-  - type: Status
+  - type: StatusPage
     url: https://status.copper.com/
   - type: Twitter
     url: https://twitter.com/copperinc
