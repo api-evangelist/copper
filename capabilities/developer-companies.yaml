@@ -1,0 +1,216 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Copper Developer API — Companies
+  description: 'Copper Developer API — Companies. 5 operations. Lead operation: Create a Company. Self-contained Naftiko capability
+    covering one Copper business surface.'
+  tags:
+  - Copper
+  - Companies
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    COPPER_API_KEY: COPPER_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: developer-companies
+    baseUri: https://api.copper.com/developer_api/v1
+    description: Copper Developer API — Companies business capability. Self-contained, no shared references.
+    resources:
+    - name: companies
+      path: /companies
+      operations:
+      - name: createcompany
+        method: POST
+        description: Create a Company
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: companies-search
+      path: /companies/search
+      operations:
+      - name: searchcompanies
+        method: POST
+        description: Search Companies
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: companies-id
+      path: /companies/{id}
+      operations:
+      - name: getcompany
+        method: GET
+        description: Get a Company
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: updatecompany
+        method: PUT
+        description: Update a Company
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deletecompany
+        method: DELETE
+        description: Delete a Company
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: apikey
+      key: X-PW-AccessToken
+      value: '{{env.COPPER_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: developer-companies-rest
+    port: 8080
+    description: REST adapter for Copper Developer API — Companies. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/companies
+      name: companies
+      description: REST surface for companies.
+      operations:
+      - method: POST
+        name: createcompany
+        description: Create a Company
+        call: developer-companies.createcompany
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/companies/search
+      name: companies-search
+      description: REST surface for companies-search.
+      operations:
+      - method: POST
+        name: searchcompanies
+        description: Search Companies
+        call: developer-companies.searchcompanies
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/companies/{id}
+      name: companies-id
+      description: REST surface for companies-id.
+      operations:
+      - method: GET
+        name: getcompany
+        description: Get a Company
+        call: developer-companies.getcompany
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: updatecompany
+        description: Update a Company
+        call: developer-companies.updatecompany
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletecompany
+        description: Delete a Company
+        call: developer-companies.deletecompany
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: developer-companies-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Copper Developer API — Companies. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: create-company
+      description: Create a Company
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: developer-companies.createcompany
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: search-companies
+      description: Search Companies
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: developer-companies.searchcompanies
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-company
+      description: Get a Company
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: developer-companies.getcompany
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: update-company
+      description: Update a Company
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: developer-companies.updatecompany
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-company
+      description: Delete a Company
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: developer-companies.deletecompany
+      outputParameters:
+      - type: object
+        mapping: $.
