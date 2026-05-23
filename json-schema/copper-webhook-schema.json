@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/components/schemas/Webhook",
+  "title": "Webhook",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "target": {
+      "type": "string",
+      "format": "uri"
+    },
+    "event": {
+      "type": "string",
+      "enum": [
+        "new",
+        "update",
+        "delete"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "person",
+        "company",
+        "lead",
+        "opportunity",
+        "project",
+        "task"
+      ]
+    },
+    "secret": {
+      "type": "object",
+      "properties": {
+        "secret": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

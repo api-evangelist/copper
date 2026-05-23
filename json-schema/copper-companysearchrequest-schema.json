@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/components/schemas/CompanySearchRequest",
+  "title": "CompanySearchRequest",
+  "type": "object",
+  "properties": {
+    "page_number": {
+      "type": "integer"
+    },
+    "page_size": {
+      "type": "integer"
+    },
+    "sort_by": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "assignee_ids": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

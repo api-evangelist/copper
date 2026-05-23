@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/components/schemas/PeopleSearchRequest",
+  "title": "PeopleSearchRequest",
+  "type": "object",
+  "properties": {
+    "page_number": {
+      "type": "integer",
+      "default": 1
+    },
+    "page_size": {
+      "type": "integer",
+      "default": 20,
+      "maximum": 200
+    },
+    "sort_by": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "emails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "phone_numbers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "assignee_ids": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

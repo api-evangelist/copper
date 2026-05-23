@@ -1,0 +1,369 @@
+{
+  "provider": "Copper",
+  "providerId": "copper",
+  "kind": "json-structure",
+  "description": "Structural overview of the Copper API surface; extracted from openapi/.",
+  "schemaCount": 13,
+  "operationCount": 31,
+  "schemas": [
+    {
+      "name": "Person",
+      "type": "object",
+      "propertyCount": 21,
+      "required": []
+    },
+    {
+      "name": "Company",
+      "type": "object",
+      "propertyCount": 14,
+      "required": []
+    },
+    {
+      "name": "Lead",
+      "type": "object",
+      "propertyCount": 16,
+      "required": []
+    },
+    {
+      "name": "Opportunity",
+      "type": "object",
+      "propertyCount": 18,
+      "required": []
+    },
+    {
+      "name": "Task",
+      "type": "object",
+      "propertyCount": 12,
+      "required": []
+    },
+    {
+      "name": "Activity",
+      "type": "object",
+      "propertyCount": 10,
+      "required": []
+    },
+    {
+      "name": "Webhook",
+      "type": "object",
+      "propertyCount": 5,
+      "required": []
+    },
+    {
+      "name": "Address",
+      "type": "object",
+      "propertyCount": 5,
+      "required": []
+    },
+    {
+      "name": "CustomFieldValue",
+      "type": "object",
+      "propertyCount": 2,
+      "required": []
+    },
+    {
+      "name": "PeopleSearchRequest",
+      "type": "object",
+      "propertyCount": 8,
+      "required": []
+    },
+    {
+      "name": "CompanySearchRequest",
+      "type": "object",
+      "propertyCount": 6,
+      "required": []
+    },
+    {
+      "name": "LeadSearchRequest",
+      "type": "object",
+      "propertyCount": 7,
+      "required": []
+    },
+    {
+      "name": "Error",
+      "type": "object",
+      "propertyCount": 2,
+      "required": []
+    }
+  ],
+  "operations": [
+    {
+      "method": "POST",
+      "path": "/people/search",
+      "operationId": "searchPeople",
+      "summary": "Search People",
+      "tags": [
+        "People"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/people",
+      "operationId": "createPerson",
+      "summary": "Create a Person",
+      "tags": [
+        "People"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/people/{id}",
+      "operationId": "getPerson",
+      "summary": "Get a Person",
+      "tags": [
+        "People"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/people/{id}",
+      "operationId": "updatePerson",
+      "summary": "Update a Person",
+      "tags": [
+        "People"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/people/{id}",
+      "operationId": "deletePerson",
+      "summary": "Delete a Person",
+      "tags": [
+        "People"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/companies/search",
+      "operationId": "searchCompanies",
+      "summary": "Search Companies",
+      "tags": [
+        "Companies"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/companies",
+      "operationId": "createCompany",
+      "summary": "Create a Company",
+      "tags": [
+        "Companies"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/companies/{id}",
+      "operationId": "getCompany",
+      "summary": "Get a Company",
+      "tags": [
+        "Companies"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/companies/{id}",
+      "operationId": "updateCompany",
+      "summary": "Update a Company",
+      "tags": [
+        "Companies"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/companies/{id}",
+      "operationId": "deleteCompany",
+      "summary": "Delete a Company",
+      "tags": [
+        "Companies"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/leads/search",
+      "operationId": "searchLeads",
+      "summary": "Search Leads",
+      "tags": [
+        "Leads"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/leads",
+      "operationId": "createLead",
+      "summary": "Create a Lead",
+      "tags": [
+        "Leads"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/leads/{id}",
+      "operationId": "getLead",
+      "summary": "Get a Lead",
+      "tags": [
+        "Leads"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/leads/{id}",
+      "operationId": "updateLead",
+      "summary": "Update a Lead",
+      "tags": [
+        "Leads"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/leads/{id}",
+      "operationId": "deleteLead",
+      "summary": "Delete a Lead",
+      "tags": [
+        "Leads"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/leads/{id}/convert",
+      "operationId": "convertLead",
+      "summary": "Convert a Lead",
+      "tags": [
+        "Leads"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/opportunities/search",
+      "operationId": "searchOpportunities",
+      "summary": "Search Opportunities",
+      "tags": [
+        "Opportunities"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/opportunities",
+      "operationId": "createOpportunity",
+      "summary": "Create an Opportunity",
+      "tags": [
+        "Opportunities"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/opportunities/{id}",
+      "operationId": "getOpportunity",
+      "summary": "Get an Opportunity",
+      "tags": [
+        "Opportunities"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/opportunities/{id}",
+      "operationId": "updateOpportunity",
+      "summary": "Update an Opportunity",
+      "tags": [
+        "Opportunities"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/opportunities/{id}",
+      "operationId": "deleteOpportunity",
+      "summary": "Delete an Opportunity",
+      "tags": [
+        "Opportunities"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/tasks/search",
+      "operationId": "searchTasks",
+      "summary": "Search Tasks",
+      "tags": [
+        "Tasks"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/tasks",
+      "operationId": "createTask",
+      "summary": "Create a Task",
+      "tags": [
+        "Tasks"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/tasks/{id}",
+      "operationId": "getTask",
+      "summary": "Get a Task",
+      "tags": [
+        "Tasks"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/tasks/{id}",
+      "operationId": "updateTask",
+      "summary": "Update a Task",
+      "tags": [
+        "Tasks"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/tasks/{id}",
+      "operationId": "deleteTask",
+      "summary": "Delete a Task",
+      "tags": [
+        "Tasks"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/activities",
+      "operationId": "createActivity",
+      "summary": "Create an Activity",
+      "tags": [
+        "Activities"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/activities/search",
+      "operationId": "searchActivities",
+      "summary": "Search Activities",
+      "tags": [
+        "Activities"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/webhooks",
+      "operationId": "listWebhooks",
+      "summary": "List Webhooks",
+      "tags": [
+        "Webhooks"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/webhooks",
+      "operationId": "createWebhook",
+      "summary": "Create a Webhook subscription",
+      "tags": [
+        "Webhooks"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/webhooks/{id}",
+      "operationId": "deleteWebhook",
+      "summary": "Delete a Webhook",
+      "tags": [
+        "Webhooks"
+      ]
+    }
+  ]
+}

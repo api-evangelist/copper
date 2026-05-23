@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/components/schemas/Opportunity",
+  "title": "Opportunity",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "name": {
+      "type": "string"
+    },
+    "assignee_id": {
+      "type": "integer",
+      "nullable": true
+    },
+    "close_date": {
+      "type": "string",
+      "nullable": true
+    },
+    "company_id": {
+      "type": "integer",
+      "nullable": true
+    },
+    "company_name": {
+      "type": "string",
+      "nullable": true
+    },
+    "customer_source_id": {
+      "type": "integer",
+      "nullable": true
+    },
+    "details": {
+      "type": "string",
+      "nullable": true
+    },
+    "loss_reason_id": {
+      "type": "integer",
+      "nullable": true
+    },
+    "pipeline_id": {
+      "type": "integer"
+    },
+    "pipeline_stage_id": {
+      "type": "integer"
+    },
+    "primary_contact_id": {
+      "type": "integer",
+      "nullable": true
+    },
+    "priority": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Open",
+        "Won",
+        "Lost",
+        "Abandoned"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "win_probability": {
+      "type": "integer",
+      "nullable": true
+    },
+    "monetary_value": {
+      "type": "number",
+      "nullable": true
+    },
+    "custom_fields": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CustomFieldValue"
+      }
+    }
+  }
+}
