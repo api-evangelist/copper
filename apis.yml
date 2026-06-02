@@ -24,7 +24,7 @@ tags:
   - Sales
   - Tasks
 created: '2025-01-07'
-modified: '2026-05-19'
+modified: '2026-05-30'
 specificationVersion: '0.20'
 apis:
   - aid: copper:developer-api
@@ -80,6 +80,8 @@ apis:
       url: https://developer.copper.com/tags/
     - type: OpenAPI
       url: openapi/copper-developer-api-openapi.yml
+    - type: AsyncAPI
+      url: asyncapi/copper-webhooks-asyncapi.yml
     - type: Rules
       url: rules/copper-developer-api-rules.yml
     - type: JSONLD

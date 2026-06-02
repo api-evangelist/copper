@@ -1,0 +1,715 @@
+asyncapi: '2.6.0'
+info:
+  title: Copper CRM Webhooks
+  version: '1.0.0'
+  description: |
+    AsyncAPI definition for the Copper CRM webhook surface. Copper webhooks
+    are HTTP POST deliveries from Copper to a subscriber-defined `target`
+    URL that was registered via the Copper Developer API
+    (`POST /developer_api/v1/webhooks`).
+
+    Each subscription is scoped to a single (`type`, `event`) pair, where
+    `type` is one of `lead`, `person`, `company`, `opportunity`, `project`,
+    or `task`, and `event` is one of `new`, `update`, or `delete`. Each
+    delivery is a JSON document containing an `ids` array (1-30 entity IDs
+    affected by the event), the `type` and `event` of the subscription,
+    the originating `subscription_id`, an ISO 8601 `timestamp`, and on
+    `update` events an `updated_attributes` object whose properties are
+    `[old_value, new_value]` pairs. Custom authentication key/value pairs
+    configured on the subscription's `secret` are echoed as top-level
+    `secret_field_*` fields, and custom HTTP headers configured on the
+    subscription are passed through on every delivery.
+
+    Only `https://` endpoints are accepted as the notification `target`.
+    Deliveries fire at most once per event and are not retried. Copper
+    limits each account to 600 notifications per minute, 1,800 per ten
+    minutes, and at most 100 active subscriptions.
+
+    Sourced from https://developer.copper.com/webhooks/overview.html,
+    https://developer.copper.com/webhooks/create-new-subscription.html,
+    and https://developer.copper.com/webhooks/notification-example.html.
+    Fields not documented by Copper are not invented here.
+  contact:
+    name: Copper Developer Support
+    url: https://developer.copper.com/
+  license:
+    name: Proprietary
+    url: https://www.copper.com/terms-of-service
+  tags:
+    - name: Copper
+    - name: CRM
+    - name: Webhooks
+    - name: Leads
+    - name: People
+    - name: Companies
+    - name: Opportunities
+    - name: Projects
+    - name: Tasks
+
+defaultContentType: application/json
+
+servers:
+  subscriber:
+    url: '{target}'
+    protocol: https
+    description: |
+      The HTTPS endpoint that the webhook subscriber registers with Copper
+      as the subscription's `target`. Copper delivers all notifications
+      for the subscription's (`type`, `event`) pair to this URL via HTTP
+      POST with a JSON body.
+    variables:
+      target:
+        description: Subscriber-controlled HTTPS URL configured on the Copper webhook.
+        default: https://example.com/webhooks/copper
+
+channels:
+  lead.new:
+    description: One or more leads were created.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Lead created
+      operationId: onLeadNew
+      message:
+        $ref: '#/components/messages/LeadNew'
+
+  lead.update:
+    description: One or more leads had fields changed.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Lead updated
+      operationId: onLeadUpdate
+      message:
+        $ref: '#/components/messages/LeadUpdate'
+
+  lead.delete:
+    description: One or more leads were deleted.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Lead deleted
+      operationId: onLeadDelete
+      message:
+        $ref: '#/components/messages/LeadDelete'
+
+  person.new:
+    description: One or more people were created.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Person created
+      operationId: onPersonNew
+      message:
+        $ref: '#/components/messages/PersonNew'
+
+  person.update:
+    description: One or more people had fields changed.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Person updated
+      operationId: onPersonUpdate
+      message:
+        $ref: '#/components/messages/PersonUpdate'
+
+  person.delete:
+    description: One or more people were deleted.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Person deleted
+      operationId: onPersonDelete
+      message:
+        $ref: '#/components/messages/PersonDelete'
+
+  company.new:
+    description: One or more companies were created.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Company created
+      operationId: onCompanyNew
+      message:
+        $ref: '#/components/messages/CompanyNew'
+
+  company.update:
+    description: One or more companies had fields changed.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Company updated
+      operationId: onCompanyUpdate
+      message:
+        $ref: '#/components/messages/CompanyUpdate'
+
+  company.delete:
+    description: One or more companies were deleted.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Company deleted
+      operationId: onCompanyDelete
+      message:
+        $ref: '#/components/messages/CompanyDelete'
+
+  opportunity.new:
+    description: One or more opportunities were created.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Opportunity created
+      operationId: onOpportunityNew
+      message:
+        $ref: '#/components/messages/OpportunityNew'
+
+  opportunity.update:
+    description: One or more opportunities had fields changed.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Opportunity updated
+      operationId: onOpportunityUpdate
+      message:
+        $ref: '#/components/messages/OpportunityUpdate'
+
+  opportunity.delete:
+    description: One or more opportunities were deleted.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Opportunity deleted
+      operationId: onOpportunityDelete
+      message:
+        $ref: '#/components/messages/OpportunityDelete'
+
+  project.new:
+    description: One or more projects were created.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Project created
+      operationId: onProjectNew
+      message:
+        $ref: '#/components/messages/ProjectNew'
+
+  project.update:
+    description: One or more projects had fields changed.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Project updated
+      operationId: onProjectUpdate
+      message:
+        $ref: '#/components/messages/ProjectUpdate'
+
+  project.delete:
+    description: One or more projects were deleted.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Project deleted
+      operationId: onProjectDelete
+      message:
+        $ref: '#/components/messages/ProjectDelete'
+
+  task.new:
+    description: One or more tasks were created.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Task created
+      operationId: onTaskNew
+      message:
+        $ref: '#/components/messages/TaskNew'
+
+  task.update:
+    description: One or more tasks had fields changed.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Task updated
+      operationId: onTaskUpdate
+      message:
+        $ref: '#/components/messages/TaskUpdate'
+
+  task.delete:
+    description: One or more tasks were deleted.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: 0.3.0
+    subscribe:
+      summary: Task deleted
+      operationId: onTaskDelete
+      message:
+        $ref: '#/components/messages/TaskDelete'
+
+components:
+  messageTraits:
+    CopperWebhookHeaders:
+      headers:
+        type: object
+        description: |
+          Standard delivery headers. Any custom HTTP headers configured on
+          the webhook subscription's `headers` map are passed through on
+          every delivery in addition to these.
+        properties:
+          Content-Type:
+            type: string
+            const: application/json
+
+  messages:
+    LeadNew:
+      name: LeadNew
+      title: lead.new
+      summary: One or more leads were created.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookEnvelope'
+          - type: object
+            properties:
+              type:
+                const: lead
+              event:
+                const: new
+
+    LeadUpdate:
+      name: LeadUpdate
+      title: lead.update
+      summary: One or more leads had fields changed.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookUpdateEnvelope'
+          - type: object
+            properties:
+              type:
+                const: lead
+              event:
+                const: update
+
+    LeadDelete:
+      name: LeadDelete
+      title: lead.delete
+      summary: One or more leads were deleted.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookEnvelope'
+          - type: object
+            properties:
+              type:
+                const: lead
+              event:
+                const: delete
+
+    PersonNew:
+      name: PersonNew
+      title: person.new
+      summary: One or more people were created.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookEnvelope'
+          - type: object
+            properties:
+              type:
+                const: person
+              event:
+                const: new
+
+    PersonUpdate:
+      name: PersonUpdate
+      title: person.update
+      summary: One or more people had fields changed.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookUpdateEnvelope'
+          - type: object
+            properties:
+              type:
+                const: person
+              event:
+                const: update
+
+    PersonDelete:
+      name: PersonDelete
+      title: person.delete
+      summary: One or more people were deleted.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookEnvelope'
+          - type: object
+            properties:
+              type:
+                const: person
+              event:
+                const: delete
+
+    CompanyNew:
+      name: CompanyNew
+      title: company.new
+      summary: One or more companies were created.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookEnvelope'
+          - type: object
+            properties:
+              type:
+                const: company
+              event:
+                const: new
+
+    CompanyUpdate:
+      name: CompanyUpdate
+      title: company.update
+      summary: One or more companies had fields changed.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookUpdateEnvelope'
+          - type: object
+            properties:
+              type:
+                const: company
+              event:
+                const: update
+
+    CompanyDelete:
+      name: CompanyDelete
+      title: company.delete
+      summary: One or more companies were deleted.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookEnvelope'
+          - type: object
+            properties:
+              type:
+                const: company
+              event:
+                const: delete
+
+    OpportunityNew:
+      name: OpportunityNew
+      title: opportunity.new
+      summary: One or more opportunities were created.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookEnvelope'
+          - type: object
+            properties:
+              type:
+                const: opportunity
+              event:
+                const: new
+
+    OpportunityUpdate:
+      name: OpportunityUpdate
+      title: opportunity.update
+      summary: One or more opportunities had fields changed.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookUpdateEnvelope'
+          - type: object
+            properties:
+              type:
+                const: opportunity
+              event:
+                const: update
+
+    OpportunityDelete:
+      name: OpportunityDelete
+      title: opportunity.delete
+      summary: One or more opportunities were deleted.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookEnvelope'
+          - type: object
+            properties:
+              type:
+                const: opportunity
+              event:
+                const: delete
+
+    ProjectNew:
+      name: ProjectNew
+      title: project.new
+      summary: One or more projects were created.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookEnvelope'
+          - type: object
+            properties:
+              type:
+                const: project
+              event:
+                const: new
+
+    ProjectUpdate:
+      name: ProjectUpdate
+      title: project.update
+      summary: One or more projects had fields changed.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookUpdateEnvelope'
+          - type: object
+            properties:
+              type:
+                const: project
+              event:
+                const: update
+
+    ProjectDelete:
+      name: ProjectDelete
+      title: project.delete
+      summary: One or more projects were deleted.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookEnvelope'
+          - type: object
+            properties:
+              type:
+                const: project
+              event:
+                const: delete
+
+    TaskNew:
+      name: TaskNew
+      title: task.new
+      summary: One or more tasks were created.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookEnvelope'
+          - type: object
+            properties:
+              type:
+                const: task
+              event:
+                const: new
+
+    TaskUpdate:
+      name: TaskUpdate
+      title: task.update
+      summary: One or more tasks had fields changed.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookUpdateEnvelope'
+          - type: object
+            properties:
+              type:
+                const: task
+              event:
+                const: update
+
+    TaskDelete:
+      name: TaskDelete
+      title: task.delete
+      summary: One or more tasks were deleted.
+      contentType: application/json
+      traits:
+        - $ref: '#/components/messageTraits/CopperWebhookHeaders'
+      payload:
+        allOf:
+          - $ref: '#/components/schemas/WebhookEnvelope'
+          - type: object
+            properties:
+              type:
+                const: task
+              event:
+                const: delete
+
+  schemas:
+    WebhookEnvelope:
+      type: object
+      description: |
+        Standard Copper webhook notification envelope. Fields documented at
+        https://developer.copper.com/webhooks/notification-example.html.
+        Custom authentication key/value pairs configured on the
+        subscription's `secret` are passed through as additional
+        `secret_field_*` properties on the root object.
+      required:
+        - ids
+        - type
+        - event
+        - subscription_id
+        - timestamp
+      additionalProperties: true
+      properties:
+        ids:
+          type: array
+          description: |
+            IDs of the entities affected by the event. Each notification
+            carries 1-30 IDs; larger batches are split across multiple
+            notifications.
+          minItems: 1
+          maxItems: 30
+          items:
+            type: integer
+            format: int64
+        type:
+          type: string
+          description: |
+            Entity type the subscription is scoped to. Mirrors the
+            subscription's `type` field.
+          enum:
+            - lead
+            - person
+            - company
+            - opportunity
+            - project
+            - task
+        event:
+          type: string
+          description: |
+            Event category the subscription is scoped to. Mirrors the
+            subscription's `event` field.
+          enum:
+            - new
+            - update
+            - delete
+        subscription_id:
+          type: integer
+          format: int64
+          description: ID of the Copper webhook subscription that produced this delivery.
+        timestamp:
+          type: string
+          format: date-time
+          description: ISO 8601 timestamp at which the event occurred.
+
+    WebhookUpdateEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/WebhookEnvelope'
+        - type: object
+          description: |
+            Update-event variant. Adds `updated_attributes`, which
+            enumerates only the fields whose values changed.
+          properties:
+            updated_attributes:
+              $ref: '#/components/schemas/UpdatedAttributes'
+
+    UpdatedAttributes:
+      type: object
+      description: |
+        Map of changed field names to `[old_value, new_value]` pairs.
+        Present only on `update` events. `custom_fields` is a nested
+        object keyed by custom-field ID; when the subscription was
+        created with `custom_field_computed_values: true`, dropdown and
+        multi-select dropdown values are resolved to their display names
+        instead of numeric option IDs.
+      additionalProperties:
+        type: array
+        minItems: 2
+        maxItems: 2
+        items:
+          description: '[0] is the prior value; [1] is the new value.'
+      properties:
+        custom_fields:
+          type: object
+          description: |
+            Changes to custom-field values, keyed by custom-field ID.
+          additionalProperties:
+            type: array
+            minItems: 2
+            maxItems: 2
+            items:
+              description: '[0] is the prior value; [1] is the new value.'
