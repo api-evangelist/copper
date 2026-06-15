@@ -1,0 +1,3222 @@
+{
+  "item": [
+    {
+      "id": "67ca1297-30d5-4742-9cfa-84ed3ee38d9e",
+      "name": "People",
+      "description": {
+        "content": "People (contacts) management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "dc621ec2-9c67-42bc-a81d-f4f21888c914",
+          "name": "Search People",
+          "request": {
+            "name": "Search People",
+            "description": {
+              "content": "Search and list People records using filter criteria. Returns up to 200 records per page.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "people",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"page_number\": 1,\n  \"page_size\": 20,\n  \"sort_by\": \"<string>\",\n  \"name\": \"<string>\",\n  \"emails\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"phone_numbers\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"assignee_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "48a51d06-109b-452d-aabb-1e3e0edf68cd",
+              "name": "List of matching People records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"page_number\": 1,\n  \"page_size\": 20,\n  \"sort_by\": \"<string>\",\n  \"name\": \"<string>\",\n  \"emails\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"phone_numbers\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"assignee_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 7832,\n    \"name\": \"string\",\n    \"prefix\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"suffix\": \"string\",\n    \"title\": \"string\",\n    \"company_id\": 4158,\n    \"company_name\": \"string\",\n    \"emails\": [\n      {\n        \"email\": \"dVTsHpwvwl-Gw@qQYfOaktIMJaLgqCxNgk.vi\",\n        \"category\": \"string\"\n      },\n      {\n        \"email\": \"31r1lpQvgE@qiMVOlOpESKIfjldV.yemd\",\n        \"category\": \"string\"\n      }\n    ],\n    \"phone_numbers\": [\n      {\n        \"number\": \"string\",\n        \"category\": \"string\"\n      },\n      {\n        \"number\": \"string\",\n        \"category\": \"string\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"postal_code\": \"<string>\",\n      \"country\": \"<string>\"\n    },\n    \"assignee_id\": 4807,\n    \"contact_type_id\": 113,\n    \"details\": \"string\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      },\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      }\n    ],\n    \"date_created\": 4484,\n    \"date_modified\": 6898\n  },\n  {\n    \"id\": 6980,\n    \"name\": \"string\",\n    \"prefix\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"suffix\": \"string\",\n    \"title\": \"string\",\n    \"company_id\": 7116,\n    \"company_name\": \"string\",\n    \"emails\": [\n      {\n        \"email\": \"cAv7sua1d8KOdd@FiizkrWQEPKtI.hj\",\n        \"category\": \"string\"\n      },\n      {\n        \"email\": \"9KkAdy@EzhaD.hb\",\n        \"category\": \"string\"\n      }\n    ],\n    \"phone_numbers\": [\n      {\n        \"number\": \"string\",\n        \"category\": \"string\"\n      },\n      {\n        \"number\": \"string\",\n        \"category\": \"string\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"postal_code\": \"<string>\",\n      \"country\": \"<string>\"\n    },\n    \"assignee_id\": 7809,\n    \"contact_type_id\": 809,\n    \"details\": \"string\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      },\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      }\n    ],\n    \"date_created\": 7110,\n    \"date_modified\": 4905\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "002907ad-ebd4-4ca6-801d-3fb81ad4833f",
+              "name": "Authentication failed or missing",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"page_number\": 1,\n  \"page_size\": 20,\n  \"sort_by\": \"<string>\",\n  \"name\": \"<string>\",\n  \"emails\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"phone_numbers\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"assignee_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": 7682,\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3d34f75f-c676-424d-9f15-ac92c82ed49a",
+              "name": "Rate limit exceeded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"page_number\": 1,\n  \"page_size\": 20,\n  \"sort_by\": \"<string>\",\n  \"name\": \"<string>\",\n  \"emails\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"phone_numbers\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"assignee_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": 7682,\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f5d21c45-ea63-4324-bff7-44dade59138c",
+          "name": "Create a Person",
+          "request": {
+            "name": "Create a Person",
+            "description": {
+              "content": "Create a new Person (contact) record in Copper.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "people"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"suffix\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"emails\": [\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"phone_numbers\": [\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5cde2f89-f094-496a-acc7-e657a03a51a8",
+              "name": "Created Person record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"suffix\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"emails\": [\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"phone_numbers\": [\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"suffix\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"emails\": [\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"phone_numbers\": [\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "800ff489-1626-487f-880c-453aac076b2f",
+          "name": "Get a Person",
+          "request": {
+            "name": "Get a Person",
+            "description": {
+              "content": "Retrieve a single Person record by ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "people",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "80797fd0-1b2e-4808-a5c4-e252dfc470c0",
+              "name": "Person record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"suffix\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"emails\": [\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"phone_numbers\": [\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2201f032-6191-41b6-9849-ad517e663cce",
+          "name": "Update a Person",
+          "request": {
+            "name": "Update a Person",
+            "description": {
+              "content": "Update an existing Person record by ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "people",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"suffix\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"emails\": [\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"phone_numbers\": [\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7815763e-c1d6-4a4b-901b-10f2b32ea89a",
+              "name": "Updated Person record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"suffix\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"emails\": [\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"phone_numbers\": [\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"suffix\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"emails\": [\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"phone_numbers\": [\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ffcc6c2b-edcb-424c-93ff-6cba2afac775",
+          "name": "Delete a Person",
+          "request": {
+            "name": "Delete a Person",
+            "description": {
+              "content": "Delete a Person record by ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "people",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9ca8a5b8-3d96-4494-8053-273dec1c727c",
+              "name": "Deletion confirmation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "029da00c-0eaa-45fe-9a21-e0f93fb24214",
+      "name": "Companies",
+      "description": {
+        "content": "Company records management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ddf7b22c-1629-47eb-bae6-b6fbfa07c7cf",
+          "name": "Search Companies",
+          "request": {
+            "name": "Search Companies",
+            "description": {
+              "content": "Search and list Company records using filter criteria.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "companies",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"page_number\": \"<integer>\",\n  \"page_size\": \"<integer>\",\n  \"sort_by\": \"<string>\",\n  \"name\": \"<string>\",\n  \"assignee_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "94d8efc2-d6af-441b-8820-29b5c63b54cb",
+              "name": "List of matching Company records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "companies",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"page_number\": \"<integer>\",\n  \"page_size\": \"<integer>\",\n  \"sort_by\": \"<string>\",\n  \"name\": \"<string>\",\n  \"assignee_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 4598,\n    \"name\": \"string\",\n    \"assignee_id\": 4792,\n    \"contact_type_id\": 1178,\n    \"details\": \"string\",\n    \"email_domain\": \"string\",\n    \"address\": {\n      \"street\": \"string\",\n      \"city\": \"string\",\n      \"state\": \"string\",\n      \"postal_code\": \"string\",\n      \"country\": \"string\"\n    },\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      },\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      }\n    ],\n    \"date_created\": 1029,\n    \"date_modified\": 9886\n  },\n  {\n    \"id\": 7263,\n    \"name\": \"string\",\n    \"assignee_id\": 4750,\n    \"contact_type_id\": 1683,\n    \"details\": \"string\",\n    \"email_domain\": \"string\",\n    \"address\": {\n      \"street\": \"string\",\n      \"city\": \"string\",\n      \"state\": \"string\",\n      \"postal_code\": \"string\",\n      \"country\": \"string\"\n    },\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      },\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      }\n    ],\n    \"date_created\": 4475,\n    \"date_modified\": 9062\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bfb8a318-93cc-4975-920c-46c5bc5f469f",
+          "name": "Create a Company",
+          "request": {
+            "name": "Create a Company",
+            "description": {
+              "content": "Create a new Company record in Copper.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "companies"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"email_domain\": \"<string>\",\n  \"phone_numbers\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "da10e5db-c447-4186-be0e-7df5734d69ad",
+              "name": "Created Company record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "companies"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"email_domain\": \"<string>\",\n  \"phone_numbers\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"email_domain\": \"<string>\",\n  \"phone_numbers\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e863687b-7e34-4042-8784-b7285ca81ad6",
+          "name": "Get a Company",
+          "request": {
+            "name": "Get a Company",
+            "description": {
+              "content": "Retrieve a single Company record by ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "companies",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2bce4b8f-7554-4627-8540-1cf8b17c00e9",
+              "name": "Company record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "companies",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"email_domain\": \"<string>\",\n  \"phone_numbers\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "327d260f-f721-4729-8cec-2527280bff07",
+          "name": "Update a Company",
+          "request": {
+            "name": "Update a Company",
+            "description": {},
+            "url": {
+              "path": [
+                "companies",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"email_domain\": \"<string>\",\n  \"phone_numbers\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "84b4cd29-ca10-4e4e-8252-98e1741d6aa5",
+              "name": "Updated Company record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "companies",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"email_domain\": \"<string>\",\n  \"phone_numbers\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"email_domain\": \"<string>\",\n  \"phone_numbers\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "028d8830-baef-4843-a015-744ddf8bc2c5",
+          "name": "Delete a Company",
+          "request": {
+            "name": "Delete a Company",
+            "description": {},
+            "url": {
+              "path": [
+                "companies",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e40d3fb7-a358-4981-9102-d6db855a1d74",
+              "name": "Deletion confirmation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "companies",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "e8c5d110-21bc-4511-90fb-569191605d2e",
+      "name": "Leads",
+      "description": {
+        "content": "Lead records and conversion",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "06a0e81d-8698-4935-9aa3-2bc26d06d730",
+          "name": "Search Leads",
+          "request": {
+            "name": "Search Leads",
+            "description": {
+              "content": "Search and list Lead records using filter criteria.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "leads",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"page_number\": \"<integer>\",\n  \"page_size\": \"<integer>\",\n  \"sort_by\": \"<string>\",\n  \"name\": \"<string>\",\n  \"emails\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"status_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a03c3a86-0f82-45c1-8fdb-6a2e5c161660",
+              "name": "List of matching Lead records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leads",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"page_number\": \"<integer>\",\n  \"page_size\": \"<integer>\",\n  \"sort_by\": \"<string>\",\n  \"name\": \"<string>\",\n  \"emails\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"status_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 1815,\n    \"name\": \"string\",\n    \"prefix\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"title\": \"string\",\n    \"company_name\": \"string\",\n    \"email\": {\n      \"email\": \"azpZ9vYCE3i6ZG@tiRuKYRRxV.rc\",\n      \"category\": \"string\"\n    },\n    \"status\": \"string\",\n    \"status_id\": 3029,\n    \"source_id\": 4692,\n    \"monetary_value\": 1007.4367757238678,\n    \"details\": \"string\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      },\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      }\n    ]\n  },\n  {\n    \"id\": 9928,\n    \"name\": \"string\",\n    \"prefix\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"title\": \"string\",\n    \"company_name\": \"string\",\n    \"email\": {\n      \"email\": \"CxflRk@bGYuiuxHyAkEBfEqnLK.vklm\",\n      \"category\": \"string\"\n    },\n    \"status\": \"string\",\n    \"status_id\": 9795,\n    \"source_id\": 8724,\n    \"monetary_value\": 4779.446295950145,\n    \"details\": \"string\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      },\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f11dc23c-e7a3-4e87-b19d-ff9a4cbb2485",
+          "name": "Create a Lead",
+          "request": {
+            "name": "Create a Lead",
+            "description": {},
+            "url": {
+              "path": [
+                "leads"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_name\": \"<string>\",\n  \"email\": {\n    \"email\": \"<email>\",\n    \"category\": \"<string>\"\n  },\n  \"phone_numbers\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"status\": \"<string>\",\n  \"status_id\": \"<integer>\",\n  \"source_id\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "fd043a67-4d39-4724-8439-3ae1d0e54a30",
+              "name": "Created Lead record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leads"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_name\": \"<string>\",\n  \"email\": {\n    \"email\": \"<email>\",\n    \"category\": \"<string>\"\n  },\n  \"phone_numbers\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"status\": \"<string>\",\n  \"status_id\": \"<integer>\",\n  \"source_id\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_name\": \"<string>\",\n  \"email\": {\n    \"email\": \"<email>\",\n    \"category\": \"<string>\"\n  },\n  \"phone_numbers\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"status\": \"<string>\",\n  \"status_id\": \"<integer>\",\n  \"source_id\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3b30de15-d984-4097-ae1e-5ff9dbef939a",
+          "name": "Get a Lead",
+          "request": {
+            "name": "Get a Lead",
+            "description": {},
+            "url": {
+              "path": [
+                "leads",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6c936231-7a6b-4027-b308-e5c53ffd474f",
+              "name": "Lead record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leads",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_name\": \"<string>\",\n  \"email\": {\n    \"email\": \"<email>\",\n    \"category\": \"<string>\"\n  },\n  \"phone_numbers\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"status\": \"<string>\",\n  \"status_id\": \"<integer>\",\n  \"source_id\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4ca43226-ed3d-489c-904f-8d2331658578",
+          "name": "Update a Lead",
+          "request": {
+            "name": "Update a Lead",
+            "description": {},
+            "url": {
+              "path": [
+                "leads",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_name\": \"<string>\",\n  \"email\": {\n    \"email\": \"<email>\",\n    \"category\": \"<string>\"\n  },\n  \"phone_numbers\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"status\": \"<string>\",\n  \"status_id\": \"<integer>\",\n  \"source_id\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c942542f-78ab-4130-9c80-18aa5754e8a1",
+              "name": "Updated Lead record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leads",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_name\": \"<string>\",\n  \"email\": {\n    \"email\": \"<email>\",\n    \"category\": \"<string>\"\n  },\n  \"phone_numbers\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"status\": \"<string>\",\n  \"status_id\": \"<integer>\",\n  \"source_id\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_name\": \"<string>\",\n  \"email\": {\n    \"email\": \"<email>\",\n    \"category\": \"<string>\"\n  },\n  \"phone_numbers\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"status\": \"<string>\",\n  \"status_id\": \"<integer>\",\n  \"source_id\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "275977dd-cc58-4950-b958-8a408627716a",
+          "name": "Delete a Lead",
+          "request": {
+            "name": "Delete a Lead",
+            "description": {},
+            "url": {
+              "path": [
+                "leads",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fde8d98a-4b7c-4af9-b937-405d6cd86c8c",
+              "name": "Deletion confirmation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leads",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "68294fd3-9634-452f-9bbf-d6d5c93254c8",
+          "name": "Convert a Lead",
+          "request": {
+            "name": "Convert a Lead",
+            "description": {
+              "content": "Convert a Lead into a Person, Company, and Opportunity.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "leads",
+                ":id",
+                "convert"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "033149a5-ab5e-4c61-be61-db5ef33b7cdc",
+              "name": "Conversion result with new Person, Company, and Opportunity references",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "leads",
+                    ":id",
+                    "convert"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"person_id\": 4455,\n  \"company_id\": 3071,\n  \"opportunity_id\": 5785\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "aa00af8c-14db-4bd4-bff4-4e21cff23ca1",
+      "name": "Opportunities",
+      "description": {
+        "content": "Sales opportunity pipelines",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9248f83e-115b-480a-82a4-c6790cf76a6b",
+          "name": "Search Opportunities",
+          "request": {
+            "name": "Search Opportunities",
+            "description": {},
+            "url": {
+              "path": [
+                "opportunities",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"page_number\": \"<integer>\",\n  \"page_size\": \"<integer>\",\n  \"sort_by\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a75de79f-da72-4d91-94aa-564923bb6d29",
+              "name": "List of matching Opportunity records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "opportunities",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"page_number\": \"<integer>\",\n  \"page_size\": \"<integer>\",\n  \"sort_by\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 1224,\n    \"name\": \"string\",\n    \"assignee_id\": 2972,\n    \"close_date\": \"string\",\n    \"company_id\": 2205,\n    \"company_name\": \"string\",\n    \"customer_source_id\": 9185,\n    \"details\": \"string\",\n    \"loss_reason_id\": 9501,\n    \"pipeline_id\": 3245,\n    \"pipeline_stage_id\": 835,\n    \"primary_contact_id\": 6391,\n    \"priority\": \"string\",\n    \"status\": \"Open\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"win_probability\": 9378,\n    \"monetary_value\": 916.8032998017861,\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      },\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      }\n    ]\n  },\n  {\n    \"id\": 1323,\n    \"name\": \"string\",\n    \"assignee_id\": 5025,\n    \"close_date\": \"string\",\n    \"company_id\": 8408,\n    \"company_name\": \"string\",\n    \"customer_source_id\": 571,\n    \"details\": \"string\",\n    \"loss_reason_id\": 9975,\n    \"pipeline_id\": 5302,\n    \"pipeline_stage_id\": 6255,\n    \"primary_contact_id\": 6810,\n    \"priority\": \"string\",\n    \"status\": \"Abandoned\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"win_probability\": 6307,\n    \"monetary_value\": 8964.820849003436,\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      },\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a1b47024-234f-4fbc-87ce-14c3d0ce1585",
+          "name": "Create an Opportunity",
+          "request": {
+            "name": "Create an Opportunity",
+            "description": {},
+            "url": {
+              "path": [
+                "opportunities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"close_date\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"customer_source_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"loss_reason_id\": \"<integer>\",\n  \"pipeline_id\": \"<integer>\",\n  \"pipeline_stage_id\": \"<integer>\",\n  \"primary_contact_id\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"win_probability\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "118c20a4-4f0b-46bc-b5e8-aefe1d14beea",
+              "name": "Created Opportunity record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "opportunities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"close_date\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"customer_source_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"loss_reason_id\": \"<integer>\",\n  \"pipeline_id\": \"<integer>\",\n  \"pipeline_stage_id\": \"<integer>\",\n  \"primary_contact_id\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"win_probability\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"close_date\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"customer_source_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"loss_reason_id\": \"<integer>\",\n  \"pipeline_id\": \"<integer>\",\n  \"pipeline_stage_id\": \"<integer>\",\n  \"primary_contact_id\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"win_probability\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4bafdef2-d274-413b-82ef-0c7b415f08b4",
+          "name": "Get an Opportunity",
+          "request": {
+            "name": "Get an Opportunity",
+            "description": {},
+            "url": {
+              "path": [
+                "opportunities",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c5874848-056e-48d1-bcd9-06c54d22a343",
+              "name": "Opportunity record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "opportunities",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"close_date\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"customer_source_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"loss_reason_id\": \"<integer>\",\n  \"pipeline_id\": \"<integer>\",\n  \"pipeline_stage_id\": \"<integer>\",\n  \"primary_contact_id\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"win_probability\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "90b0ded6-aa6a-4a5e-9c37-614bb62909bd",
+          "name": "Update an Opportunity",
+          "request": {
+            "name": "Update an Opportunity",
+            "description": {},
+            "url": {
+              "path": [
+                "opportunities",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"close_date\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"customer_source_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"loss_reason_id\": \"<integer>\",\n  \"pipeline_id\": \"<integer>\",\n  \"pipeline_stage_id\": \"<integer>\",\n  \"primary_contact_id\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"win_probability\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ae15017a-54dd-4e62-aebb-de3e0c02dea7",
+              "name": "Updated Opportunity record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "opportunities",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"close_date\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"customer_source_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"loss_reason_id\": \"<integer>\",\n  \"pipeline_id\": \"<integer>\",\n  \"pipeline_stage_id\": \"<integer>\",\n  \"primary_contact_id\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"win_probability\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"close_date\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"customer_source_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"loss_reason_id\": \"<integer>\",\n  \"pipeline_id\": \"<integer>\",\n  \"pipeline_stage_id\": \"<integer>\",\n  \"primary_contact_id\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"win_probability\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7ca154b3-65d5-4227-b28c-a39343b4ec57",
+          "name": "Delete an Opportunity",
+          "request": {
+            "name": "Delete an Opportunity",
+            "description": {},
+            "url": {
+              "path": [
+                "opportunities",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "11bc8478-34cb-4cd3-883f-7fc044e1c590",
+              "name": "Deletion confirmation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "opportunities",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "36544c0d-98dc-4b15-b139-3f199b814628",
+      "name": "Projects",
+      "description": {
+        "content": "Project records management",
+        "type": "text/plain"
+      },
+      "item": [],
+      "event": []
+    },
+    {
+      "id": "a315ffc7-cb8a-416f-86d2-d8ebdfe3b838",
+      "name": "Tasks",
+      "description": {
+        "content": "Task records management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2edec168-98c4-4643-927c-1c0677cea56f",
+          "name": "Search Tasks",
+          "request": {
+            "name": "Search Tasks",
+            "description": {},
+            "url": {
+              "path": [
+                "tasks",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e3b5a28b-d0c7-4f68-9a07-259ebaa43932",
+              "name": "List of Task records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tasks",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 7118,\n    \"name\": \"string\",\n    \"related_resource\": {\n      \"id\": 2315,\n      \"type\": \"string\"\n    },\n    \"assignee_id\": 5912,\n    \"due_date\": 1744,\n    \"reminder_date\": 7405,\n    \"completed_date\": 574,\n    \"priority\": \"High\",\n    \"status\": \"Open\",\n    \"details\": \"string\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": 3461,\n        \"value\": \"string\"\n      },\n      {\n        \"custom_field_definition_id\": 1798,\n        \"value\": \"string\"\n      }\n    ]\n  },\n  {\n    \"id\": 9495,\n    \"name\": \"string\",\n    \"related_resource\": {\n      \"id\": 7739,\n      \"type\": \"string\"\n    },\n    \"assignee_id\": 6421,\n    \"due_date\": 2448,\n    \"reminder_date\": 1455,\n    \"completed_date\": 2259,\n    \"priority\": \"None\",\n    \"status\": \"Open\",\n    \"details\": \"string\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": 1926,\n        \"value\": \"string\"\n      },\n      {\n        \"custom_field_definition_id\": 1198,\n        \"value\": \"string\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3286a0a2-f6fe-491c-b241-ea0c05910d02",
+          "name": "Create a Task",
+          "request": {
+            "name": "Create a Task",
+            "description": {},
+            "url": {
+              "path": [
+                "tasks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"related_resource\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"due_date\": \"<integer>\",\n  \"reminder_date\": \"<integer>\",\n  \"completed_date\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "da55361f-9a78-4dcb-8805-b86c9ca32f4b",
+              "name": "Created Task record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tasks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"related_resource\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"due_date\": \"<integer>\",\n  \"reminder_date\": \"<integer>\",\n  \"completed_date\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"related_resource\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"due_date\": \"<integer>\",\n  \"reminder_date\": \"<integer>\",\n  \"completed_date\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "de9d5028-6d6a-44cd-990e-f4683d995944",
+          "name": "Get a Task",
+          "request": {
+            "name": "Get a Task",
+            "description": {},
+            "url": {
+              "path": [
+                "tasks",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e1ac0386-8660-44e8-a16f-44bc46ff9828",
+              "name": "Task record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tasks",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"related_resource\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"due_date\": \"<integer>\",\n  \"reminder_date\": \"<integer>\",\n  \"completed_date\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a173d0a5-4e1d-4320-9c7c-0d70b07246b4",
+          "name": "Update a Task",
+          "request": {
+            "name": "Update a Task",
+            "description": {},
+            "url": {
+              "path": [
+                "tasks",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"related_resource\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"due_date\": \"<integer>\",\n  \"reminder_date\": \"<integer>\",\n  \"completed_date\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8dbac868-7bb2-4130-901b-bd5163ccbade",
+              "name": "Updated Task record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tasks",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"related_resource\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"due_date\": \"<integer>\",\n  \"reminder_date\": \"<integer>\",\n  \"completed_date\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"related_resource\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"due_date\": \"<integer>\",\n  \"reminder_date\": \"<integer>\",\n  \"completed_date\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5c794cb6-9376-4caa-98e7-c42d87e38270",
+          "name": "Delete a Task",
+          "request": {
+            "name": "Delete a Task",
+            "description": {},
+            "url": {
+              "path": [
+                "tasks",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "889a865d-3eaa-444c-b2b3-9b7e818d3874",
+              "name": "Deletion confirmation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tasks",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "1e299110-5c40-4582-a653-4198fd00ddb7",
+      "name": "Activities",
+      "description": {
+        "content": "Activity log entries",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8b06fafa-8ad1-4388-aa4c-b4a6cd1c4c28",
+          "name": "Create an Activity",
+          "request": {
+            "name": "Create an Activity",
+            "description": {},
+            "url": {
+              "path": [
+                "activities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"parent\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"type\": {\n    \"id\": \"<integer>\",\n    \"category\": \"<string>\"\n  },\n  \"details\": \"<string>\",\n  \"user_id\": \"<integer>\",\n  \"activity_date\": \"<integer>\",\n  \"old_value\": \"<object>\",\n  \"new_value\": \"<object>\",\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "be7cfbe2-dbbd-4fc7-b0ea-d8a2dca676a7",
+              "name": "Created Activity record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "activities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"parent\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"type\": {\n    \"id\": \"<integer>\",\n    \"category\": \"<string>\"\n  },\n  \"details\": \"<string>\",\n  \"user_id\": \"<integer>\",\n  \"activity_date\": \"<integer>\",\n  \"old_value\": \"<object>\",\n  \"new_value\": \"<object>\",\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"parent\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"type\": {\n    \"id\": \"<integer>\",\n    \"category\": \"<string>\"\n  },\n  \"details\": \"<string>\",\n  \"user_id\": \"<integer>\",\n  \"activity_date\": \"<integer>\",\n  \"old_value\": \"<object>\",\n  \"new_value\": \"<object>\",\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bbe547ec-9d1d-489c-8f44-fd35c416f9c2",
+          "name": "Search Activities",
+          "request": {
+            "name": "Search Activities",
+            "description": {},
+            "url": {
+              "path": [
+                "activities",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6a121b07-d71e-478a-b3f7-ff63c069c1fd",
+              "name": "List of matching Activity records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "activities",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"<long>\",\n    \"parent\": {\n      \"id\": \"<integer>\",\n      \"type\": \"<string>\"\n    },\n    \"type\": {\n      \"id\": \"<integer>\",\n      \"category\": \"<string>\"\n    },\n    \"details\": \"<string>\",\n    \"user_id\": \"<integer>\",\n    \"activity_date\": \"<integer>\",\n    \"old_value\": \"<object>\",\n    \"new_value\": \"<object>\",\n    \"date_created\": \"<integer>\",\n    \"date_modified\": \"<integer>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"parent\": {\n      \"id\": \"<integer>\",\n      \"type\": \"<string>\"\n    },\n    \"type\": {\n      \"id\": \"<integer>\",\n      \"category\": \"<string>\"\n    },\n    \"details\": \"<string>\",\n    \"user_id\": \"<integer>\",\n    \"activity_date\": \"<integer>\",\n    \"old_value\": \"<object>\",\n    \"new_value\": \"<object>\",\n    \"date_created\": \"<integer>\",\n    \"date_modified\": \"<integer>\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "d24ebf6f-bc40-4249-8f10-fcefe0a32520",
+      "name": "Webhooks",
+      "description": {
+        "content": "Event subscription webhooks",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7a15af6d-1b16-449b-8cba-3c79efcbf50a",
+          "name": "List Webhooks",
+          "request": {
+            "name": "List Webhooks",
+            "description": {},
+            "url": {
+              "path": [
+                "webhooks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e67f3bcd-6401-44e9-b982-b660a707c881",
+              "name": "List of subscribed webhooks",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhooks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 478,\n    \"target\": \"http://WkIDey.jawmWe5tcw9\",\n    \"event\": \"new\",\n    \"type\": \"company\",\n    \"secret\": {\n      \"secret\": \"string\"\n    }\n  },\n  {\n    \"id\": 5221,\n    \"target\": \"http://ODkcFSGeEMxoGPKBEjbc.ggocmcuTwWZ5rgkUdxHeEJQfFpD6OokUs2S7xAgGrwP10NDrZZGMdsmtxqBc\",\n    \"event\": \"delete\",\n    \"type\": \"company\",\n    \"secret\": {\n      \"secret\": \"string\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0868d242-8116-4e15-a0f0-b1e474525934",
+          "name": "Create a Webhook subscription",
+          "request": {
+            "name": "Create a Webhook subscription",
+            "description": {},
+            "url": {
+              "path": [
+                "webhooks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"target\": \"<uri>\",\n  \"event\": \"<string>\",\n  \"type\": \"<string>\",\n  \"secret\": {\n    \"secret\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e3ca7475-818f-4ca4-aa10-1eb867144986",
+              "name": "Created webhook subscription",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhooks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"target\": \"<uri>\",\n  \"event\": \"<string>\",\n  \"type\": \"<string>\",\n  \"secret\": {\n    \"secret\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"target\": \"<uri>\",\n  \"event\": \"<string>\",\n  \"type\": \"<string>\",\n  \"secret\": {\n    \"secret\": \"<string>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7950a5c3-cbb3-4efc-ac7b-14915c89f4b9",
+          "name": "Delete a Webhook",
+          "request": {
+            "name": "Delete a Webhook",
+            "description": {},
+            "url": {
+              "path": [
+                "webhooks",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "23d39cf8-af71-4ccc-a430-b4e1b51f55dc",
+              "name": "Deletion confirmation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "webhooks",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.copper.com/developer_api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-PW-AccessToken"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "6df512fa-712c-4e71-bec1-b05f357e95c5",
+    "name": "Copper Developer API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Copper is a CRM platform built natively for Google Workspace. The Copper Developer API is a RESTful JSON API providing programmatic access to people, companies, leads, opportunities, projects, tasks, activities, and webhooks.\n\nContact Support:\n Name: Copper Support",
+      "type": "text/plain"
+    }
+  }
+}
