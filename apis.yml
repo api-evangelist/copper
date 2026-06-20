@@ -7,7 +7,7 @@ description: >-
   People, Companies, Leads, Opportunities, Projects, Tasks, Activities, Webhooks, and related resources for CRM
   integration and automation.
 url: https://raw.githubusercontent.com/api-evangelist/copper/refs/heads/main/apis.yml
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 type: Index
 access: 3rd-Party
 position: Consuming
@@ -37,7 +37,7 @@ apis:
       authentication with three required headers (X-PW-AccessToken, X-PW-Application, X-PW-UserEmail) and supports full
       CRUD operations, search, bulk actions, and lead conversion. Rate limits are 180 requests per minute and 3 requests
       per second for bulk operations.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.copper.com/
     baseURL: https://api.copper.com/developer_api/v1
     tags:
