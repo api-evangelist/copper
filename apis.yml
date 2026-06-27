@@ -112,7 +112,7 @@ common:
     url: https://developer.copper.com/introduction/quick-start.html
   - type: RateLimits
     url: https://developer.copper.com/introduction/requests.html
-  - type: Errors
+  - type: ErrorCodes
     url: https://developer.copper.com/introduction/responses.html
   - type: Pricing
     url: https://www.copper.com/pricing
