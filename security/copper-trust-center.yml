@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: searched
+probe: true
+source: https://trust.copper.com/
+url: https://trust.copper.com/
+certifications:
+- HIPAA
+- FedRAMP
+- GDPR
+evidence:
+- source: https://trust.copper.com/
+  keywords:
+  - hipaa
+  - fedramp
+  - trust center
+  - gdpr

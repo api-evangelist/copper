@@ -1,0 +1,30 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/copper-developer-api-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: PWAccessToken
+  type: apiKey
+  in: header
+  parameter: X-PW-AccessToken
+  description: API access token for the user
+  sources:
+  - openapi/copper-developer-api-openapi.yml
+- name: PWApplication
+  type: apiKey
+  in: header
+  parameter: X-PW-Application
+  description: Application identifier, set to 'developer_api'
+  sources:
+  - openapi/copper-developer-api-openapi.yml
+- name: PWUserEmail
+  type: apiKey
+  in: header
+  parameter: X-PW-UserEmail
+  description: Email address of the API token owner
+  sources:
+  - openapi/copper-developer-api-openapi.yml
