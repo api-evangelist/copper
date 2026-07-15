@@ -98,6 +98,8 @@ apis:
       - type: Support
         url: https://www.copper.com/contact-us
 common:
+  - type: AgenticAccess
+    url: agentic-access/copper-agentic-access.yml
   - type: TrustCenter
     url: security/copper-trust-center.yml
   - type: DomainSecurity
