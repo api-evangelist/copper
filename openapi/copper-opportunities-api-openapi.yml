@@ -1,0 +1,215 @@
+openapi: 3.0.3
+info:
+  title: Copper Developer Activities Opportunities API
+  version: '1.0'
+  description: Copper is a CRM platform built natively for Google Workspace. The Copper Developer API is a RESTful JSON API providing programmatic access to people, companies, leads, opportunities, projects, tasks, activities, and webhooks.
+  contact:
+    name: Copper Support
+    url: https://www.copper.com/contact-us
+  license:
+    name: Proprietary
+    url: https://www.copper.com/terms-of-service
+servers:
+- url: https://api.copper.com/developer_api/v1
+  description: Copper Developer API production server
+security:
+- PWAccessToken: []
+  PWApplication: []
+  PWUserEmail: []
+tags:
+- name: Opportunities
+  description: Sales opportunity pipelines
+paths:
+  /opportunities/search:
+    post:
+      operationId: searchOpportunities
+      summary: Search Opportunities
+      tags:
+      - Opportunities
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page_number:
+                  type: integer
+                page_size:
+                  type: integer
+                sort_by:
+                  type: string
+      responses:
+        '200':
+          description: List of matching Opportunity records
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Opportunity'
+  /opportunities:
+    post:
+      operationId: createOpportunity
+      summary: Create an Opportunity
+      tags:
+      - Opportunities
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Opportunity'
+      responses:
+        '200':
+          description: Created Opportunity record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Opportunity'
+  /opportunities/{id}:
+    get:
+      operationId: getOpportunity
+      summary: Get an Opportunity
+      tags:
+      - Opportunities
+      parameters:
+      - $ref: '#/components/parameters/IdPathParam'
+      responses:
+        '200':
+          description: Opportunity record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Opportunity'
+    put:
+      operationId: updateOpportunity
+      summary: Update an Opportunity
+      tags:
+      - Opportunities
+      parameters:
+      - $ref: '#/components/parameters/IdPathParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Opportunity'
+      responses:
+        '200':
+          description: Updated Opportunity record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Opportunity'
+    delete:
+      operationId: deleteOpportunity
+      summary: Delete an Opportunity
+      tags:
+      - Opportunities
+      parameters:
+      - $ref: '#/components/parameters/IdPathParam'
+      responses:
+        '200':
+          description: Deletion confirmation
+components:
+  parameters:
+    IdPathParam:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int64
+      description: The unique resource identifier
+  schemas:
+    CustomFieldValue:
+      type: object
+      properties:
+        custom_field_definition_id:
+          type: integer
+        value:
+          oneOf:
+          - type: string
+          - type: number
+          - type: integer
+          - type: boolean
+          - type: array
+            items:
+              type: integer
+          - type: 'null'
+    Opportunity:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        assignee_id:
+          type: integer
+          nullable: true
+        close_date:
+          type: string
+          nullable: true
+        company_id:
+          type: integer
+          nullable: true
+        company_name:
+          type: string
+          nullable: true
+        customer_source_id:
+          type: integer
+          nullable: true
+        details:
+          type: string
+          nullable: true
+        loss_reason_id:
+          type: integer
+          nullable: true
+        pipeline_id:
+          type: integer
+        pipeline_stage_id:
+          type: integer
+        primary_contact_id:
+          type: integer
+          nullable: true
+        priority:
+          type: string
+        status:
+          type: string
+          enum:
+          - Open
+          - Won
+          - Lost
+          - Abandoned
+        tags:
+          type: array
+          items:
+            type: string
+        win_probability:
+          type: integer
+          nullable: true
+        monetary_value:
+          type: number
+          nullable: true
+        custom_fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomFieldValue'
+  securitySchemes:
+    PWAccessToken:
+      type: apiKey
+      in: header
+      name: X-PW-AccessToken
+      description: API access token for the user
+    PWApplication:
+      type: apiKey
+      in: header
+      name: X-PW-Application
+      description: Application identifier, set to 'developer_api'
+    PWUserEmail:
+      type: apiKey
+      in: header
+      name: X-PW-UserEmail
+      description: Email address of the API token owner
