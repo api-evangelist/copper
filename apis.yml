@@ -7,7 +7,20 @@ description: >-
   People, Companies, Leads, Opportunities, Projects, Tasks, Activities, Webhooks, and related resources for CRM
   integration and automation.
 url: https://raw.githubusercontent.com/api-evangelist/copper/refs/heads/main/apis.yml
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Paid · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/copper.png
 type: Index
 access: 3rd-Party
 position: Consuming
@@ -29,75 +42,359 @@ created: '2025-01-07'
 modified: '2026-05-30'
 specificationVersion: '0.20'
 apis:
-  - aid: copper:developer-api
-    name: Copper Developer API
-    description: >-
-      The Copper Developer API is a RESTful JSON API providing programmatic access to Copper CRM resources including
-      people, companies, leads, opportunities, projects, tasks, activities, and webhooks. The API uses token-based
-      authentication with three required headers (X-PW-AccessToken, X-PW-Application, X-PW-UserEmail) and supports full
-      CRUD operations, search, bulk actions, and lead conversion. Rate limits are 180 requests per minute and 3 requests
-      per second for bulk operations.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.copper.com/
-    baseURL: https://api.copper.com/developer_api/v1
-    tags:
-      - Activities
-      - Companies
-      - CRM
-      - Leads
-      - Opportunities
-      - People
-      - Projects
-      - REST
-      - Tasks
-      - Webhooks
-    properties:
-      - type: Documentation
-        url: https://developer.copper.com/
-      - type: Authentication
-        url: https://developer.copper.com/introduction/requests.html
-      - type: GettingStarted
-        url: https://developer.copper.com/introduction/quick-start.html
-      - type: OAuth
-        url: https://developer.copper.com/introduction/oauth-quickstart.html
-      - type: Webhooks
-        url: https://developer.copper.com/webhooks/general/list-of-webhook-events.html
-      - type: PostmanCollection
-        url: https://developer.copper.com/introduction/postman-collection.html
-      - type: People
-        url: https://developer.copper.com/people/
-      - type: Companies
-        url: https://developer.copper.com/companies/
-      - type: Leads
-        url: https://developer.copper.com/leads/
-      - type: Opportunities
-        url: https://developer.copper.com/opportunities/
-      - type: Projects
-        url: https://developer.copper.com/projects/
-      - type: Tasks
-        url: https://developer.copper.com/tasks/
-      - type: Activities
-        url: https://developer.copper.com/activities/
-      - type: CustomFields
-        url: https://developer.copper.com/custom-fields/
-      - type: Tags
-        url: https://developer.copper.com/tags/
-      - type: OpenAPI
-        url: openapi/copper-developer-api-openapi.yml
-      - type: AsyncAPI
-        url: asyncapi/copper-webhooks-asyncapi.yml
-      - type: Rules
-        url: rules/copper-developer-api-rules.yml
-      - type: JSONLD
-        url: json-ld/copper-context.jsonld
-      - type: Vocabulary
-        url: vocabulary/copper-vocabulary.yml
-      - type: Capabilities
-        url: capabilities/copper-developer-api-capabilities.yml
-    contact:
-      - type: Support
-        url: https://www.copper.com/contact-us
+- aid: copper:copper-activities-api
+  name: Copper Activities API
+  description: Activity log entries
+  humanURL: https://developer.copper.com/
+  baseURL: https://api.copper.com/developer_api/v1
+  tags:
+  - Activities
+  properties:
+  - type: OpenAPI
+    url: openapi/copper-activities-api-openapi.yml
+  - type: Documentation
+    url: https://developer.copper.com/
+  - type: Authentication
+    url: https://developer.copper.com/introduction/requests.html
+  - type: GettingStarted
+    url: https://developer.copper.com/introduction/quick-start.html
+  - type: OAuth
+    url: https://developer.copper.com/introduction/oauth-quickstart.html
+  - type: Webhooks
+    url: https://developer.copper.com/webhooks/general/list-of-webhook-events.html
+  - type: PostmanCollection
+    url: https://developer.copper.com/introduction/postman-collection.html
+  - type: People
+    url: https://developer.copper.com/people/
+  - type: Companies
+    url: https://developer.copper.com/companies/
+  - type: Leads
+    url: https://developer.copper.com/leads/
+  - type: Opportunities
+    url: https://developer.copper.com/opportunities/
+  - type: Projects
+    url: https://developer.copper.com/projects/
+  - type: Tasks
+    url: https://developer.copper.com/tasks/
+  - type: Activities
+    url: https://developer.copper.com/activities/
+  - type: CustomFields
+    url: https://developer.copper.com/custom-fields/
+  - type: Tags
+    url: https://developer.copper.com/tags/
+  - type: AsyncAPI
+    url: asyncapi/copper-webhooks-asyncapi.yml
+  - type: Rules
+    url: rules/copper-developer-api-rules.yml
+  - type: JSONLD
+    url: json-ld/copper-context.jsonld
+  - type: Vocabulary
+    url: vocabulary/copper-vocabulary.yml
+  - type: Capabilities
+    url: capabilities/copper-developer-api-capabilities.yml
+- aid: copper:copper-companies-api
+  name: Copper Companies API
+  description: Company records management
+  humanURL: https://developer.copper.com/
+  baseURL: https://api.copper.com/developer_api/v1
+  tags:
+  - Companies
+  properties:
+  - type: OpenAPI
+    url: openapi/copper-companies-api-openapi.yml
+  - type: Documentation
+    url: https://developer.copper.com/
+  - type: Authentication
+    url: https://developer.copper.com/introduction/requests.html
+  - type: GettingStarted
+    url: https://developer.copper.com/introduction/quick-start.html
+  - type: OAuth
+    url: https://developer.copper.com/introduction/oauth-quickstart.html
+  - type: Webhooks
+    url: https://developer.copper.com/webhooks/general/list-of-webhook-events.html
+  - type: PostmanCollection
+    url: https://developer.copper.com/introduction/postman-collection.html
+  - type: People
+    url: https://developer.copper.com/people/
+  - type: Companies
+    url: https://developer.copper.com/companies/
+  - type: Leads
+    url: https://developer.copper.com/leads/
+  - type: Opportunities
+    url: https://developer.copper.com/opportunities/
+  - type: Projects
+    url: https://developer.copper.com/projects/
+  - type: Tasks
+    url: https://developer.copper.com/tasks/
+  - type: Activities
+    url: https://developer.copper.com/activities/
+  - type: CustomFields
+    url: https://developer.copper.com/custom-fields/
+  - type: Tags
+    url: https://developer.copper.com/tags/
+  - type: AsyncAPI
+    url: asyncapi/copper-webhooks-asyncapi.yml
+  - type: Rules
+    url: rules/copper-developer-api-rules.yml
+  - type: JSONLD
+    url: json-ld/copper-context.jsonld
+  - type: Vocabulary
+    url: vocabulary/copper-vocabulary.yml
+  - type: Capabilities
+    url: capabilities/copper-developer-api-capabilities.yml
+- aid: copper:copper-leads-api
+  name: Copper Leads API
+  description: Lead records and conversion
+  humanURL: https://developer.copper.com/
+  baseURL: https://api.copper.com/developer_api/v1
+  tags:
+  - Leads
+  properties:
+  - type: OpenAPI
+    url: openapi/copper-leads-api-openapi.yml
+  - type: Documentation
+    url: https://developer.copper.com/
+  - type: Authentication
+    url: https://developer.copper.com/introduction/requests.html
+  - type: GettingStarted
+    url: https://developer.copper.com/introduction/quick-start.html
+  - type: OAuth
+    url: https://developer.copper.com/introduction/oauth-quickstart.html
+  - type: Webhooks
+    url: https://developer.copper.com/webhooks/general/list-of-webhook-events.html
+  - type: PostmanCollection
+    url: https://developer.copper.com/introduction/postman-collection.html
+  - type: People
+    url: https://developer.copper.com/people/
+  - type: Companies
+    url: https://developer.copper.com/companies/
+  - type: Leads
+    url: https://developer.copper.com/leads/
+  - type: Opportunities
+    url: https://developer.copper.com/opportunities/
+  - type: Projects
+    url: https://developer.copper.com/projects/
+  - type: Tasks
+    url: https://developer.copper.com/tasks/
+  - type: Activities
+    url: https://developer.copper.com/activities/
+  - type: CustomFields
+    url: https://developer.copper.com/custom-fields/
+  - type: Tags
+    url: https://developer.copper.com/tags/
+  - type: AsyncAPI
+    url: asyncapi/copper-webhooks-asyncapi.yml
+  - type: Rules
+    url: rules/copper-developer-api-rules.yml
+  - type: JSONLD
+    url: json-ld/copper-context.jsonld
+  - type: Vocabulary
+    url: vocabulary/copper-vocabulary.yml
+  - type: Capabilities
+    url: capabilities/copper-developer-api-capabilities.yml
+- aid: copper:copper-opportunities-api
+  name: Copper Opportunities API
+  description: Sales opportunity pipelines
+  humanURL: https://developer.copper.com/
+  baseURL: https://api.copper.com/developer_api/v1
+  tags:
+  - Opportunities
+  properties:
+  - type: OpenAPI
+    url: openapi/copper-opportunities-api-openapi.yml
+  - type: Documentation
+    url: https://developer.copper.com/
+  - type: Authentication
+    url: https://developer.copper.com/introduction/requests.html
+  - type: GettingStarted
+    url: https://developer.copper.com/introduction/quick-start.html
+  - type: OAuth
+    url: https://developer.copper.com/introduction/oauth-quickstart.html
+  - type: Webhooks
+    url: https://developer.copper.com/webhooks/general/list-of-webhook-events.html
+  - type: PostmanCollection
+    url: https://developer.copper.com/introduction/postman-collection.html
+  - type: People
+    url: https://developer.copper.com/people/
+  - type: Companies
+    url: https://developer.copper.com/companies/
+  - type: Leads
+    url: https://developer.copper.com/leads/
+  - type: Opportunities
+    url: https://developer.copper.com/opportunities/
+  - type: Projects
+    url: https://developer.copper.com/projects/
+  - type: Tasks
+    url: https://developer.copper.com/tasks/
+  - type: Activities
+    url: https://developer.copper.com/activities/
+  - type: CustomFields
+    url: https://developer.copper.com/custom-fields/
+  - type: Tags
+    url: https://developer.copper.com/tags/
+  - type: AsyncAPI
+    url: asyncapi/copper-webhooks-asyncapi.yml
+  - type: Rules
+    url: rules/copper-developer-api-rules.yml
+  - type: JSONLD
+    url: json-ld/copper-context.jsonld
+  - type: Vocabulary
+    url: vocabulary/copper-vocabulary.yml
+  - type: Capabilities
+    url: capabilities/copper-developer-api-capabilities.yml
+- aid: copper:copper-people-api
+  name: Copper People API
+  description: People (contacts) management
+  humanURL: https://developer.copper.com/
+  baseURL: https://api.copper.com/developer_api/v1
+  tags:
+  - People
+  properties:
+  - type: OpenAPI
+    url: openapi/copper-people-api-openapi.yml
+  - type: Documentation
+    url: https://developer.copper.com/
+  - type: Authentication
+    url: https://developer.copper.com/introduction/requests.html
+  - type: GettingStarted
+    url: https://developer.copper.com/introduction/quick-start.html
+  - type: OAuth
+    url: https://developer.copper.com/introduction/oauth-quickstart.html
+  - type: Webhooks
+    url: https://developer.copper.com/webhooks/general/list-of-webhook-events.html
+  - type: PostmanCollection
+    url: https://developer.copper.com/introduction/postman-collection.html
+  - type: People
+    url: https://developer.copper.com/people/
+  - type: Companies
+    url: https://developer.copper.com/companies/
+  - type: Leads
+    url: https://developer.copper.com/leads/
+  - type: Opportunities
+    url: https://developer.copper.com/opportunities/
+  - type: Projects
+    url: https://developer.copper.com/projects/
+  - type: Tasks
+    url: https://developer.copper.com/tasks/
+  - type: Activities
+    url: https://developer.copper.com/activities/
+  - type: CustomFields
+    url: https://developer.copper.com/custom-fields/
+  - type: Tags
+    url: https://developer.copper.com/tags/
+  - type: AsyncAPI
+    url: asyncapi/copper-webhooks-asyncapi.yml
+  - type: Rules
+    url: rules/copper-developer-api-rules.yml
+  - type: JSONLD
+    url: json-ld/copper-context.jsonld
+  - type: Vocabulary
+    url: vocabulary/copper-vocabulary.yml
+  - type: Capabilities
+    url: capabilities/copper-developer-api-capabilities.yml
+- aid: copper:copper-tasks-api
+  name: Copper Tasks API
+  description: Task records management
+  humanURL: https://developer.copper.com/
+  baseURL: https://api.copper.com/developer_api/v1
+  tags:
+  - Tasks
+  properties:
+  - type: OpenAPI
+    url: openapi/copper-tasks-api-openapi.yml
+  - type: Documentation
+    url: https://developer.copper.com/
+  - type: Authentication
+    url: https://developer.copper.com/introduction/requests.html
+  - type: GettingStarted
+    url: https://developer.copper.com/introduction/quick-start.html
+  - type: OAuth
+    url: https://developer.copper.com/introduction/oauth-quickstart.html
+  - type: Webhooks
+    url: https://developer.copper.com/webhooks/general/list-of-webhook-events.html
+  - type: PostmanCollection
+    url: https://developer.copper.com/introduction/postman-collection.html
+  - type: People
+    url: https://developer.copper.com/people/
+  - type: Companies
+    url: https://developer.copper.com/companies/
+  - type: Leads
+    url: https://developer.copper.com/leads/
+  - type: Opportunities
+    url: https://developer.copper.com/opportunities/
+  - type: Projects
+    url: https://developer.copper.com/projects/
+  - type: Tasks
+    url: https://developer.copper.com/tasks/
+  - type: Activities
+    url: https://developer.copper.com/activities/
+  - type: CustomFields
+    url: https://developer.copper.com/custom-fields/
+  - type: Tags
+    url: https://developer.copper.com/tags/
+  - type: AsyncAPI
+    url: asyncapi/copper-webhooks-asyncapi.yml
+  - type: Rules
+    url: rules/copper-developer-api-rules.yml
+  - type: JSONLD
+    url: json-ld/copper-context.jsonld
+  - type: Vocabulary
+    url: vocabulary/copper-vocabulary.yml
+  - type: Capabilities
+    url: capabilities/copper-developer-api-capabilities.yml
+- aid: copper:copper-webhooks-api
+  name: Copper Webhooks API
+  description: Event subscription webhooks
+  humanURL: https://developer.copper.com/
+  baseURL: https://api.copper.com/developer_api/v1
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/copper-webhooks-api-openapi.yml
+  - type: Documentation
+    url: https://developer.copper.com/
+  - type: Authentication
+    url: https://developer.copper.com/introduction/requests.html
+  - type: GettingStarted
+    url: https://developer.copper.com/introduction/quick-start.html
+  - type: OAuth
+    url: https://developer.copper.com/introduction/oauth-quickstart.html
+  - type: Webhooks
+    url: https://developer.copper.com/webhooks/general/list-of-webhook-events.html
+  - type: PostmanCollection
+    url: https://developer.copper.com/introduction/postman-collection.html
+  - type: People
+    url: https://developer.copper.com/people/
+  - type: Companies
+    url: https://developer.copper.com/companies/
+  - type: Leads
+    url: https://developer.copper.com/leads/
+  - type: Opportunities
+    url: https://developer.copper.com/opportunities/
+  - type: Projects
+    url: https://developer.copper.com/projects/
+  - type: Tasks
+    url: https://developer.copper.com/tasks/
+  - type: Activities
+    url: https://developer.copper.com/activities/
+  - type: CustomFields
+    url: https://developer.copper.com/custom-fields/
+  - type: Tags
+    url: https://developer.copper.com/tags/
+  - type: AsyncAPI
+    url: asyncapi/copper-webhooks-asyncapi.yml
+  - type: Rules
+    url: rules/copper-developer-api-rules.yml
+  - type: JSONLD
+    url: json-ld/copper-context.jsonld
+  - type: Vocabulary
+    url: vocabulary/copper-vocabulary.yml
+  - type: Capabilities
+    url: capabilities/copper-developer-api-capabilities.yml
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/copper/overview
   - type: AgenticAccess
     url: agentic-access/copper-agentic-access.yml
   - type: TrustCenter
