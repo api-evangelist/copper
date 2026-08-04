@@ -1,0 +1,26 @@
+{
+  "provider": "copper",
+  "sources": [
+    "copper-activities-api-openapi.yml",
+    "copper-companies-api-openapi.yml",
+    "copper-leads-api-openapi.yml",
+    "copper-opportunities-api-openapi.yml",
+    "copper-people-api-openapi.yml",
+    "copper-tasks-api-openapi.yml",
+    "copper-webhooks-api-openapi.yml"
+  ],
+  "outputs": [
+    "copper-activities-api-openapi.yml",
+    "copper-companies-api-openapi.yml",
+    "copper-leads-api-openapi.yml",
+    "copper-opportunities-api-openapi.yml",
+    "copper-people-api-openapi.yml",
+    "copper-tasks-api-openapi.yml",
+    "copper-webhooks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

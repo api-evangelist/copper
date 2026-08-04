@@ -1,0 +1,1093 @@
+openapi: 3.0.3
+info:
+  title: Copper Developer API
+  version: '1.0'
+  description: >-
+    Copper is a CRM platform built natively for Google Workspace. The Copper
+    Developer API is a RESTful JSON API providing programmatic access to people,
+    companies, leads, opportunities, projects, tasks, activities, and webhooks.
+  contact:
+    name: Copper Support
+    url: https://www.copper.com/contact-us
+  license:
+    name: Proprietary
+    url: https://www.copper.com/terms-of-service
+servers:
+  - url: https://api.copper.com/developer_api/v1
+    description: Copper Developer API production server
+security:
+  - PWAccessToken: []
+    PWApplication: []
+    PWUserEmail: []
+tags:
+  - name: People
+    description: People (contacts) management
+  - name: Companies
+    description: Company records management
+  - name: Leads
+    description: Lead records and conversion
+  - name: Opportunities
+    description: Sales opportunity pipelines
+  - name: Projects
+    description: Project records management
+  - name: Tasks
+    description: Task records management
+  - name: Activities
+    description: Activity log entries
+  - name: Webhooks
+    description: Event subscription webhooks
+paths:
+  /people/search:
+    post:
+      operationId: searchPeople
+      summary: Search People
+      description: Search and list People records using filter criteria. Returns up to 200 records per page.
+      tags:
+        - People
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PeopleSearchRequest'
+      responses:
+        '200':
+          description: List of matching People records
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Person'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+  /people:
+    post:
+      operationId: createPerson
+      summary: Create a Person
+      description: Create a new Person (contact) record in Copper.
+      tags:
+        - People
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Person'
+      responses:
+        '200':
+          description: Created Person record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+  /people/{id}:
+    get:
+      operationId: getPerson
+      summary: Get a Person
+      description: Retrieve a single Person record by ID.
+      tags:
+        - People
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      responses:
+        '200':
+          description: Person record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+    put:
+      operationId: updatePerson
+      summary: Update a Person
+      description: Update an existing Person record by ID.
+      tags:
+        - People
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Person'
+      responses:
+        '200':
+          description: Updated Person record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+    delete:
+      operationId: deletePerson
+      summary: Delete a Person
+      description: Delete a Person record by ID.
+      tags:
+        - People
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      responses:
+        '200':
+          description: Deletion confirmation
+  /companies/search:
+    post:
+      operationId: searchCompanies
+      summary: Search Companies
+      description: Search and list Company records using filter criteria.
+      tags:
+        - Companies
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CompanySearchRequest'
+      responses:
+        '200':
+          description: List of matching Company records
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Company'
+  /companies:
+    post:
+      operationId: createCompany
+      summary: Create a Company
+      description: Create a new Company record in Copper.
+      tags:
+        - Companies
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Company'
+      responses:
+        '200':
+          description: Created Company record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Company'
+  /companies/{id}:
+    get:
+      operationId: getCompany
+      summary: Get a Company
+      description: Retrieve a single Company record by ID.
+      tags:
+        - Companies
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      responses:
+        '200':
+          description: Company record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Company'
+    put:
+      operationId: updateCompany
+      summary: Update a Company
+      tags:
+        - Companies
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Company'
+      responses:
+        '200':
+          description: Updated Company record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Company'
+    delete:
+      operationId: deleteCompany
+      summary: Delete a Company
+      tags:
+        - Companies
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      responses:
+        '200':
+          description: Deletion confirmation
+  /leads/search:
+    post:
+      operationId: searchLeads
+      summary: Search Leads
+      description: Search and list Lead records using filter criteria.
+      tags:
+        - Leads
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LeadSearchRequest'
+      responses:
+        '200':
+          description: List of matching Lead records
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Lead'
+  /leads:
+    post:
+      operationId: createLead
+      summary: Create a Lead
+      tags:
+        - Leads
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Lead'
+      responses:
+        '200':
+          description: Created Lead record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lead'
+  /leads/{id}:
+    get:
+      operationId: getLead
+      summary: Get a Lead
+      tags:
+        - Leads
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      responses:
+        '200':
+          description: Lead record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lead'
+    put:
+      operationId: updateLead
+      summary: Update a Lead
+      tags:
+        - Leads
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Lead'
+      responses:
+        '200':
+          description: Updated Lead record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lead'
+    delete:
+      operationId: deleteLead
+      summary: Delete a Lead
+      tags:
+        - Leads
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      responses:
+        '200':
+          description: Deletion confirmation
+  /leads/{id}/convert:
+    post:
+      operationId: convertLead
+      summary: Convert a Lead
+      description: Convert a Lead into a Person, Company, and Opportunity.
+      tags:
+        - Leads
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      responses:
+        '200':
+          description: Conversion result with new Person, Company, and Opportunity references
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  person_id:
+                    type: integer
+                  company_id:
+                    type: integer
+                  opportunity_id:
+                    type: integer
+  /opportunities/search:
+    post:
+      operationId: searchOpportunities
+      summary: Search Opportunities
+      tags:
+        - Opportunities
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page_number:
+                  type: integer
+                page_size:
+                  type: integer
+                sort_by:
+                  type: string
+      responses:
+        '200':
+          description: List of matching Opportunity records
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Opportunity'
+  /opportunities:
+    post:
+      operationId: createOpportunity
+      summary: Create an Opportunity
+      tags:
+        - Opportunities
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Opportunity'
+      responses:
+        '200':
+          description: Created Opportunity record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Opportunity'
+  /opportunities/{id}:
+    get:
+      operationId: getOpportunity
+      summary: Get an Opportunity
+      tags:
+        - Opportunities
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      responses:
+        '200':
+          description: Opportunity record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Opportunity'
+    put:
+      operationId: updateOpportunity
+      summary: Update an Opportunity
+      tags:
+        - Opportunities
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Opportunity'
+      responses:
+        '200':
+          description: Updated Opportunity record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Opportunity'
+    delete:
+      operationId: deleteOpportunity
+      summary: Delete an Opportunity
+      tags:
+        - Opportunities
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      responses:
+        '200':
+          description: Deletion confirmation
+  /tasks/search:
+    post:
+      operationId: searchTasks
+      summary: Search Tasks
+      tags:
+        - Tasks
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: List of Task records
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+  /tasks:
+    post:
+      operationId: createTask
+      summary: Create a Task
+      tags:
+        - Tasks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Task'
+      responses:
+        '200':
+          description: Created Task record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+  /tasks/{id}:
+    get:
+      operationId: getTask
+      summary: Get a Task
+      tags:
+        - Tasks
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      responses:
+        '200':
+          description: Task record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+    put:
+      operationId: updateTask
+      summary: Update a Task
+      tags:
+        - Tasks
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Task'
+      responses:
+        '200':
+          description: Updated Task record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+    delete:
+      operationId: deleteTask
+      summary: Delete a Task
+      tags:
+        - Tasks
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      responses:
+        '200':
+          description: Deletion confirmation
+  /activities:
+    post:
+      operationId: createActivity
+      summary: Create an Activity
+      tags:
+        - Activities
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Activity'
+      responses:
+        '200':
+          description: Created Activity record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Activity'
+  /activities/search:
+    post:
+      operationId: searchActivities
+      summary: Search Activities
+      tags:
+        - Activities
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: List of matching Activity records
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Activity'
+  /webhooks:
+    get:
+      operationId: listWebhooks
+      summary: List Webhooks
+      tags:
+        - Webhooks
+      responses:
+        '200':
+          description: List of subscribed webhooks
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Webhook'
+    post:
+      operationId: createWebhook
+      summary: Create a Webhook subscription
+      tags:
+        - Webhooks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Webhook'
+      responses:
+        '200':
+          description: Created webhook subscription
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Webhook'
+  /webhooks/{id}:
+    delete:
+      operationId: deleteWebhook
+      summary: Delete a Webhook
+      tags:
+        - Webhooks
+      parameters:
+        - $ref: '#/components/parameters/IdPathParam'
+      responses:
+        '200':
+          description: Deletion confirmation
+components:
+  securitySchemes:
+    PWAccessToken:
+      type: apiKey
+      in: header
+      name: X-PW-AccessToken
+      description: API access token for the user
+    PWApplication:
+      type: apiKey
+      in: header
+      name: X-PW-Application
+      description: Application identifier, set to 'developer_api'
+    PWUserEmail:
+      type: apiKey
+      in: header
+      name: X-PW-UserEmail
+      description: Email address of the API token owner
+  parameters:
+    IdPathParam:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int64
+      description: The unique resource identifier
+  responses:
+    Unauthorized:
+      description: Authentication failed or missing
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    RateLimited:
+      description: Rate limit exceeded
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  schemas:
+    Person:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        prefix:
+          type: string
+          nullable: true
+        first_name:
+          type: string
+        last_name:
+          type: string
+        suffix:
+          type: string
+          nullable: true
+        title:
+          type: string
+        company_id:
+          type: integer
+          nullable: true
+        company_name:
+          type: string
+          nullable: true
+        emails:
+          type: array
+          items:
+            type: object
+            properties:
+              email:
+                type: string
+                format: email
+              category:
+                type: string
+        phone_numbers:
+          type: array
+          items:
+            type: object
+            properties:
+              number:
+                type: string
+              category:
+                type: string
+        socials:
+          type: array
+          items:
+            type: object
+        websites:
+          type: array
+          items:
+            type: object
+        address:
+          $ref: '#/components/schemas/Address'
+        assignee_id:
+          type: integer
+          nullable: true
+        contact_type_id:
+          type: integer
+        details:
+          type: string
+          nullable: true
+        tags:
+          type: array
+          items:
+            type: string
+        custom_fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomFieldValue'
+        date_created:
+          type: integer
+        date_modified:
+          type: integer
+    Company:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        assignee_id:
+          type: integer
+          nullable: true
+        contact_type_id:
+          type: integer
+        details:
+          type: string
+          nullable: true
+        email_domain:
+          type: string
+        phone_numbers:
+          type: array
+          items:
+            type: object
+        socials:
+          type: array
+          items:
+            type: object
+        websites:
+          type: array
+          items:
+            type: object
+        address:
+          $ref: '#/components/schemas/Address'
+        tags:
+          type: array
+          items:
+            type: string
+        custom_fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomFieldValue'
+        date_created:
+          type: integer
+        date_modified:
+          type: integer
+    Lead:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        prefix:
+          type: string
+          nullable: true
+        first_name:
+          type: string
+        last_name:
+          type: string
+        title:
+          type: string
+        company_name:
+          type: string
+        email:
+          type: object
+          properties:
+            email:
+              type: string
+              format: email
+            category:
+              type: string
+        phone_numbers:
+          type: array
+          items:
+            type: object
+        status:
+          type: string
+        status_id:
+          type: integer
+        source_id:
+          type: integer
+          nullable: true
+        monetary_value:
+          type: number
+          nullable: true
+        details:
+          type: string
+          nullable: true
+        tags:
+          type: array
+          items:
+            type: string
+        custom_fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomFieldValue'
+    Opportunity:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        assignee_id:
+          type: integer
+          nullable: true
+        close_date:
+          type: string
+          nullable: true
+        company_id:
+          type: integer
+          nullable: true
+        company_name:
+          type: string
+          nullable: true
+        customer_source_id:
+          type: integer
+          nullable: true
+        details:
+          type: string
+          nullable: true
+        loss_reason_id:
+          type: integer
+          nullable: true
+        pipeline_id:
+          type: integer
+        pipeline_stage_id:
+          type: integer
+        primary_contact_id:
+          type: integer
+          nullable: true
+        priority:
+          type: string
+        status:
+          type: string
+          enum:
+            - Open
+            - Won
+            - Lost
+            - Abandoned
+        tags:
+          type: array
+          items:
+            type: string
+        win_probability:
+          type: integer
+          nullable: true
+        monetary_value:
+          type: number
+          nullable: true
+        custom_fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomFieldValue'
+    Task:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        related_resource:
+          type: object
+          properties:
+            id:
+              type: integer
+            type:
+              type: string
+        assignee_id:
+          type: integer
+          nullable: true
+        due_date:
+          type: integer
+          nullable: true
+        reminder_date:
+          type: integer
+          nullable: true
+        completed_date:
+          type: integer
+          nullable: true
+        priority:
+          type: string
+          enum:
+            - None
+            - High
+        status:
+          type: string
+          enum:
+            - Open
+            - Completed
+        details:
+          type: string
+          nullable: true
+        tags:
+          type: array
+          items:
+            type: string
+        custom_fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomFieldValue'
+    Activity:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        parent:
+          type: object
+          properties:
+            id:
+              type: integer
+            type:
+              type: string
+              enum:
+                - lead
+                - person
+                - company
+                - opportunity
+                - project
+                - task
+        type:
+          type: object
+          properties:
+            id:
+              type: integer
+            category:
+              type: string
+        details:
+          type: string
+        user_id:
+          type: integer
+        activity_date:
+          type: integer
+        old_value:
+          type: object
+          nullable: true
+        new_value:
+          type: object
+          nullable: true
+        date_created:
+          type: integer
+        date_modified:
+          type: integer
+    Webhook:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        target:
+          type: string
+          format: uri
+        event:
+          type: string
+          enum:
+            - new
+            - update
+            - delete
+        type:
+          type: string
+          enum:
+            - person
+            - company
+            - lead
+            - opportunity
+            - project
+            - task
+        secret:
+          type: object
+          properties:
+            secret:
+              type: string
+    Address:
+      type: object
+      properties:
+        street:
+          type: string
+          nullable: true
+        city:
+          type: string
+          nullable: true
+        state:
+          type: string
+          nullable: true
+        postal_code:
+          type: string
+          nullable: true
+        country:
+          type: string
+          nullable: true
+    CustomFieldValue:
+      type: object
+      properties:
+        custom_field_definition_id:
+          type: integer
+        value:
+          oneOf:
+            - type: string
+            - type: number
+            - type: integer
+            - type: boolean
+            - type: array
+              items:
+                type: integer
+            - type: 'null'
+    PeopleSearchRequest:
+      type: object
+      properties:
+        page_number:
+          type: integer
+          default: 1
+        page_size:
+          type: integer
+          default: 20
+          maximum: 200
+        sort_by:
+          type: string
+        name:
+          type: string
+        emails:
+          type: array
+          items:
+            type: string
+        phone_numbers:
+          type: array
+          items:
+            type: string
+        assignee_ids:
+          type: array
+          items:
+            type: integer
+        tags:
+          type: array
+          items:
+            type: string
+    CompanySearchRequest:
+      type: object
+      properties:
+        page_number:
+          type: integer
+        page_size:
+          type: integer
+        sort_by:
+          type: string
+        name:
+          type: string
+        assignee_ids:
+          type: array
+          items:
+            type: integer
+        tags:
+          type: array
+          items:
+            type: string
+    LeadSearchRequest:
+      type: object
+      properties:
+        page_number:
+          type: integer
+        page_size:
+          type: integer
+        sort_by:
+          type: string
+        name:
+          type: string
+        emails:
+          type: array
+          items:
+            type: string
+        status_ids:
+          type: array
+          items:
+            type: integer
+        tags:
+          type: array
+          items:
+            type: string
+    Error:
+      type: object
+      properties:
+        status:
+          type: integer
+        message:
+          type: string

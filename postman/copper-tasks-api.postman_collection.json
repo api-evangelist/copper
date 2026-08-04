@@ -1,0 +1,544 @@
+{
+  "info": {
+    "_postman_id": "6b04b6c6-ee49-461f-a002-36af36c7a3da",
+    "name": "Copper Developer Activities Tasks API",
+    "description": "Copper is a CRM platform built natively for Google Workspace. The Copper Developer API is a RESTful JSON API providing programmatic access to people, companies, leads, opportunities, projects, tasks, activities, and webhooks.\n\nContact Support:\n Name: Copper Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:26:25.000Z",
+    "updatedAt": "2026-07-28T01:26:25.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-6b04b6c6-ee49-461f-a002-36af36c7a3da"
+  },
+  "item": [
+    {
+      "name": "tasks",
+      "item": [
+        {
+          "name": "search",
+          "item": [
+            {
+              "name": "Search Tasks",
+              "id": "137842ed-0c15-4032-87b3-6aa296d097dc",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/tasks/search",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "tasks",
+                    "search"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "0cf7ac5a-b88f-4b9e-9dfe-5a52e0a8b4b7",
+                  "name": "List of Task records",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "X-PW-AccessToken",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/tasks/search",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "tasks",
+                        "search"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"related_resource\": {\n      \"id\": \"<integer>\",\n      \"type\": \"<string>\"\n    },\n    \"assignee_id\": \"<integer>\",\n    \"due_date\": \"<integer>\",\n    \"reminder_date\": \"<integer>\",\n    \"completed_date\": \"<integer>\",\n    \"priority\": \"High\",\n    \"status\": \"Completed\",\n    \"details\": \"<string>\",\n    \"tags\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      },\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      }\n    ]\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"related_resource\": {\n      \"id\": \"<integer>\",\n      \"type\": \"<string>\"\n    },\n    \"assignee_id\": \"<integer>\",\n    \"due_date\": \"<integer>\",\n    \"reminder_date\": \"<integer>\",\n    \"completed_date\": \"<integer>\",\n    \"priority\": \"High\",\n    \"status\": \"Completed\",\n    \"details\": \"<string>\",\n    \"tags\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      },\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      }\n    ]\n  }\n]",
+                  "createdAt": "2026-07-28T01:26:26.000Z",
+                  "updatedAt": "2026-07-28T01:26:26.000Z",
+                  "uid": "35240-0cf7ac5a-b88f-4b9e-9dfe-5a52e0a8b4b7"
+                }
+              ],
+              "createdAt": "2026-07-28T01:26:25.000Z",
+              "updatedAt": "2026-07-28T01:26:25.000Z",
+              "uid": "35240-137842ed-0c15-4032-87b3-6aa296d097dc"
+            }
+          ],
+          "id": "5cc122f6-681c-42c3-8c13-c9008e9d436e",
+          "createdAt": "2026-07-28T01:26:25.000Z",
+          "updatedAt": "2026-07-28T01:26:25.000Z",
+          "uid": "35240-5cc122f6-681c-42c3-8c13-c9008e9d436e"
+        },
+        {
+          "name": "{id}",
+          "item": [
+            {
+              "name": "Get a Task",
+              "id": "1afd5416-adde-4181-ab0c-3ee86d3410cf",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/tasks/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "tasks",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "77389735-b6d1-419f-b04c-31df001d4b68",
+                      "key": "id",
+                      "value": "<long>",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "934f6228-4d95-49cb-b2cc-8e1f291f40c1",
+                  "name": "Task record",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "X-PW-AccessToken",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/tasks/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "tasks",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"related_resource\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"due_date\": \"<integer>\",\n  \"reminder_date\": \"<integer>\",\n  \"completed_date\": \"<integer>\",\n  \"priority\": \"High\",\n  \"status\": \"Completed\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                  "createdAt": "2026-07-28T01:26:26.000Z",
+                  "updatedAt": "2026-07-28T01:26:26.000Z",
+                  "uid": "35240-934f6228-4d95-49cb-b2cc-8e1f291f40c1"
+                }
+              ],
+              "createdAt": "2026-07-28T01:26:25.000Z",
+              "updatedAt": "2026-07-28T01:26:25.000Z",
+              "uid": "35240-1afd5416-adde-4181-ab0c-3ee86d3410cf"
+            },
+            {
+              "name": "Update a Task",
+              "id": "b41030a1-6892-47bb-ad32-045d8451048d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"related_resource\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"due_date\": \"<integer>\",\n  \"reminder_date\": \"<integer>\",\n  \"completed_date\": \"<integer>\",\n  \"priority\": \"High\",\n  \"status\": \"Completed\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/tasks/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "tasks",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "3c176bf2-320b-4963-8f8a-d5de352c8a08",
+                      "key": "id",
+                      "value": "<long>",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "b0622b96-0f21-4509-9e3e-8c40760bc3fb",
+                  "name": "Updated Task record",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "X-PW-AccessToken",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"related_resource\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"due_date\": \"<integer>\",\n  \"reminder_date\": \"<integer>\",\n  \"completed_date\": \"<integer>\",\n  \"priority\": \"High\",\n  \"status\": \"Completed\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/tasks/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "tasks",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"related_resource\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"due_date\": \"<integer>\",\n  \"reminder_date\": \"<integer>\",\n  \"completed_date\": \"<integer>\",\n  \"priority\": \"High\",\n  \"status\": \"Completed\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                  "createdAt": "2026-07-28T01:26:26.000Z",
+                  "updatedAt": "2026-07-28T01:26:26.000Z",
+                  "uid": "35240-b0622b96-0f21-4509-9e3e-8c40760bc3fb"
+                }
+              ],
+              "createdAt": "2026-07-28T01:26:25.000Z",
+              "updatedAt": "2026-07-28T01:26:25.000Z",
+              "uid": "35240-b41030a1-6892-47bb-ad32-045d8451048d"
+            },
+            {
+              "name": "Delete a Task",
+              "id": "0a06a69b-a48c-441d-bc43-c8c6c3377a34",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/tasks/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "tasks",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "84e875f1-0bc6-4665-85d6-713b31bd2a28",
+                      "key": "id",
+                      "value": "<long>",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "31265cf0-6d80-4b0b-87a1-5018c4e6eed4",
+                  "name": "Deletion confirmation",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "X-PW-AccessToken",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/tasks/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "tasks",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:26:26.000Z",
+                  "updatedAt": "2026-07-28T01:26:26.000Z",
+                  "uid": "35240-31265cf0-6d80-4b0b-87a1-5018c4e6eed4"
+                }
+              ],
+              "createdAt": "2026-07-28T01:26:25.000Z",
+              "updatedAt": "2026-07-28T01:26:25.000Z",
+              "uid": "35240-0a06a69b-a48c-441d-bc43-c8c6c3377a34"
+            }
+          ],
+          "id": "21471059-3e7a-45b5-b667-2600be033854",
+          "createdAt": "2026-07-28T01:26:25.000Z",
+          "updatedAt": "2026-07-28T01:26:25.000Z",
+          "uid": "35240-21471059-3e7a-45b5-b667-2600be033854"
+        },
+        {
+          "name": "Create a Task",
+          "id": "e81a9441-f5e5-4e83-8a1d-0ce4f003c9cf",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"related_resource\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"due_date\": \"<integer>\",\n  \"reminder_date\": \"<integer>\",\n  \"completed_date\": \"<integer>\",\n  \"priority\": \"High\",\n  \"status\": \"Completed\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/tasks",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "tasks"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "6f51d438-5198-4aa0-86cb-d4208a9dd9e1",
+              "name": "Created Task record",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"related_resource\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"due_date\": \"<integer>\",\n  \"reminder_date\": \"<integer>\",\n  \"completed_date\": \"<integer>\",\n  \"priority\": \"High\",\n  \"status\": \"Completed\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/tasks",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "tasks"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"related_resource\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"due_date\": \"<integer>\",\n  \"reminder_date\": \"<integer>\",\n  \"completed_date\": \"<integer>\",\n  \"priority\": \"High\",\n  \"status\": \"Completed\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "createdAt": "2026-07-28T01:26:26.000Z",
+              "updatedAt": "2026-07-28T01:26:26.000Z",
+              "uid": "35240-6f51d438-5198-4aa0-86cb-d4208a9dd9e1"
+            }
+          ],
+          "createdAt": "2026-07-28T01:26:25.000Z",
+          "updatedAt": "2026-07-28T01:26:25.000Z",
+          "uid": "35240-e81a9441-f5e5-4e83-8a1d-0ce4f003c9cf"
+        }
+      ],
+      "id": "0c815b67-9ad5-4782-be23-bce6e925c1e9",
+      "createdAt": "2026-07-28T01:26:25.000Z",
+      "updatedAt": "2026-07-28T01:26:25.000Z",
+      "uid": "35240-0c815b67-9ad5-4782-be23-bce6e925c1e9"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-PW-AccessToken",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.copper.com/developer_api/v1"
+    }
+  ]
+}

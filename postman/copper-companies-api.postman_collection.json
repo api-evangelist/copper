@@ -1,0 +1,547 @@
+{
+  "info": {
+    "_postman_id": "c3aa0847-949d-4104-939e-8e600df14b38",
+    "name": "Copper Developer Activities Companies API",
+    "description": "Copper is a CRM platform built natively for Google Workspace. The Copper Developer API is a RESTful JSON API providing programmatic access to people, companies, leads, opportunities, projects, tasks, activities, and webhooks.\n\nContact Support:\n Name: Copper Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:26:21.000Z",
+    "updatedAt": "2026-07-28T01:26:21.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-c3aa0847-949d-4104-939e-8e600df14b38"
+  },
+  "item": [
+    {
+      "name": "companies",
+      "item": [
+        {
+          "name": "search",
+          "item": [
+            {
+              "name": "Search Companies",
+              "id": "b60643a2-09d2-45aa-b303-628dd2d8e63b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"page_number\": \"<integer>\",\n  \"page_size\": \"<integer>\",\n  \"sort_by\": \"<string>\",\n  \"name\": \"<string>\",\n  \"assignee_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/companies/search",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "companies",
+                    "search"
+                  ]
+                },
+                "description": "Search and list Company records using filter criteria."
+              },
+              "response": [
+                {
+                  "id": "c03fe1db-4e57-4264-8ded-ed74b54c8c4f",
+                  "name": "List of matching Company records",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "X-PW-AccessToken",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"page_number\": \"<integer>\",\n  \"page_size\": \"<integer>\",\n  \"sort_by\": \"<string>\",\n  \"name\": \"<string>\",\n  \"assignee_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/companies/search",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "companies",
+                        "search"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"assignee_id\": \"<integer>\",\n    \"contact_type_id\": \"<integer>\",\n    \"details\": \"<string>\",\n    \"email_domain\": \"<string>\",\n    \"address\": {\n      \"street\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"postal_code\": \"<string>\",\n      \"country\": \"<string>\"\n    },\n    \"tags\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      },\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      }\n    ],\n    \"date_created\": \"<integer>\",\n    \"date_modified\": \"<integer>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\",\n    \"assignee_id\": \"<integer>\",\n    \"contact_type_id\": \"<integer>\",\n    \"details\": \"<string>\",\n    \"email_domain\": \"<string>\",\n    \"address\": {\n      \"street\": \"<string>\",\n      \"city\": \"<string>\",\n      \"state\": \"<string>\",\n      \"postal_code\": \"<string>\",\n      \"country\": \"<string>\"\n    },\n    \"tags\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      },\n      {\n        \"custom_field_definition_id\": \"<integer>\",\n        \"value\": \"<string>\"\n      }\n    ],\n    \"date_created\": \"<integer>\",\n    \"date_modified\": \"<integer>\"\n  }\n]",
+                  "createdAt": "2026-07-28T01:26:22.000Z",
+                  "updatedAt": "2026-07-28T01:26:22.000Z",
+                  "uid": "35240-c03fe1db-4e57-4264-8ded-ed74b54c8c4f"
+                }
+              ],
+              "createdAt": "2026-07-28T01:26:22.000Z",
+              "updatedAt": "2026-07-28T01:26:22.000Z",
+              "uid": "35240-b60643a2-09d2-45aa-b303-628dd2d8e63b"
+            }
+          ],
+          "id": "164e553b-9c81-43a0-ae3c-3495b6e8187b",
+          "createdAt": "2026-07-28T01:26:22.000Z",
+          "updatedAt": "2026-07-28T01:26:22.000Z",
+          "uid": "35240-164e553b-9c81-43a0-ae3c-3495b6e8187b"
+        },
+        {
+          "name": "{id}",
+          "item": [
+            {
+              "name": "Get a Company",
+              "id": "2750d54d-2498-4a1e-8fac-0e0c6ddd9822",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/companies/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "companies",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "7ffcf604-00db-41b5-ad7c-8789c8ce1c98",
+                      "key": "id",
+                      "value": "<long>",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "description": "Retrieve a single Company record by ID."
+              },
+              "response": [
+                {
+                  "id": "b8c592f7-1255-4e7f-a1c6-79997e5273ee",
+                  "name": "Company record",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "X-PW-AccessToken",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/companies/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "companies",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"email_domain\": \"<string>\",\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+                  "createdAt": "2026-07-28T01:26:22.000Z",
+                  "updatedAt": "2026-07-28T01:26:22.000Z",
+                  "uid": "35240-b8c592f7-1255-4e7f-a1c6-79997e5273ee"
+                }
+              ],
+              "createdAt": "2026-07-28T01:26:22.000Z",
+              "updatedAt": "2026-07-28T01:26:22.000Z",
+              "uid": "35240-2750d54d-2498-4a1e-8fac-0e0c6ddd9822"
+            },
+            {
+              "name": "Update a Company",
+              "id": "483383db-6ade-437a-8119-94fd04e58753",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"email_domain\": \"<string>\",\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/companies/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "companies",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "c6c823d8-9a02-43d8-a13f-5ef0f976185b",
+                      "key": "id",
+                      "value": "<long>",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "e6e19367-402a-48e5-83a2-1c680aede5e7",
+                  "name": "Updated Company record",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "X-PW-AccessToken",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"email_domain\": \"<string>\",\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/companies/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "companies",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"email_domain\": \"<string>\",\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+                  "createdAt": "2026-07-28T01:26:22.000Z",
+                  "updatedAt": "2026-07-28T01:26:22.000Z",
+                  "uid": "35240-e6e19367-402a-48e5-83a2-1c680aede5e7"
+                }
+              ],
+              "createdAt": "2026-07-28T01:26:22.000Z",
+              "updatedAt": "2026-07-28T01:26:22.000Z",
+              "uid": "35240-483383db-6ade-437a-8119-94fd04e58753"
+            },
+            {
+              "name": "Delete a Company",
+              "id": "4ab1a2c4-d261-40bb-a528-86fb14baf4c3",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/companies/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "companies",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "id": "e871cde5-0e00-4a62-aa25-6e2d574ccd14",
+                      "key": "id",
+                      "value": "<long>",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "2f59b17a-9c5c-4058-8a4e-292438b03c33",
+                  "name": "Deletion confirmation",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "X-PW-AccessToken",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/companies/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "companies",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:26:22.000Z",
+                  "updatedAt": "2026-07-28T01:26:22.000Z",
+                  "uid": "35240-2f59b17a-9c5c-4058-8a4e-292438b03c33"
+                }
+              ],
+              "createdAt": "2026-07-28T01:26:22.000Z",
+              "updatedAt": "2026-07-28T01:26:22.000Z",
+              "uid": "35240-4ab1a2c4-d261-40bb-a528-86fb14baf4c3"
+            }
+          ],
+          "id": "ffa67f06-eabf-407c-af85-f2b955ec545e",
+          "createdAt": "2026-07-28T01:26:22.000Z",
+          "updatedAt": "2026-07-28T01:26:22.000Z",
+          "uid": "35240-ffa67f06-eabf-407c-af85-f2b955ec545e"
+        },
+        {
+          "name": "Create a Company",
+          "id": "2dcae5e5-3911-4384-89a1-664289742d4b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"email_domain\": \"<string>\",\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/companies",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "companies"
+              ]
+            },
+            "description": "Create a new Company record in Copper."
+          },
+          "response": [
+            {
+              "id": "1ec8d7bf-a9b8-4af1-889b-c876189dea89",
+              "name": "Created Company record",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"email_domain\": \"<string>\",\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/companies",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "companies"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"email_domain\": \"<string>\",\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "createdAt": "2026-07-28T01:26:22.000Z",
+              "updatedAt": "2026-07-28T01:26:22.000Z",
+              "uid": "35240-1ec8d7bf-a9b8-4af1-889b-c876189dea89"
+            }
+          ],
+          "createdAt": "2026-07-28T01:26:22.000Z",
+          "updatedAt": "2026-07-28T01:26:22.000Z",
+          "uid": "35240-2dcae5e5-3911-4384-89a1-664289742d4b"
+        }
+      ],
+      "id": "58362308-a4b8-419c-ab57-1a57ba500b4c",
+      "createdAt": "2026-07-28T01:26:22.000Z",
+      "updatedAt": "2026-07-28T01:26:22.000Z",
+      "uid": "35240-58362308-a4b8-419c-ab57-1a57ba500b4c"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-PW-AccessToken",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.copper.com/developer_api/v1"
+    }
+  ]
+}
