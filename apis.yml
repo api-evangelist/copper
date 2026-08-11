@@ -90,8 +90,6 @@ apis:
     url: json-ld/copper-context.jsonld
   - type: Vocabulary
     url: vocabulary/copper-vocabulary.yml
-  - type: Capabilities
-    url: capabilities/copper-developer-api-capabilities.yml
 - aid: copper:copper-companies-api
   name: Copper Companies API
   description: Company records management
@@ -140,8 +138,6 @@ apis:
     url: json-ld/copper-context.jsonld
   - type: Vocabulary
     url: vocabulary/copper-vocabulary.yml
-  - type: Capabilities
-    url: capabilities/copper-developer-api-capabilities.yml
 - aid: copper:copper-leads-api
   name: Copper Leads API
   description: Lead records and conversion
@@ -190,8 +186,6 @@ apis:
     url: json-ld/copper-context.jsonld
   - type: Vocabulary
     url: vocabulary/copper-vocabulary.yml
-  - type: Capabilities
-    url: capabilities/copper-developer-api-capabilities.yml
 - aid: copper:copper-opportunities-api
   name: Copper Opportunities API
   description: Sales opportunity pipelines
@@ -240,8 +234,6 @@ apis:
     url: json-ld/copper-context.jsonld
   - type: Vocabulary
     url: vocabulary/copper-vocabulary.yml
-  - type: Capabilities
-    url: capabilities/copper-developer-api-capabilities.yml
 - aid: copper:copper-people-api
   name: Copper People API
   description: People (contacts) management
@@ -290,8 +282,6 @@ apis:
     url: json-ld/copper-context.jsonld
   - type: Vocabulary
     url: vocabulary/copper-vocabulary.yml
-  - type: Capabilities
-    url: capabilities/copper-developer-api-capabilities.yml
 - aid: copper:copper-tasks-api
   name: Copper Tasks API
   description: Task records management
@@ -340,8 +330,6 @@ apis:
     url: json-ld/copper-context.jsonld
   - type: Vocabulary
     url: vocabulary/copper-vocabulary.yml
-  - type: Capabilities
-    url: capabilities/copper-developer-api-capabilities.yml
 - aid: copper:copper-webhooks-api
   name: Copper Webhooks API
   description: Event subscription webhooks
@@ -390,8 +378,6 @@ apis:
     url: json-ld/copper-context.jsonld
   - type: Vocabulary
     url: vocabulary/copper-vocabulary.yml
-  - type: Capabilities
-    url: capabilities/copper-developer-api-capabilities.yml
 common:
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/copper/overview
