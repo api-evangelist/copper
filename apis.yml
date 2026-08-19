@@ -40,7 +40,7 @@ tags:
   - Tasks
 created: '2025-01-07'
 modified: '2026-05-30'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 apis:
 - aid: copper:copper-activities-api
   name: Copper Activities API
