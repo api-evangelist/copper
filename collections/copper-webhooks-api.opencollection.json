@@ -1,0 +1,71 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Copper Developer Activities Webhooks API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-PW-AccessToken",
+      "value": "{{X-PW-AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.copper.com/developer_api/v1/webhooks"
+          },
+          "docs": "List Webhooks"
+        },
+        {
+          "info": {
+            "name": "Create a Webhook subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.copper.com/developer_api/v1/webhooks",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a Webhook subscription"
+        },
+        {
+          "info": {
+            "name": "Delete a Webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.copper.com/developer_api/v1/webhooks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The unique resource identifier"
+              }
+            ]
+          },
+          "docs": "Delete a Webhook"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,136 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Copper Developer Activities Leads API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-PW-AccessToken",
+      "value": "{{X-PW-AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Leads",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search Leads",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.copper.com/developer_api/v1/leads/search",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Search and list Lead records using filter criteria."
+        },
+        {
+          "info": {
+            "name": "Create a Lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.copper.com/developer_api/v1/leads",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a Lead"
+        },
+        {
+          "info": {
+            "name": "Get a Lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.copper.com/developer_api/v1/leads/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The unique resource identifier"
+              }
+            ]
+          },
+          "docs": "Get a Lead"
+        },
+        {
+          "info": {
+            "name": "Update a Lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.copper.com/developer_api/v1/leads/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The unique resource identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a Lead"
+        },
+        {
+          "info": {
+            "name": "Delete a Lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.copper.com/developer_api/v1/leads/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The unique resource identifier"
+              }
+            ]
+          },
+          "docs": "Delete a Lead"
+        },
+        {
+          "info": {
+            "name": "Convert a Lead",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.copper.com/developer_api/v1/leads/:id/convert",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The unique resource identifier"
+              }
+            ]
+          },
+          "docs": "Convert a Lead into a Person, Company, and Opportunity."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

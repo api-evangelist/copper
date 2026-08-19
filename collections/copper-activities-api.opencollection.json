@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Copper Developer Activities API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-PW-AccessToken",
+      "value": "{{X-PW-AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Activities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create an Activity",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.copper.com/developer_api/v1/activities",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an Activity"
+        },
+        {
+          "info": {
+            "name": "Search Activities",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.copper.com/developer_api/v1/activities/search",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Search Activities"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

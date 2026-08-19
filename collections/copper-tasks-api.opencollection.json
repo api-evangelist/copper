@@ -1,0 +1,117 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Copper Developer Activities Tasks API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-PW-AccessToken",
+      "value": "{{X-PW-AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tasks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search Tasks",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.copper.com/developer_api/v1/tasks/search",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Search Tasks"
+        },
+        {
+          "info": {
+            "name": "Create a Task",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.copper.com/developer_api/v1/tasks",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a Task"
+        },
+        {
+          "info": {
+            "name": "Get a Task",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.copper.com/developer_api/v1/tasks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The unique resource identifier"
+              }
+            ]
+          },
+          "docs": "Get a Task"
+        },
+        {
+          "info": {
+            "name": "Update a Task",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.copper.com/developer_api/v1/tasks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The unique resource identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a Task"
+        },
+        {
+          "info": {
+            "name": "Delete a Task",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.copper.com/developer_api/v1/tasks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The unique resource identifier"
+              }
+            ]
+          },
+          "docs": "Delete a Task"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

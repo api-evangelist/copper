@@ -1,0 +1,533 @@
+{
+  "item": [
+    {
+      "id": "57d615b4-4d64-47dd-ae93-6e998baac90a",
+      "name": "Opportunities",
+      "description": {
+        "content": "Sales opportunity pipelines",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9cb8ce6a-40af-4f2d-958b-45be47c3b8cd",
+          "name": "Search Opportunities",
+          "request": {
+            "name": "Search Opportunities",
+            "description": {},
+            "url": {
+              "path": [
+                "opportunities",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"page_number\": \"<integer>\",\n  \"page_size\": \"<integer>\",\n  \"sort_by\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c3548340-6e3e-49ed-bd9a-a28a7db30307",
+              "name": "List of matching Opportunity records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "opportunities",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"page_number\": \"<integer>\",\n  \"page_size\": \"<integer>\",\n  \"sort_by\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 3405,\n    \"name\": \"string\",\n    \"assignee_id\": 9596,\n    \"close_date\": \"string\",\n    \"company_id\": 5753,\n    \"company_name\": \"string\",\n    \"customer_source_id\": 7963,\n    \"details\": \"string\",\n    \"loss_reason_id\": 1531,\n    \"pipeline_id\": 5544,\n    \"pipeline_stage_id\": 2998,\n    \"primary_contact_id\": 4715,\n    \"priority\": \"string\",\n    \"status\": \"Lost\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"win_probability\": 5781,\n    \"monetary_value\": 4668.5637825941585,\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": 1504,\n        \"value\": \"string\"\n      },\n      {\n        \"custom_field_definition_id\": 5965,\n        \"value\": \"string\"\n      }\n    ]\n  },\n  {\n    \"id\": 6578,\n    \"name\": \"string\",\n    \"assignee_id\": 3906,\n    \"close_date\": \"string\",\n    \"company_id\": 5638,\n    \"company_name\": \"string\",\n    \"customer_source_id\": 3711,\n    \"details\": \"string\",\n    \"loss_reason_id\": 2463,\n    \"pipeline_id\": 7075,\n    \"pipeline_stage_id\": 283,\n    \"primary_contact_id\": 9518,\n    \"priority\": \"string\",\n    \"status\": \"Lost\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"win_probability\": 6542,\n    \"monetary_value\": 4116.065056989954,\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": 669,\n        \"value\": \"string\"\n      },\n      {\n        \"custom_field_definition_id\": 3319,\n        \"value\": \"string\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6a112718-05d1-418c-bfee-905c076e1ae2",
+          "name": "Create an Opportunity",
+          "request": {
+            "name": "Create an Opportunity",
+            "description": {},
+            "url": {
+              "path": [
+                "opportunities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"close_date\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"customer_source_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"loss_reason_id\": \"<integer>\",\n  \"pipeline_id\": \"<integer>\",\n  \"pipeline_stage_id\": \"<integer>\",\n  \"primary_contact_id\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"win_probability\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "be434978-54fe-4565-8c12-154738941bd5",
+              "name": "Created Opportunity record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "opportunities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"close_date\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"customer_source_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"loss_reason_id\": \"<integer>\",\n  \"pipeline_id\": \"<integer>\",\n  \"pipeline_stage_id\": \"<integer>\",\n  \"primary_contact_id\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"win_probability\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"close_date\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"customer_source_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"loss_reason_id\": \"<integer>\",\n  \"pipeline_id\": \"<integer>\",\n  \"pipeline_stage_id\": \"<integer>\",\n  \"primary_contact_id\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"win_probability\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fd1f597b-b68f-4649-b4b5-d8e4a268f855",
+          "name": "Get an Opportunity",
+          "request": {
+            "name": "Get an Opportunity",
+            "description": {},
+            "url": {
+              "path": [
+                "opportunities",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ce1531aa-05e6-4fe6-aa7e-9712829deed1",
+              "name": "Opportunity record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "opportunities",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"close_date\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"customer_source_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"loss_reason_id\": \"<integer>\",\n  \"pipeline_id\": \"<integer>\",\n  \"pipeline_stage_id\": \"<integer>\",\n  \"primary_contact_id\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"win_probability\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dcf3c0ce-d7a3-4bd3-81c4-0b4f412e1954",
+          "name": "Update an Opportunity",
+          "request": {
+            "name": "Update an Opportunity",
+            "description": {},
+            "url": {
+              "path": [
+                "opportunities",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"close_date\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"customer_source_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"loss_reason_id\": \"<integer>\",\n  \"pipeline_id\": \"<integer>\",\n  \"pipeline_stage_id\": \"<integer>\",\n  \"primary_contact_id\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"win_probability\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ee957dac-c725-4654-81bc-0c9dce6c5bf5",
+              "name": "Updated Opportunity record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "opportunities",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"close_date\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"customer_source_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"loss_reason_id\": \"<integer>\",\n  \"pipeline_id\": \"<integer>\",\n  \"pipeline_stage_id\": \"<integer>\",\n  \"primary_contact_id\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"win_probability\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"assignee_id\": \"<integer>\",\n  \"close_date\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"customer_source_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"loss_reason_id\": \"<integer>\",\n  \"pipeline_id\": \"<integer>\",\n  \"pipeline_stage_id\": \"<integer>\",\n  \"primary_contact_id\": \"<integer>\",\n  \"priority\": \"<string>\",\n  \"status\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"win_probability\": \"<integer>\",\n  \"monetary_value\": \"<number>\",\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "47512f43-380e-47a0-a242-42e6234abc4d",
+          "name": "Delete an Opportunity",
+          "request": {
+            "name": "Delete an Opportunity",
+            "description": {},
+            "url": {
+              "path": [
+                "opportunities",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d076589e-2f7f-468f-adfa-f43459a9454e",
+              "name": "Deletion confirmation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "opportunities",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.copper.com/developer_api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-PW-AccessToken"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ecdca89c-ad05-4f47-b9af-e6f9a2630248",
+    "name": "Copper Developer Activities Opportunities API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Copper is a CRM platform built natively for Google Workspace. The Copper Developer API is a RESTful JSON API providing programmatic access to people, companies, leads, opportunities, projects, tasks, activities, and webhooks.\n\nContact Support:\n Name: Copper Support",
+      "type": "text/plain"
+    }
+  }
+}

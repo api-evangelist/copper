@@ -1,0 +1,117 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Copper Developer Activities Companies API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-PW-AccessToken",
+      "value": "{{X-PW-AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Companies",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search Companies",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.copper.com/developer_api/v1/companies/search",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Search and list Company records using filter criteria."
+        },
+        {
+          "info": {
+            "name": "Create a Company",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.copper.com/developer_api/v1/companies",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new Company record in Copper."
+        },
+        {
+          "info": {
+            "name": "Get a Company",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.copper.com/developer_api/v1/companies/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The unique resource identifier"
+              }
+            ]
+          },
+          "docs": "Retrieve a single Company record by ID."
+        },
+        {
+          "info": {
+            "name": "Update a Company",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.copper.com/developer_api/v1/companies/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The unique resource identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a Company"
+        },
+        {
+          "info": {
+            "name": "Delete a Company",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.copper.com/developer_api/v1/companies/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The unique resource identifier"
+              }
+            ]
+          },
+          "docs": "Delete a Company"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

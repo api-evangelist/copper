@@ -1,0 +1,652 @@
+{
+  "item": [
+    {
+      "id": "fd937174-e812-4e59-adc0-b0f4e5bfa566",
+      "name": "People",
+      "description": {
+        "content": "People (contacts) management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9097a472-380f-45f5-a3ea-d74c1d77bdef",
+          "name": "Search People",
+          "request": {
+            "name": "Search People",
+            "description": {
+              "content": "Search and list People records using filter criteria. Returns up to 200 records per page.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "people",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"page_number\": 1,\n  \"page_size\": 20,\n  \"sort_by\": \"<string>\",\n  \"name\": \"<string>\",\n  \"emails\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"phone_numbers\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"assignee_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5ed9a713-3dbc-4b99-b6b9-0e228c3cdad8",
+              "name": "List of matching People records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"page_number\": 1,\n  \"page_size\": 20,\n  \"sort_by\": \"<string>\",\n  \"name\": \"<string>\",\n  \"emails\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"phone_numbers\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"assignee_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 9992,\n    \"name\": \"string\",\n    \"prefix\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"suffix\": \"string\",\n    \"title\": \"string\",\n    \"company_id\": 1372,\n    \"company_name\": \"string\",\n    \"emails\": [\n      {\n        \"email\": \"5B21y@dKuJhuDzg.tudy\",\n        \"category\": \"string\"\n      },\n      {\n        \"email\": \"oDz@BNFlpQZuSNENvGLhQfvMVcuHcHhd.ups\",\n        \"category\": \"string\"\n      }\n    ],\n    \"phone_numbers\": [\n      {\n        \"number\": \"string\",\n        \"category\": \"string\"\n      },\n      {\n        \"number\": \"string\",\n        \"category\": \"string\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"string\",\n      \"city\": \"string\",\n      \"state\": \"string\",\n      \"postal_code\": \"string\",\n      \"country\": \"string\"\n    },\n    \"assignee_id\": 7606,\n    \"contact_type_id\": 7655,\n    \"details\": \"string\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": 5085,\n        \"value\": \"string\"\n      },\n      {\n        \"custom_field_definition_id\": 5745,\n        \"value\": \"string\"\n      }\n    ],\n    \"date_created\": 9980,\n    \"date_modified\": 758\n  },\n  {\n    \"id\": 3807,\n    \"name\": \"string\",\n    \"prefix\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"suffix\": \"string\",\n    \"title\": \"string\",\n    \"company_id\": 5870,\n    \"company_name\": \"string\",\n    \"emails\": [\n      {\n        \"email\": \"H3de@eDodnFqDyplRSsaEFiSWXkwDeNZ.fiaw\",\n        \"category\": \"string\"\n      },\n      {\n        \"email\": \"6ZOu3aYPgdPRuf@LPAotTCqfgwr.vvtf\",\n        \"category\": \"string\"\n      }\n    ],\n    \"phone_numbers\": [\n      {\n        \"number\": \"string\",\n        \"category\": \"string\"\n      },\n      {\n        \"number\": \"string\",\n        \"category\": \"string\"\n      }\n    ],\n    \"address\": {\n      \"street\": \"string\",\n      \"city\": \"string\",\n      \"state\": \"string\",\n      \"postal_code\": \"string\",\n      \"country\": \"string\"\n    },\n    \"assignee_id\": 7024,\n    \"contact_type_id\": 295,\n    \"details\": \"string\",\n    \"tags\": [\n      \"string\",\n      \"string\"\n    ],\n    \"custom_fields\": [\n      {\n        \"custom_field_definition_id\": 6699,\n        \"value\": \"string\"\n      },\n      {\n        \"custom_field_definition_id\": 6100,\n        \"value\": \"string\"\n      }\n    ],\n    \"date_created\": 2474,\n    \"date_modified\": 2163\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6314e8f4-75e7-448f-87f8-a9e0631aa30a",
+              "name": "Authentication failed or missing",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"page_number\": 1,\n  \"page_size\": 20,\n  \"sort_by\": \"<string>\",\n  \"name\": \"<string>\",\n  \"emails\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"phone_numbers\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"assignee_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": 8765,\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6beec89a-d6a4-43ce-805c-81b4399f7279",
+              "name": "Rate limit exceeded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"page_number\": 1,\n  \"page_size\": 20,\n  \"sort_by\": \"<string>\",\n  \"name\": \"<string>\",\n  \"emails\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"phone_numbers\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"assignee_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": 8765,\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b14900a9-d92f-4ade-861b-eb27dca6aa44",
+          "name": "Create a Person",
+          "request": {
+            "name": "Create a Person",
+            "description": {
+              "content": "Create a new Person (contact) record in Copper.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "people"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"suffix\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"emails\": [\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"phone_numbers\": [\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "fe00c73e-c479-4781-8024-8167cf67d434",
+              "name": "Created Person record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"suffix\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"emails\": [\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"phone_numbers\": [\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"suffix\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"emails\": [\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"phone_numbers\": [\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c60fd5ac-da27-4d64-bed1-56fbe66b27fc",
+          "name": "Get a Person",
+          "request": {
+            "name": "Get a Person",
+            "description": {
+              "content": "Retrieve a single Person record by ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "people",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8d2b0da8-0b30-468b-80b0-e120e2945d4d",
+              "name": "Person record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"suffix\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"emails\": [\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"phone_numbers\": [\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "26629eda-0156-47a8-bd82-8c8f750a71f6",
+          "name": "Update a Person",
+          "request": {
+            "name": "Update a Person",
+            "description": {
+              "content": "Update an existing Person record by ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "people",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"suffix\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"emails\": [\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"phone_numbers\": [\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5021d812-267e-4710-a9fb-cc49f3747d1d",
+              "name": "Updated Person record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"suffix\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"emails\": [\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"phone_numbers\": [\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"prefix\": \"<string>\",\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"suffix\": \"<string>\",\n  \"title\": \"<string>\",\n  \"company_id\": \"<integer>\",\n  \"company_name\": \"<string>\",\n  \"emails\": [\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"email\": \"<email>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"phone_numbers\": [\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"number\": \"<string>\",\n      \"category\": \"<string>\"\n    }\n  ],\n  \"socials\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"websites\": [\n    \"<object>\",\n    \"<object>\"\n  ],\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"state\": \"<string>\",\n    \"postal_code\": \"<string>\",\n    \"country\": \"<string>\"\n  },\n  \"assignee_id\": \"<integer>\",\n  \"contact_type_id\": \"<integer>\",\n  \"details\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"custom_fields\": [\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"custom_field_definition_id\": \"<integer>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6f568cd1-ff3b-4b5b-bd16-cef67d20fe09",
+          "name": "Delete a Person",
+          "request": {
+            "name": "Delete a Person",
+            "description": {
+              "content": "Delete a Person record by ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "people",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) The unique resource identifier"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "62b63547-0234-4f38-b100-3da65151af80",
+              "name": "Deletion confirmation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) The unique resource identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.copper.com/developer_api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-PW-AccessToken"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "9e079e6f-5f67-43b2-87e2-7281d1c9ecca",
+    "name": "Copper Developer Activities People API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Copper is a CRM platform built natively for Google Workspace. The Copper Developer API is a RESTful JSON API providing programmatic access to people, companies, leads, opportunities, projects, tasks, activities, and webhooks.\n\nContact Support:\n Name: Copper Support",
+      "type": "text/plain"
+    }
+  }
+}

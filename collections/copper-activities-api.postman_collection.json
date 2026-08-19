@@ -1,0 +1,243 @@
+{
+  "item": [
+    {
+      "id": "1f66503e-dda9-4477-bcc0-884fcbbf25ce",
+      "name": "Activities",
+      "description": {
+        "content": "Activity log entries",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "85825bd3-d0d1-40d0-81b1-e3c12d559941",
+          "name": "Create an Activity",
+          "request": {
+            "name": "Create an Activity",
+            "description": {},
+            "url": {
+              "path": [
+                "activities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<long>\",\n  \"parent\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"type\": {\n    \"id\": \"<integer>\",\n    \"category\": \"<string>\"\n  },\n  \"details\": \"<string>\",\n  \"user_id\": \"<integer>\",\n  \"activity_date\": \"<integer>\",\n  \"old_value\": \"<object>\",\n  \"new_value\": \"<object>\",\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a7042e76-2653-49b4-a3c0-bb13786adb3e",
+              "name": "Created Activity record",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "activities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<long>\",\n  \"parent\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"type\": {\n    \"id\": \"<integer>\",\n    \"category\": \"<string>\"\n  },\n  \"details\": \"<string>\",\n  \"user_id\": \"<integer>\",\n  \"activity_date\": \"<integer>\",\n  \"old_value\": \"<object>\",\n  \"new_value\": \"<object>\",\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"<long>\",\n  \"parent\": {\n    \"id\": \"<integer>\",\n    \"type\": \"<string>\"\n  },\n  \"type\": {\n    \"id\": \"<integer>\",\n    \"category\": \"<string>\"\n  },\n  \"details\": \"<string>\",\n  \"user_id\": \"<integer>\",\n  \"activity_date\": \"<integer>\",\n  \"old_value\": \"<object>\",\n  \"new_value\": \"<object>\",\n  \"date_created\": \"<integer>\",\n  \"date_modified\": \"<integer>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "805ac03f-6c3e-4840-aed7-e527750347be",
+          "name": "Search Activities",
+          "request": {
+            "name": "Search Activities",
+            "description": {},
+            "url": {
+              "path": [
+                "activities",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3396fc26-8b6a-4d17-beea-0a687b82f498",
+              "name": "List of matching Activity records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "activities",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-PW-AccessToken",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"<long>\",\n    \"parent\": {\n      \"id\": \"<integer>\",\n      \"type\": \"<string>\"\n    },\n    \"type\": {\n      \"id\": \"<integer>\",\n      \"category\": \"<string>\"\n    },\n    \"details\": \"<string>\",\n    \"user_id\": \"<integer>\",\n    \"activity_date\": \"<integer>\",\n    \"old_value\": \"<object>\",\n    \"new_value\": \"<object>\",\n    \"date_created\": \"<integer>\",\n    \"date_modified\": \"<integer>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"parent\": {\n      \"id\": \"<integer>\",\n      \"type\": \"<string>\"\n    },\n    \"type\": {\n      \"id\": \"<integer>\",\n      \"category\": \"<string>\"\n    },\n    \"details\": \"<string>\",\n    \"user_id\": \"<integer>\",\n    \"activity_date\": \"<integer>\",\n    \"old_value\": \"<object>\",\n    \"new_value\": \"<object>\",\n    \"date_created\": \"<integer>\",\n    \"date_modified\": \"<integer>\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.copper.com/developer_api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-PW-AccessToken"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "45103a72-907d-4f6a-912a-650015dd5e20",
+    "name": "Copper Developer Activities API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Copper is a CRM platform built natively for Google Workspace. The Copper Developer API is a RESTful JSON API providing programmatic access to people, companies, leads, opportunities, projects, tasks, activities, and webhooks.\n\nContact Support:\n Name: Copper Support",
+      "type": "text/plain"
+    }
+  }
+}

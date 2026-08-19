@@ -1,0 +1,117 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Copper Developer Activities Opportunities API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-PW-AccessToken",
+      "value": "{{X-PW-AccessToken}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Opportunities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search Opportunities",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.copper.com/developer_api/v1/opportunities/search",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Search Opportunities"
+        },
+        {
+          "info": {
+            "name": "Create an Opportunity",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.copper.com/developer_api/v1/opportunities",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an Opportunity"
+        },
+        {
+          "info": {
+            "name": "Get an Opportunity",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.copper.com/developer_api/v1/opportunities/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The unique resource identifier"
+              }
+            ]
+          },
+          "docs": "Get an Opportunity"
+        },
+        {
+          "info": {
+            "name": "Update an Opportunity",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.copper.com/developer_api/v1/opportunities/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The unique resource identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update an Opportunity"
+        },
+        {
+          "info": {
+            "name": "Delete an Opportunity",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.copper.com/developer_api/v1/opportunities/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The unique resource identifier"
+              }
+            ]
+          },
+          "docs": "Delete an Opportunity"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
