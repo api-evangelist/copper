@@ -30,6 +30,19 @@ tags:
   - Contact Relationship Management
   - Contacts
   - CRM
+  - Google Workspace
+  - Leads
+  - Opportunities
+  - People
+  - Project
+  - Sales
+  - Task
+tags_raw:
+  - Activities
+  - Companies
+  - Contact Relationship Management
+  - Contacts
+  - CRM
   - Customer Relationship Management
   - Google Workspace
   - Leads
@@ -288,6 +301,8 @@ apis:
   humanURL: https://developer.copper.com/
   baseURL: https://api.copper.com/developer_api/v1
   tags:
+  - Task
+  tags_raw:
   - Tasks
   properties:
   - type: OpenAPI
@@ -336,6 +351,8 @@ apis:
   humanURL: https://developer.copper.com/
   baseURL: https://api.copper.com/developer_api/v1
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
