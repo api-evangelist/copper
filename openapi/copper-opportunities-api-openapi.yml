@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Copper Developer Activities Opportunities API
+  title: Copper Developer Opportunities API
   version: '1.0'
   description: Copper is a CRM platform built natively for Google Workspace. The Copper Developer API is a RESTful JSON API providing programmatic access to people, companies, leads, opportunities, projects, tasks, activities, and webhooks.
   contact:
@@ -147,33 +147,41 @@ components:
         name:
           type: string
         assignee_id:
-          type: integer
-          nullable: true
+          type:
+          - integer
+          - 'null'
         close_date:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         company_id:
-          type: integer
-          nullable: true
+          type:
+          - integer
+          - 'null'
         company_name:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         customer_source_id:
-          type: integer
-          nullable: true
+          type:
+          - integer
+          - 'null'
         details:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         loss_reason_id:
-          type: integer
-          nullable: true
+          type:
+          - integer
+          - 'null'
         pipeline_id:
           type: integer
         pipeline_stage_id:
           type: integer
         primary_contact_id:
-          type: integer
-          nullable: true
+          type:
+          - integer
+          - 'null'
         priority:
           type: string
         status:
@@ -188,11 +196,13 @@ components:
           items:
             type: string
         win_probability:
-          type: integer
-          nullable: true
+          type:
+          - integer
+          - 'null'
         monetary_value:
-          type: number
-          nullable: true
+          type:
+          - number
+          - 'null'
         custom_fields:
           type: array
           items:

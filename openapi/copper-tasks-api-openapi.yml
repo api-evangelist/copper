@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Copper Developer Activities Tasks API
+  title: Copper Developer Tasks API
   version: '1.0'
   description: Copper is a CRM platform built natively for Google Workspace. The Copper Developer API is a RESTful JSON API providing programmatic access to people, companies, leads, opportunities, projects, tasks, activities, and webhooks.
   contact:
@@ -106,15 +106,6 @@ paths:
         '200':
           description: Deletion confirmation
 components:
-  parameters:
-    IdPathParam:
-      name: id
-      in: path
-      required: true
-      schema:
-        type: integer
-        format: int64
-      description: The unique resource identifier
   schemas:
     Task:
       type: object
@@ -132,17 +123,21 @@ components:
             type:
               type: string
         assignee_id:
-          type: integer
-          nullable: true
+          type:
+          - integer
+          - 'null'
         due_date:
-          type: integer
-          nullable: true
+          type:
+          - integer
+          - 'null'
         reminder_date:
-          type: integer
-          nullable: true
+          type:
+          - integer
+          - 'null'
         completed_date:
-          type: integer
-          nullable: true
+          type:
+          - integer
+          - 'null'
         priority:
           type: string
           enum:
@@ -154,8 +149,9 @@ components:
           - Open
           - Completed
         details:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         tags:
           type: array
           items:
@@ -179,6 +175,15 @@ components:
             items:
               type: integer
           - type: 'null'
+  parameters:
+    IdPathParam:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int64
+      description: The unique resource identifier
   securitySchemes:
     PWAccessToken:
       type: apiKey

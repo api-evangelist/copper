@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Copper Developer Activities People API
+  title: Copper Developer People API
   version: '1.0'
   description: Copper is a CRM platform built natively for Google Workspace. The Copper Developer API is a RESTful JSON API providing programmatic access to people, companies, leads, opportunities, projects, tasks, activities, and webhooks.
   contact:
@@ -116,114 +116,13 @@ paths:
           description: Deletion confirmation
 components:
   schemas:
-    Address:
+    Error:
       type: object
       properties:
-        street:
-          type: string
-          nullable: true
-        city:
-          type: string
-          nullable: true
-        state:
-          type: string
-          nullable: true
-        postal_code:
-          type: string
-          nullable: true
-        country:
-          type: string
-          nullable: true
-    Person:
-      type: object
-      properties:
-        id:
+        status:
           type: integer
-          format: int64
-        name:
+        message:
           type: string
-        prefix:
-          type: string
-          nullable: true
-        first_name:
-          type: string
-        last_name:
-          type: string
-        suffix:
-          type: string
-          nullable: true
-        title:
-          type: string
-        company_id:
-          type: integer
-          nullable: true
-        company_name:
-          type: string
-          nullable: true
-        emails:
-          type: array
-          items:
-            type: object
-            properties:
-              email:
-                type: string
-                format: email
-              category:
-                type: string
-        phone_numbers:
-          type: array
-          items:
-            type: object
-            properties:
-              number:
-                type: string
-              category:
-                type: string
-        socials:
-          type: array
-          items:
-            type: object
-        websites:
-          type: array
-          items:
-            type: object
-        address:
-          $ref: '#/components/schemas/Address'
-        assignee_id:
-          type: integer
-          nullable: true
-        contact_type_id:
-          type: integer
-        details:
-          type: string
-          nullable: true
-        tags:
-          type: array
-          items:
-            type: string
-        custom_fields:
-          type: array
-          items:
-            $ref: '#/components/schemas/CustomFieldValue'
-        date_created:
-          type: integer
-        date_modified:
-          type: integer
-    CustomFieldValue:
-      type: object
-      properties:
-        custom_field_definition_id:
-          type: integer
-        value:
-          oneOf:
-          - type: string
-          - type: number
-          - type: integer
-          - type: boolean
-          - type: array
-            items:
-              type: integer
-          - type: 'null'
     PeopleSearchRequest:
       type: object
       properties:
@@ -254,22 +153,134 @@ components:
           type: array
           items:
             type: string
-    Error:
+    Person:
       type: object
       properties:
-        status:
+        id:
           type: integer
-        message:
+          format: int64
+        name:
           type: string
+        prefix:
+          type:
+          - string
+          - 'null'
+        first_name:
+          type: string
+        last_name:
+          type: string
+        suffix:
+          type:
+          - string
+          - 'null'
+        title:
+          type: string
+        company_id:
+          type:
+          - integer
+          - 'null'
+        company_name:
+          type:
+          - string
+          - 'null'
+        emails:
+          type: array
+          items:
+            type: object
+            properties:
+              email:
+                type: string
+                format: email
+              category:
+                type: string
+        phone_numbers:
+          type: array
+          items:
+            type: object
+            properties:
+              number:
+                type: string
+              category:
+                type: string
+        socials:
+          type: array
+          items:
+            type: object
+        websites:
+          type: array
+          items:
+            type: object
+        address:
+          $ref: '#/components/schemas/Address'
+        assignee_id:
+          type:
+          - integer
+          - 'null'
+        contact_type_id:
+          type: integer
+        details:
+          type:
+          - string
+          - 'null'
+        tags:
+          type: array
+          items:
+            type: string
+        custom_fields:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomFieldValue'
+        date_created:
+          type: integer
+        date_modified:
+          type: integer
+    Address:
+      type: object
+      properties:
+        street:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        postal_code:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+    CustomFieldValue:
+      type: object
+      properties:
+        custom_field_definition_id:
+          type: integer
+        value:
+          oneOf:
+          - type: string
+          - type: number
+          - type: integer
+          - type: boolean
+          - type: array
+            items:
+              type: integer
+          - type: 'null'
   responses:
-    Unauthorized:
-      description: Authentication failed or missing
+    RateLimited:
+      description: Rate limit exceeded
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Error'
-    RateLimited:
-      description: Rate limit exceeded
+    Unauthorized:
+      description: Authentication failed or missing
       content:
         application/json:
           schema:

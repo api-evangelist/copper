@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Copper Developer Activities Companies API
+  title: Copper Developer Companies API
   version: '1.0'
   description: Copper is a CRM platform built natively for Google Workspace. The Copper Developer API is a RESTful JSON API providing programmatic access to people, companies, leads, opportunities, projects, tasks, activities, and webhooks.
   contact:
@@ -110,24 +110,48 @@ paths:
           description: Deletion confirmation
 components:
   schemas:
+    CompanySearchRequest:
+      type: object
+      properties:
+        page_number:
+          type: integer
+        page_size:
+          type: integer
+        sort_by:
+          type: string
+        name:
+          type: string
+        assignee_ids:
+          type: array
+          items:
+            type: integer
+        tags:
+          type: array
+          items:
+            type: string
     Address:
       type: object
       properties:
         street:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         city:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         state:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         postal_code:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         country:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
     CustomFieldValue:
       type: object
       properties:
@@ -152,13 +176,15 @@ components:
         name:
           type: string
         assignee_id:
-          type: integer
-          nullable: true
+          type:
+          - integer
+          - 'null'
         contact_type_id:
           type: integer
         details:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         email_domain:
           type: string
         phone_numbers:
@@ -187,25 +213,6 @@ components:
           type: integer
         date_modified:
           type: integer
-    CompanySearchRequest:
-      type: object
-      properties:
-        page_number:
-          type: integer
-        page_size:
-          type: integer
-        sort_by:
-          type: string
-        name:
-          type: string
-        assignee_ids:
-          type: array
-          items:
-            type: integer
-        tags:
-          type: array
-          items:
-            type: string
   parameters:
     IdPathParam:
       name: id

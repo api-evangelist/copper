@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
   title: Copper Developer Activities API
   version: '1.0'
@@ -96,11 +96,13 @@ components:
         activity_date:
           type: integer
         old_value:
-          type: object
-          nullable: true
+          type:
+          - object
+          - 'null'
         new_value:
-          type: object
-          nullable: true
+          type:
+          - object
+          - 'null'
         date_created:
           type: integer
         date_modified:
