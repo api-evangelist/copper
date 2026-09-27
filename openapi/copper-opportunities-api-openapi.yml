@@ -113,15 +113,6 @@ paths:
         '200':
           description: Deletion confirmation
 components:
-  parameters:
-    IdPathParam:
-      name: id
-      in: path
-      required: true
-      schema:
-        type: integer
-        format: int64
-      description: The unique resource identifier
   schemas:
     CustomFieldValue:
       type: object
@@ -207,6 +198,15 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/CustomFieldValue'
+  parameters:
+    IdPathParam:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int64
+      description: The unique resource identifier
   securitySchemes:
     PWAccessToken:
       type: apiKey

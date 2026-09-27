@@ -37,6 +37,10 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/copper.png
 type: Index
 access: 3rd-Party
 position: Consuming
+x-docs-platform: mkdocs
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-09-24
+x-docs-hosting: aws-cloudfront
 tags:
   - Activities
   - Companies

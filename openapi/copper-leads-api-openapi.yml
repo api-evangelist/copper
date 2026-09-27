@@ -146,6 +146,29 @@ components:
             items:
               type: integer
           - type: 'null'
+    LeadSearchRequest:
+      type: object
+      properties:
+        page_number:
+          type: integer
+        page_size:
+          type: integer
+        sort_by:
+          type: string
+        name:
+          type: string
+        emails:
+          type: array
+          items:
+            type: string
+        status_ids:
+          type: array
+          items:
+            type: integer
+        tags:
+          type: array
+          items:
+            type: string
     Lead:
       type: object
       properties:
@@ -202,29 +225,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/CustomFieldValue'
-    LeadSearchRequest:
-      type: object
-      properties:
-        page_number:
-          type: integer
-        page_size:
-          type: integer
-        sort_by:
-          type: string
-        name:
-          type: string
-        emails:
-          type: array
-          items:
-            type: string
-        status_ids:
-          type: array
-          items:
-            type: integer
-        tags:
-          type: array
-          items:
-            type: string
   parameters:
     IdPathParam:
       name: id
