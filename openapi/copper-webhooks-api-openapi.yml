@@ -65,15 +65,6 @@ paths:
         '200':
           description: Deletion confirmation
 components:
-  parameters:
-    IdPathParam:
-      name: id
-      in: path
-      required: true
-      schema:
-        type: integer
-        format: int64
-      description: The unique resource identifier
   schemas:
     Webhook:
       type: object
@@ -104,6 +95,15 @@ components:
           properties:
             secret:
               type: string
+  parameters:
+    IdPathParam:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int64
+      description: The unique resource identifier
   securitySchemes:
     PWAccessToken:
       type: apiKey
