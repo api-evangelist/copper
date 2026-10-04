@@ -413,6 +413,9 @@ apis:
   - type: Vocabulary
     url: vocabulary/copper-vocabulary.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/copper-capability-edges.yml
+    name: Copper Business Capability Map
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/copper/overview
   - type: AgenticAccess
