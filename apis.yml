@@ -413,6 +413,10 @@ apis:
   - type: Vocabulary
     url: vocabulary/copper-vocabulary.yml
 common:
+  - type: Plans
+    url: plans/copper-plans-pricing.yml
+  - type: FinOps
+    url: finops/copper-finops.yml
   - type: CapabilityMap
     url: capabilities/copper-capability-edges.yml
     name: Copper Business Capability Map
