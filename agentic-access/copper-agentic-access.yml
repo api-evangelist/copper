@@ -1,22 +1,24 @@
-generated: '2026-07-15'
+generated: '2026-09-23'
 method: generated
-source: openapi/copper-developer-api-openapi.yml
+source: openapi/copper-activities-api-openapi.yml, openapi/copper-companies-api-openapi.yml,
+  openapi/copper-leads-api-openapi.yml, openapi/copper-opportunities-api-openapi.yml, openapi/copper-people-api-openapi.yml,
+  openapi/copper-tasks-api-openapi.yml, openapi/copper-webhooks-api-openapi.yml
 description: Recommended x-agentic-access execution contracts, classified heuristically from
   the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
   audience per deployment. See research/curity/agentic-governance/.
 summary:
   operations: 31
   by_action_class:
-    acting: 25
-    connected: 6
+    acting: 19
+    connected: 12
   by_consequence:
-    write: 25
-    read: 6
+    write: 19
+    read: 12
   human_in_the_loop_required: 0
 operations:
-- path: /people/search
+- path: /activities
   method: post
-  operationId: searchPeople
+  operationId: createActivity
   x-agentic-access:
     action-class: acting
     consequence: write
@@ -30,25 +32,9 @@ operations:
       - abnormal
       - high-value
     audit: required
-- path: /people
+- path: /activities/search
   method: post
-  operationId: createPerson
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /people/{id}
-  method: get
-  operationId: getPerson
+  operationId: searchActivities
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -56,54 +42,16 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /people/{id}
-  method: put
-  operationId: updatePerson
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /people/{id}
-  method: delete
-  operationId: deletePerson
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
 - path: /companies/search
   method: post
   operationId: searchCompanies
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /companies
   method: post
   operationId: createCompany
@@ -166,18 +114,12 @@ operations:
   method: post
   operationId: searchLeads
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /leads
   method: post
   operationId: createLead
@@ -256,18 +198,12 @@ operations:
   method: post
   operationId: searchOpportunities
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /opportunities
   method: post
   operationId: createOpportunity
@@ -326,9 +262,19 @@ operations:
       - abnormal
       - high-value
     audit: required
-- path: /tasks/search
+- path: /people/search
   method: post
-  operationId: searchTasks
+  operationId: searchPeople
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /people
+  method: post
+  operationId: createPerson
   x-agentic-access:
     action-class: acting
     consequence: write
@@ -342,6 +288,58 @@ operations:
       - abnormal
       - high-value
     audit: required
+- path: /people/{id}
+  method: get
+  operationId: getPerson
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /people/{id}
+  method: put
+  operationId: updatePerson
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /people/{id}
+  method: delete
+  operationId: deletePerson
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /tasks/search
+  method: post
+  operationId: searchTasks
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
 - path: /tasks
   method: post
   operationId: createTask
@@ -387,38 +385,6 @@ operations:
 - path: /tasks/{id}
   method: delete
   operationId: deleteTask
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /activities
-  method: post
-  operationId: createActivity
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /activities/search
-  method: post
-  operationId: searchActivities
   x-agentic-access:
     action-class: acting
     consequence: write

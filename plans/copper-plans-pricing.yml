@@ -167,3 +167,47 @@ plans:
       - name: Custom reports
       - name: Multi-currency
       - name: Premium support
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - active-user
+  - period
+  plans:
+  - name: Starter
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - active-user
+    - period
+    periods:
+    - month
+  - name: Basic
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - active-user
+    - period
+    periods:
+    - month
+  - name: Professional
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - active-user
+    - period
+    periods:
+    - month
+  - name: Business
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - period
+    periods:
+    - month
