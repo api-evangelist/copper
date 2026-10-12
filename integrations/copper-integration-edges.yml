@@ -1,0 +1,1200 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/copper/integrations
+- https://n8n.io/integrations/copper/
+- https://composio.dev/toolkits/copper
+checked:
+- https://composio.dev/toolkits/copper
+- https://monid.ai/tools/copper
+- https://n8n.io/integrations/copper/
+- https://zapier.com/apps/copper/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: copper
+  url: https://zapier.com/apps/copper/integrations
+  external_url: https://copper.com/?utm_source=zapier&utm_medium=zapier
+  partner_tier: GOLD
+  triggers:
+  - key: new_activity_log
+    label: New Activity
+  - key: new_company
+    label: New Company
+  - key: new_contact_v2
+    label: New Person
+  - key: new_deal_v2
+    label: New Opportunity
+  - key: new_lead_v2
+    label: New Lead
+  - key: new_project
+    label: New Project
+  - key: new_task
+    label: New Task
+  - key: update_company
+    label: Updated Company
+  - key: update_contact_v2
+    label: Updated Contact Type
+  - key: update_contact_v3
+    label: Updated Person
+  - key: update_deal
+    label: Updated Opportunity
+  - key: update_deal_stage_v2
+    label: Updated Opportunity Stage
+  - key: update_deal_status_v2
+    label: Updated Opportunity Status
+  - key: update_lead_v2
+    label: Updated Lead Status
+  - key: update_lead_v3
+    label: Updated Lead
+  - key: update_project
+    label: Updated Project
+  - key: update_task
+    label: Updated Task
+  actions:
+  - key: activities_v2
+    label: Create Activity
+  - key: associate_to_project
+    label: Associate to Project
+  - key: companies_update
+    label: Update Company
+  - key: companies_upsert
+    label: Create/Update Company
+  - key: companies_v2
+    label: Create Company
+  - key: contacts_update
+    label: Update Person
+  - key: contacts_upsert
+    label: Create/Update Person
+  - key: contacts_v3
+    label: Create Person
+  - key: leads_update
+    label: Update Lead
+  - key: leads_upsert_v2
+    label: Create/Update Lead
+  - key: leads_v3
+    label: Create Lead
+  - key: opportunities_update_v2
+    label: Update Opportunity by ID
+  - key: opportunities_update_v3
+    label: Update Opportunity
+  - key: opportunities_upsert_v2
+    label: Create/Update Opportunity
+  - key: opportunities_v3
+    label: Create Opportunity
+  - key: projects_create
+    label: Create Project
+  - key: projects_update
+    label: Update Project
+  - key: projects_upsert
+    label: Create/Update Project
+  - key: tasks_v2
+    label: Create Task
+  searches:
+  - key: search_activities
+    label: Search for an Activity
+  - key: search_companies
+    label: Search for a Company
+  - key: search_contacts
+    label: Search for a Person
+  - key: search_deals
+    label: Search for a Opportunity
+  - key: search_leads
+    label: Search for a Lead
+  - key: search_projects
+    label: Search for a Project
+- marketplace: n8n
+  channel: open-source-node
+  app: copper
+  url: https://n8n.io/integrations/copper/
+  identity: title
+  pair_pages: 623
+  pairs:
+  - copyai
+  - corsizio
+  - cortex
+  - craftdraft
+  - cratedb
+  - crisp
+  - cronly
+  - crossmint
+  - crowddev
+  - crowdin
+  - crowdpower
+  - crowdstrike
+  - cryptolens
+  - currents
+  - customer-datastore-n8n-training
+  - customer-messenger-n8n-training
+  - customerio
+  - customeriq
+  - daffy
+  - dante-ai
+  - darksky-api
+  - dasha
+  - data-soap
+  - databox
+  - databricks
+  - datadog
+  - datarobot
+  - datumbox
+  - dayschedule
+  - deepgram
+  - deepl
+  - deepseek-chat-model
+  - demio
+  - descript
+  - detrack
+  - devcycle
+  - dhl
+  - dialzara
+  - diddo-ai
+  - diffy
+  - digicert
+  - discord
+  - discourse
+  - disqus
+  - dock-certs
+  - docparser
+  - docsbot-ai
+  - docupilot
+  - docuwriter
+  - dokan
+  - domo
+  - draftable
+  - drift
+  - dropbox
+  - dropcontact
+  - droxy
+  - dynatrace
+  - e-goi
+  - easyship
+  - echowin
+  - ecwid
+  - elastic-security
+  - elasticsearch
+  - elmah
+  - embedai
+  - emelia
+  - empsing
+  - engati
+  - enormail
+  - enterpret
+  - envoy
+  - erpnext
+  - esendex
+  - evervault
+  - evolphin-zoom
+  - f5-big-ip
+  - facebook-graph-api
+  - faraday
+  - faros
+  - fastbots
+  - fathom
+  - filemaker
+  - filescan
+  - firmao
+  - fitbit
+  - flagship
+  - float
+  - flotiq
+  - flow
+  - fluent-support
+  - focuster
+  - formcarry
+  - formdesk
+  - forms-on-fire
+  - formsite
+  - formstack-documents
+  - fortinet-fortigate
+  - foursquare
+  - free-dictionary
+  - freshdesk
+  - freshping
+  - freshservice
+  - freshworks-crm
+  - fullcontact
+  - fusioo
+  - gali
+  - gatekeeper
+  - gender-api
+  - getresponse
+  - getscreenshot
+  - ghost
+  - giphy
+  - gitea
+  - github
+  - gitlab
+  - gleap
+  - gmail
+  - gocanvas
+  - godaddy
+  - gong
+  - google-ads
+  - google-ai-studio-gemini
+  - google-analytics
+  - google-bigquery
+  - google-books
+  - google-business-profile
+  - google-calendar
+  - google-chat
+  - google-cloud
+  - google-cloud-firestore
+  - google-cloud-natural-language
+  - google-cloud-realtime-database
+  - google-cloud-storage
+  - google-contacts
+  - google-docs
+  - google-drive
+  - google-forms
+  - google-gemini-chat-model
+  - google-perspective
+  - google-sheets
+  - google-slides
+  - google-tables
+  - google-tasks
+  - google-translate
+  - google-vertex-ai
+  - google-workspace-admin
+  - gotify
+  - gotowebinar
+  - gptea
+  - grafana
+  - grain
+  - graphql
+  - gravity-forms
+  - grid
+  - grist
+  - growbots
+  - gumroad
+  - gupshup
+  - guru
+  - hacker-news
+  - halopsa
+  - handwrytten
+  - hansei
+  - harry-potter-api
+  - harvest
+  - headless-testing
+  - helcim
+  - helpscout
+  - heysummit
+  - highlevel
+  - home-assistant
+  - http-request
+  - hub-planner
+  - hubspot
+  - hugging-face
+  - humantic-ai
+  - hunter
+  - hybrid-analysis
+  - iauditor-by-safetyculture
+  - idealpostcodes
+  - idealspot
+  - ideta
+  - imgbb
+  - imgur
+  - imperva-waf
+  - impira
+  - industryselect
+  - influxdb-cloud
+  - infolobby
+  - instabot
+  - instabug
+  - intakeq
+  - intercom
+  - invoice-ninja
+  - invoiced
+  - ip2location
+  - ipinfo
+  - ipregistry
+  - iris-dfir
+  - isn
+  - iterable
+  - jama
+  - jasper
+  - jenkins
+  - jina-ai
+  - jira-software
+  - jwt
+  - kadoa
+  - kafka
+  - kaggle
+  - kanban-tool
+  - karbon
+  - keap
+  - keygen
+  - keyzy
+  - kibana
+  - kitemaker
+  - klaviyo
+  - klazify
+  - knack
+  - knowbe4
+  - kobotoolbox
+  - kraftful
+  - lagrowthmachine
+  - lambdatest
+  - landbot
+  - laposta
+  - launch27
+  - launchdarkly
+  - ldap
+  - leadboxer
+  - leadpops
+  - lemlist
+  - lets-enhance
+  - libraria
+  - lighthouse
+  - lime-go
+  - line
+  - linear
+  - lingvanex
+  - linkedin
+  - linkish
+  - linode
+  - liveagent
+  - localazy
+  - loginradius
+  - lokalise
+  - lonescale
+  - lucidchart
+  - magento-2
+  - mailcheck
+  - mailchimp
+  - mailerlite
+  - mailersend
+  - mailgun
+  - mailify
+  - mailjet
+  - mailmodo
+  - malcore
+  - mandrill
+  - marcom-robot
+  - marketing-master-io
+  - marketplacer
+  - marketstack
+  - mastodon
+  - matrix
+  - mattermost
+  - mautic
+  - mav
+  - maverick
+  - medium
+  - mem
+  - messagebird
+  - metabase
+  - metatextai-inference-api
+  - mews
+  - microsoft-azure-monitor
+  - microsoft-dynamics-365-business-central-api
+  - microsoft-dynamics-crm
+  - microsoft-entra-id
+  - microsoft-entra-id-azure-active-directory
+  - microsoft-excel
+  - microsoft-graph-security
+  - microsoft-onedrive
+  - microsoft-outlook
+  - microsoft-sharepoint
+  - microsoft-sql
+  - microsoft-teams
+  - microsoft-teams-admin
+  - microsoft-to-do
+  - miestro
+  - mindee
+  - miro
+  - misp
+  - missive
+  - mist
+  - mistral-ai
+  - mixpanel
+  - mocean
+  - mondaycom
+  - mongodb
+  - monica-crm
+  - moonclerk
+  - moonmail
+  - morph
+  - mqtt
+  - msg91
+  - mux
+  - mx-toolbox
+  - my-askai
+  - myphoner
+  - mysql
+  - nanonets-ocr
+  - nasa
+  - ncscale
+  - netlify
+  - nextcloud
+  - nightfallai
+  - ninox
+  - nmkr
+  - nocodb
+  - notion
+  - nozbe-teams
+  - npm
+  - nuclia
+  - nusii-proposals
+  - nyckel
+  - nyota
+  - occasion
+  - ocrspace
+  - odoo
+  - offalerts
+  - okta
+  - omeda
+  - omniconvert
+  - omnimind
+  - on2air
+  - one-ai
+  - one-simple-api
+  - onfleet
+  - openai
+  - opencti
+  - openthesaurus
+  - openweathermap
+  - opn-formerly-omise
+  - oracle-database
+  - orbit
+  - order-desk
+  - ortto
+  - oura
+  - paddle
+  - pagerduty
+  - paperform
+  - papyrs
+  - parsehub
+  - parseprompt
+  - passcreator
+  - passslot
+  - patreon
+  - paymo
+  - paypal
+  - peekalink
+  - perplexity
+  - persio
+  - personal-ai
+  - phantombuster
+  - philips-hue
+  - phrase
+  - pinata
+  - pinboard
+  - pinterest
+  - pipedrive
+  - pipefy
+  - pirate-weather
+  - pitchly
+  - pivotal-tracker
+  - planview-leankit
+  - planyo-online-booking
+  - platformly
+  - plecto
+  - plivo
+  - postbin
+  - postgres
+  - posthog
+  - practitest
+  - predisai
+  - prodia
+  - product-hunt
+  - profitwell
+  - project-bubble-proprofs-project
+  - prompthub
+  - prospe-ai
+  - pushbullet
+  - pushcut
+  - pusher
+  - pushover
+  - qradar
+  - qualaroo
+  - qualys
+  - quentn
+  - questdb
+  - quick-base
+  - quickbooks-online
+  - quickchart
+  - quintadb
+  - rabbitmq
+  - radar
+  - raindrop
+  - rapid7-insightvm
+  - raven-tools
+  - rawg-video-games-database
+  - read-ai
+  - realphonevalidation
+  - recharge
+  - recorded-future
+  - redash
+  - reddit
+  - redis
+  - relevance-ai
+  - relink-url-shortener
+  - relysia
+  - replyio
+  - retable
+  - reverse-contact
+  - rewardful
+  - ritekit
+  - roboflow
+  - robolytix
+  - roboresponseai
+  - rocketchat
+  - rollbar
+  - rootly
+  - route4me
+  - rundeck
+  - s3
+  - sales-simplify
+  - salesforce
+  - salesmaa
+  - salesmate
+  - salesmsg
+  - salesrocks
+  - samsung-smartthings
+  - scrape-itcloud
+  - scrapeninja
+  - seamless-ai
+  - search-and-save
+  - seatable
+  - securityscorecard
+  - segment
+  - sekoia
+  - sellix
+  - sembly-ai
+  - sendgrid
+  - sendy
+  - sentryio
+  - servicenow
+  - sharly-ai
+  - shiphero
+  - shipstation
+  - shopify
+  - shortio
+  - shuffler
+  - sierra-interactive
+  - sifter
+  - signaturit
+  - signl4
+  - signrequest
+  - simpleem
+  - simplehash
+  - simplekpi
+  - simplelocalize
+  - simplero
+  - simpletexting
+  - sitecreatorio
+  - sitespeakai
+  - slack
+  - smaily
+  - smartreach
+  - smartsuite
+  - sms-it
+  - sms-magic
+  - sms77
+  - snapdocs
+  - snatchbot
+  - snipcart
+  - snowflake
+  - solve-data
+  - specter
+  - splunk
+  - spondyr
+  - spontit
+  - sportsdata
+  - spotify
+  - spydra
+  - sslmate-cert-spotter-api
+  - stackby
+  - stammerai
+  - starton
+  - statuscake
+  - storyblok
+  - strapi
+  - strava
+  - stripe
+  - studio-by-ai21-labs
+  - suitedash
+  - supabase
+  - supernormal
+  - superpowered
+  - supportivekoala
+  - survicate
+  - swagup
+  - switchboard
+  - syncly
+  - syncromsp
+  - synthesia
+  - taiga
+  - talentlms
+  - talknotes
+  - tapfiliate
+  - td-ameritrade
+  - teachable
+  - team-up
+  - teamdeck
+  - teamgate
+  - teknoir
+  - telegram
+  - testmonitor
+  - textcortex-ai
+  - textgain
+  - textkit
+  - textmagic
+  - thankster
+  - the-customer-factor
+  - the-leap
+  - thehive
+  - thehive-5
+  - thoughtfulgpt
+  - thrivecart
+  - tidb-cloud
+  - tierion
+  - tilda
+  - timescaledb
+  - timetonic
+  - tinyurl
+  - tisane-labs
+  - todoist
+  - token-metrics
+  - toket
+  - totango
+  - trackvia
+  - transifex
+  - travisci
+  - trellix-epo
+  - trello
+  - trengo
+  - trevorio
+  - turbohire
+  - tuskr
+  - tuulio
+  - twake
+  - twilio
+  - twist
+  - twitter
+  - unbounce
+  - unisender
+  - unleashed-software
+  - upkeep
+  - uplead
+  - uproc
+  - uptimerobot
+  - uptimetoolbox
+  - urlscanio
+  - uservoice
+  - venafi-tls-protect-cloud
+  - venafi-tls-protect-datacenter
+  - venly
+  - verifalia
+  - vero
+  - vimeo
+  - virustotal
+  - vivifyscrum
+  - voicit
+  - vonage
+  - vowel
+  - watchsignals
+  - waveline-extract
+  - webex-by-cisco
+  - webflow
+  - webscraperio
+  - wekan
+  - whal3s
+  - whatconverts
+  - whatsapp-business-cloud
+  - wise
+  - wizychat
+  - wonderchat
+  - wondercraft
+  - woocommerce
+  - woodpeckerco
+  - wordpress
+  - workast
+  - workboard
+  - woxo
+  - writesonic
+  - wubook-ratechecker
+  - xero
+  - xtractly
+  - ybug
+  - ycode
+  - yodiz
+  - yourls
+  - youtube
+  - zabbix
+  - zammad
+  - zendesk
+  - zenrows
+  - zoho-books
+  - zoho-crm
+  - zoho-desk
+  - zonka-feedback
+  - zoom
+  - zscaler-zia
+  - zulip
+- marketplace: composio
+  channel: agent-gateway
+  app: copper
+  url: https://composio.dev/toolkits/copper
+  identity: action-prefix
+  actions:
+  - key: COPPER_BULK_CREATE_ACTIVITIES
+  - key: COPPER_BULK_CREATE_COMPANIES
+  - key: COPPER_BULK_CREATE_LEADS
+  - key: COPPER_BULK_CREATE_OPPORTUNITIES
+  - key: COPPER_BULK_CREATE_PEOPLE
+  - key: COPPER_BULK_UPDATE_COMPANIES
+  - key: COPPER_BULK_UPDATE_LEADS
+  - key: COPPER_BULK_UPDATE_PEOPLE
+  - key: COPPER_CONVERT_LEAD
+  - key: COPPER_CREATE_ACTIVITY
+  - key: COPPER_CREATE_COMPANY
+  - key: COPPER_CREATE_CUSTOM_ACTIVITY_TYPE
+  - key: COPPER_CREATE_CUSTOM_FIELD_DEFINITION
+  - key: COPPER_CREATE_LEAD
+  - key: COPPER_CREATE_OPPORTUNITY
+  - key: COPPER_CREATE_PERSON
+  - key: COPPER_CREATE_PROJECT
+  - key: COPPER_CREATE_RELATED_LINK
+  - key: COPPER_CREATE_TASK
+  - key: COPPER_DELETE_ATTACHED_FILE
+  - key: COPPER_DELETE_CUSTOM_FIELD_DEFINITION
+  - key: COPPER_DELETE_LEAD
+  - key: COPPER_DELETE_RECORD
+  - key: COPPER_DELETE_RELATED_LINK
+  - key: COPPER_GET_ACCOUNT
+  - key: COPPER_GET_ATTACHED_FILE_METADATA
+  - key: COPPER_GET_CURRENT_USER
+  - key: COPPER_GET_CUSTOM_ACTIVITY_TYPE
+  - key: COPPER_GET_CUSTOM_FIELD_DEFINITION
+  - key: COPPER_GET_FIELD_LAYOUT
+  - key: COPPER_GET_LEAD
+  - key: COPPER_GET_PERSON_BY_EMAIL
+  - key: COPPER_GET_RECORD
+  - key: COPPER_LIST_ATTACHED_FILES
+  - key: COPPER_LIST_CUSTOM_ACTIVITY_TYPES
+  - key: COPPER_LIST_CUSTOM_FIELD_DEFINITIONS
+  - key: COPPER_LIST_ENTITY_ACTIVITIES
+  - key: COPPER_LIST_LEAD_STATUSES
+  - key: COPPER_LIST_PIPELINES
+  - key: COPPER_LIST_PIPELINE_STAGES
+  - key: COPPER_LIST_REFERENCE_VALUES
+  - key: COPPER_LIST_RELATED_LINKS
+  - key: COPPER_LIST_RELATED_RECORDS
+  - key: COPPER_LIST_TAGS
+  - key: COPPER_LIST_USERS
+  - key: COPPER_RELATE_RECORDS
+  - key: COPPER_SEARCH_ACTIVITIES
+  - key: COPPER_SEARCH_COMPANIES
+  - key: COPPER_SEARCH_LEADS
+  - key: COPPER_SEARCH_OPPORTUNITIES
+  - key: COPPER_SEARCH_PEOPLE
+  - key: COPPER_SEARCH_PROJECTS
+  - key: COPPER_SEARCH_TASKS
+  - key: COPPER_UNRELATE_RECORDS
+  - key: COPPER_UPDATE_ACTIVITY
+  - key: COPPER_UPDATE_COMPANY
+  - key: COPPER_UPDATE_CUSTOM_ACTIVITY_TYPE
+  - key: COPPER_UPDATE_CUSTOM_FIELD_DEFINITION
+  - key: COPPER_UPDATE_LEAD
+  - key: COPPER_UPDATE_OPPORTUNITY
+  - key: COPPER_UPDATE_PERSON
+  - key: COPPER_UPDATE_PROJECT
+  - key: COPPER_UPDATE_TASK
+  - key: COPPER_UPLOAD_ATTACHED_FILE
+  - key: COPPER_UPSERT_LEAD
+edges:
+- partner_name: Mailchimp
+  partner: mailchimp
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/mailchimp
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://mailchimp.com/
+- partner_name: Typeform
+  partner: typeform
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/typeform
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.typeform.com/signup?utm_medium=referral&utm_source=zapier&utm_campaign=zapier_integration&utm_content=marketplace
+- partner_name: Gmail
+  partner: gmail
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/gmail
+  direction: third-party
+  category: Email
+  partner_url: https://mail.google.com/
+- partner_name: Gravity Forms
+  partner: gravity-forms
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/gravity-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.gravityforms.com/?utm_campaign=partners&utm_source=zapier-listing-learn-more&utm_medium=free-placement
+- partner_name: Airtable
+  partner: airtable
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/airtable
+  direction: third-party
+  category: Databases
+  partner_url: https://airtable.com/
+- partner_name: Squarespace Forms
+  partner: squarespace
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/squarespace-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.squarespace.com/
+- partner_name: HubSpot
+  partner: hubspot
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/hubspot
+  direction: third-party
+  category: Marketing Automation
+  partner_url: http://www.hubspot.com/
+- partner_name: Intercom
+  partner: intercom
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/intercom
+  direction: third-party
+  category: Customer Support
+  partner_url: https://www.intercom.com/welcome-to-intercom?utm_source=external-website&utm_medium=partner&utm_campaign=20220503_all_oc_all_global_gl_all_all_par_extmktplc&utm_term=zapier
+- partner_name: Google Forms
+  partner: google-forms
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/google-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://google.com/
+- partner_name: QuickBooks Online
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/quickbooks
+  direction: third-party
+  category: Accounting
+  partner_url: http://intuit.com/
+- partner_name: Google Calendar
+  partner: google-calendar
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/google-calendar
+  direction: third-party
+  category: Calendar
+  partner_url: https://calendar.google.com/
+- partner_name: Acuity Scheduling
+  partner: acuity-scheduling
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/acuity-scheduling
+  direction: third-party
+  category: Scheduling & Booking
+  partner_url: https://acuityscheduling.com/?utm_source=zapier.com&utm_medium=referral&utm_campaign=integration-page
+- partner_name: Wufoo
+  partner: wufoo
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/wufoo
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.wufoo.com/
+- partner_name: Reply
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/reply
+  direction: third-party
+  category: Marketing Automation
+  partner_url: http://reply.io/
+- partner_name: Unbounce
+  partner: unbounce
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/unbounce
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://unbounce.com/
+- partner_name: Trello
+  partner: trello
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/trello
+  direction: third-party
+  category: Project Management
+  partner_url: https://trello.com/
+- partner_name: Asana
+  partner: asana
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/asana
+  direction: third-party
+  category: Project Management
+  partner_url: http://asana.com/
+- partner_name: ActiveCampaign
+  partner: activecampaign
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/activecampaign
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.activecampaign.com/?utm_source=unpaid_syndication_website&utm_medium=referral&utm_campaign=zapier_listing
+- partner_name: Notion
+  partner: notion
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/notion
+  direction: third-party
+  category: Task Management
+  partner_url: https://www.notion.so/
+- partner_name: Google Ads
+  partner: google-ads
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/google-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://ads.google.com/
+- partner_name: Mailshake
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/mailshake
+  direction: third-party
+  category: Drip Emails
+  partner_url: https://mailshake.com/
+- partner_name: Slack
+  partner: slack
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/slack
+  direction: third-party
+  category: Team Chat
+  partner_url: https://slack.com/
+- partner_name: Apollo
+  partner: apollo
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/apollo
+  direction: third-party
+  category: Sales & CRM
+  partner_url: https://www.apollo.io/
+- partner_name: Google Drive
+  partner: google-drive
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/google-drive
+  direction: third-party
+  category: File Management & Storage
+  partner_url: https://www.google.com/drive/
+- partner_name: Zoom
+  partner: zoom
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/zoom
+  direction: third-party
+  category: Video Conferencing
+  partner_url: https://www.zoom.us/
+- partner_name: Calendly
+  partner: calendly
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/calendly
+  direction: third-party
+  category: Scheduling & Booking
+  partner_url: https://calendly.com/?utm_medium=partner&utm_source=zapier&utm_campaign=main_partner_page&utm_content=main_inbound_link
+- partner_name: Eventbrite
+  partner: eventbrite
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/eventbrite
+  direction: third-party
+  category: Event Management
+  partner_url: https://eventbrite.com/
+- partner_name: ClickUp
+  partner: clickup
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/clickup
+  direction: third-party
+  category: Project Management
+  partner_url: https://clickup.com/zapier
+- partner_name: Xero
+  partner: xero
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/xero
+  direction: third-party
+  category: Accounting
+  partner_url: https://xero5440.partnerlinks.io/uvwuuwrxyoi8
+- partner_name: Seamless
+  partner: seamless-ai
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/copper/integrations/seamless
+  direction: third-party
+  category: AI Sales Tools
+  partner_url: https://seamless.ai/customers/education/articles/zapier-connection-guide
+templates:
+- title: Add Copper leads for new submissions on Gravity Forms
+  url: https://zapier.com/apps/copper/integrations/gravity-forms/6349/add-copper-leads-for-new-submissions-on-gravity-forms
+  apps:
+  - gravity-forms
+  - copper
+- title: Add Copper leads for new Typeform entries
+  url: https://zapier.com/apps/copper/integrations/typeform/6348/add-copper-leads-for-new-typeform-entries
+  apps:
+  - typeform
+  - copper
+- title: Create Copper leads for new Jotform submissions
+  url: https://zapier.com/apps/copper/integrations/jotform/6350/create-copper-leads-for-new-jotform-submissions
+  apps:
+  - jotform
+  - copper
+- title: Create or update Copper persons for new Calendly invitees
+  url: https://zapier.com/apps/calendly/integrations/copper/1243908/create-or-update-copper-persons-for-new-calendly-invitees
+  apps:
+  - calendly
+  - copper
+- title: Create New Copper Leads From Wufoo Forms
+  url: https://zapier.com/apps/copper/integrations/wufoo/691/create-new-copper-leads-from-wufoo-forms
+  apps:
+  - wufoo
+  - copper
+- title: Create Copper leads for new form submissions in Squarespace Forms
+  url: https://zapier.com/apps/copper/integrations/squarespace-forms/177879/create-copper-leads-for-new-form-submissions-in-squarespace-forms
+  apps:
+  - squarespace-forms
+  - copper
+- title: Create Copper leads from new Webflow form submissions
+  url: https://zapier.com/apps/copper/integrations/webflow/1232764/create-copper-leads-from-new-webflow-form-submissions
+  apps:
+  - webflow
+  - copper
+- title: Send new Copper contacts to Google Contacts
+  url: https://zapier.com/apps/copper/integrations/google-contacts/6342/send-new-copper-contacts-to-google-contacts
+  apps:
+  - copper
+  - google-contacts
+- title: Create Copper leads from new rows on Google Sheets
+  url: https://zapier.com/apps/copper/integrations/google-sheets/692/create-copper-leads-from-new-rows-on-google-sheets
+  apps:
+  - google-sheets
+  - copper
+- title: Add Copper contacts to a Mailchimp subscriber list
+  url: https://zapier.com/apps/copper/integrations/mailchimp/2332/add-copper-contacts-to-a-mailchimp-subscriber-list
+  apps:
+  - copper
+  - mailchimp
+- title: Update persons in Copper when contacts are updated in Apollo
+  url: https://zapier.com/apps/apollo/integrations/copper/1781458/update-persons-in-copper-when-contacts-are-updated-in-apollo
+  apps:
+  - apollo
+  - copper
+- title: Create offline conversions in Google Ads for updated Copper opportunity stages
+  url: https://zapier.com/apps/copper/integrations/google-ads/88837/create-offline-conversions-in-google-ads-for-updated-copper-opportunity-stages
+  apps:
+  - copper
+  - google-ads
+template_total: 3530
