@@ -9,6 +9,7 @@ checked:
 - https://monid.ai/tools/copper
 - https://n8n.io/integrations/copper/
 - https://zapier.com/apps/copper/integrations
+- okta/integrations/okta-integration-edges.yml
 summary: null
 marketplace_apps:
 - marketplace: zapier
@@ -1136,6 +1137,31 @@ edges:
   direction: third-party
   category: AI Sales Tools
   partner_url: https://seamless.ai/customers/education/articles/zapier-connection-guide
+- partner_name: Okta (own)
+  partner: okta
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.okta.com/integrations/prosperworks/
+  mirror_of: okta/integrations/okta-integration-edges.yml
+  apps:
+  - Copper
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Single Sign-On
+  badges:
+  - OKTA_VERIFIED
+  features:
+  - CREATE
+  - DEACTIVATE
+  - SAML
+  - SWA
+  - UPDATE
 templates:
 - title: Add Copper leads for new submissions on Gravity Forms
   url: https://zapier.com/apps/copper/integrations/gravity-forms/6349/add-copper-leads-for-new-submissions-on-gravity-forms
