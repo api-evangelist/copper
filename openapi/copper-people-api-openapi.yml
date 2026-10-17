@@ -128,31 +128,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/Error'
-  parameters:
-    IdPathParam:
-      name: id
-      in: path
-      required: true
-      schema:
-        type: integer
-        format: int64
-      description: The unique resource identifier
   schemas:
-    CustomFieldValue:
-      type: object
-      properties:
-        custom_field_definition_id:
-          type: integer
-        value:
-          oneOf:
-          - type: string
-          - type: number
-          - type: integer
-          - type: boolean
-          - type: array
-            items:
-              type: integer
-          - type: 'null'
     Person:
       type: object
       properties:
@@ -257,13 +233,6 @@ components:
           type:
           - string
           - 'null'
-    Error:
-      type: object
-      properties:
-        status:
-          type: integer
-        message:
-          type: string
     PeopleSearchRequest:
       type: object
       properties:
@@ -294,6 +263,37 @@ components:
           type: array
           items:
             type: string
+    Error:
+      type: object
+      properties:
+        status:
+          type: integer
+        message:
+          type: string
+    CustomFieldValue:
+      type: object
+      properties:
+        custom_field_definition_id:
+          type: integer
+        value:
+          oneOf:
+          - type: string
+          - type: number
+          - type: integer
+          - type: boolean
+          - type: array
+            items:
+              type: integer
+          - type: 'null'
+  parameters:
+    IdPathParam:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int64
+      description: The unique resource identifier
   securitySchemes:
     PWAccessToken:
       type: apiKey

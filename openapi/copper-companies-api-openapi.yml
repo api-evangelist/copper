@@ -110,25 +110,6 @@ paths:
           description: Deletion confirmation
 components:
   schemas:
-    CompanySearchRequest:
-      type: object
-      properties:
-        page_number:
-          type: integer
-        page_size:
-          type: integer
-        sort_by:
-          type: string
-        name:
-          type: string
-        assignee_ids:
-          type: array
-          items:
-            type: integer
-        tags:
-          type: array
-          items:
-            type: string
     Company:
       type: object
       properties:
@@ -175,21 +156,6 @@ components:
           type: integer
         date_modified:
           type: integer
-    CustomFieldValue:
-      type: object
-      properties:
-        custom_field_definition_id:
-          type: integer
-        value:
-          oneOf:
-          - type: string
-          - type: number
-          - type: integer
-          - type: boolean
-          - type: array
-            items:
-              type: integer
-          - type: 'null'
     Address:
       type: object
       properties:
@@ -213,6 +179,40 @@ components:
           type:
           - string
           - 'null'
+    CompanySearchRequest:
+      type: object
+      properties:
+        page_number:
+          type: integer
+        page_size:
+          type: integer
+        sort_by:
+          type: string
+        name:
+          type: string
+        assignee_ids:
+          type: array
+          items:
+            type: integer
+        tags:
+          type: array
+          items:
+            type: string
+    CustomFieldValue:
+      type: object
+      properties:
+        custom_field_definition_id:
+          type: integer
+        value:
+          oneOf:
+          - type: string
+          - type: number
+          - type: integer
+          - type: boolean
+          - type: array
+            items:
+              type: integer
+          - type: 'null'
   parameters:
     IdPathParam:
       name: id

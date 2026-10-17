@@ -114,21 +114,6 @@ paths:
           description: Deletion confirmation
 components:
   schemas:
-    CustomFieldValue:
-      type: object
-      properties:
-        custom_field_definition_id:
-          type: integer
-        value:
-          oneOf:
-          - type: string
-          - type: number
-          - type: integer
-          - type: boolean
-          - type: array
-            items:
-              type: integer
-          - type: 'null'
     Opportunity:
       type: object
       properties:
@@ -198,6 +183,21 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/CustomFieldValue'
+    CustomFieldValue:
+      type: object
+      properties:
+        custom_field_definition_id:
+          type: integer
+        value:
+          oneOf:
+          - type: string
+          - type: number
+          - type: integer
+          - type: boolean
+          - type: array
+            items:
+              type: integer
+          - type: 'null'
   parameters:
     IdPathParam:
       name: id
