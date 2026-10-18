@@ -493,7 +493,7 @@
     - alpha
     in_cloud: true
     builder: unknown (community connector; contributor not in the record)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: copper-fivetran
   label: Fivetran
@@ -519,7 +519,7 @@
     - connectors/applications/copper
     vendor_link: https://www.copper.com/
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: copper-meltano
   label: Meltano
@@ -548,7 +548,7 @@
     quality:
     - bronze
     builder: 'community (Meltano Hub variant maintainers: airbyte)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: copper-google-workspace-own
   label: Google Workspace (own)
