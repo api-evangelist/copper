@@ -22,6 +22,9 @@ checked:
 - https://zapier.com/apps/copper/integrations
 - okta/integrations/okta-integration-edges.yml
 - slack/integrations/slack-integration-edges.yml
+- https://ifttt.com/copper
+- https://ifttt.com/explore/services
+- https://ifttt.com/sitemap_services.xml
 summary: null
 marketplace_apps:
 - marketplace: zapier
@@ -791,6 +794,31 @@ edges:
   direction: third-party
   category: Accounting
   partner_url: https://xero5440.partnerlinks.io/uvwuuwrxyoi8
+- partner_name: IFTTT
+  partner: ifttt
+  partner_match: aggregator
+  type: marketplace
+  marketplace: ifttt-services
+  channel: ipaas-listing
+  relationship: ipaas-bridge
+  direction: third-party
+  evidence: https://ifttt.com/copper
+  category: null
+  contract_reference:
+    register: IFTTT service directory (ifttt.com/explore/services; ifttt.com/<service>)
+    spec_file: null
+    role: ipaas-connector:ifttt
+    registered_name: Copper
+    matched_domain: copper.com
+    matched_by: domain
+    app_slug: copper
+    ifttt_category: Business tools
+    builder: unknown (the service page does not say who built it)
+    detected_by: sweep-ifttt-services.py
+    detected: '2026-10-23'
+    signal_note: one edge per (provider, platform); triggers, actions and applet counts are context, never read
+  detected_by: sweep-ifttt-services.py
+  first_seen: '2026-10-23'
 templates:
 - title: Add Copper leads for new submissions on Gravity Forms
   url: https://zapier.com/apps/copper/integrations/gravity-forms/6349/add-copper-leads-for-new-submissions-on-gravity-forms
