@@ -1,4 +1,4 @@
-# Copper (copper)
+# Copper
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,105 +66,216 @@
 
 Copper is a CRM platform built natively for Google Workspace, designed to help teams cultivate enduring client relationships through purposeful collaboration. Copper offers a RESTful Developer API providing programmatic access to People, Companies, Leads, Opportunities, Projects, Tasks, Activities, Webhooks, and related resources for CRM integration and automation.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/copper/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/copper/refs/heads/main/apis.yml)
+**Areas:** Activities · Companies · Contact Relationship Management · Contacts · CRM · Google Workspace · Leads · Opportunities · People · Project · Sales · Task
 
-## Scope
+## Copper on APIs.io
 
-- **Type:** Index
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for Copper is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/copper/](https://apis.io/providers/copper/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (7)
 
-- Activities
-- Companies
-- Contact Relationship Management
-- Contacts
-- CRM
-- Customer Relationship Management
-- Google Workspace
-- Leads
-- Opportunities
-- People
-- Projects
-- Sales
-- Tasks
+- [Copper Activities API](https://apis.io/apis/copper/copper-activities-api/) — Activity log entries
+- [Copper Companies API](https://apis.io/apis/copper/copper-companies-api/) — Company records management
+- [Copper Leads API](https://apis.io/apis/copper/copper-leads-api/) — Lead records and conversion
+- [Copper Opportunities API](https://apis.io/apis/copper/copper-opportunities-api/) — Sales opportunity pipelines
+- [Copper People API](https://apis.io/apis/copper/copper-people-api/) — People (contacts) management
+- [Copper Tasks API](https://apis.io/apis/copper/copper-tasks-api/) — Task records management
+- [Copper Webhooks API](https://apis.io/apis/copper/copper-webhooks-api/) — Event subscription webhooks
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-01-07
-- **Modified:** 2026-05-30
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### AsyncAPI (1)
 
-### Copper Developer API
+Event-driven and webhook contracts.
 
-The Copper Developer API is a RESTful JSON API providing programmatic access to Copper CRM resources including people, companies, leads, opportunities, projects, tasks, activities, and webhooks. The API uses token-based authentication with three required headers (X-PW-AccessToken, X-PW-Application, X-PW-UserEmail) and supports full CRUD operations, search, bulk actions, and lead conversion. Rate limits are 180 requests per minute and 3 requests per second for bulk operations.
+- [Copper CRM Webhooks](https://apis.io/asyncapis/copper/copper-webhooks-asyncapi/)
 
-- **Human URL:** [https://developer.copper.com/](https://developer.copper.com/)
-- **Base URL:** `https://api.copper.com/developer_api/v1`
+#### Event channels (18)
 
-#### Tags
+Individual events and webhooks the provider emits.
 
-- Activities
-- Companies
-- CRM
-- Leads
-- Opportunities
-- People
-- Projects
-- REST
-- Tasks
-- Webhooks
+- [company.delete](https://apis.io/channels/copper/company-delete/)
+- [company.new](https://apis.io/channels/copper/company-new/)
+- [company.update](https://apis.io/channels/copper/company-update/)
+- [lead.delete](https://apis.io/channels/copper/lead-delete/)
+- [lead.new](https://apis.io/channels/copper/lead-new/)
+- [lead.update](https://apis.io/channels/copper/lead-update/)
+- [opportunity.delete](https://apis.io/channels/copper/opportunity-delete/)
+- [opportunity.new](https://apis.io/channels/copper/opportunity-new/)
+- [opportunity.update](https://apis.io/channels/copper/opportunity-update/)
+- [person.delete](https://apis.io/channels/copper/person-delete/)
+- [person.new](https://apis.io/channels/copper/person-new/)
+- [person.update](https://apis.io/channels/copper/person-update/)
+- [project.delete](https://apis.io/channels/copper/project-delete/)
+- [project.new](https://apis.io/channels/copper/project-new/)
+- [project.update](https://apis.io/channels/copper/project-update/)
+- [task.delete](https://apis.io/channels/copper/task-delete/)
+- [task.new](https://apis.io/channels/copper/task-new/)
+- [task.update](https://apis.io/channels/copper/task-update/)
 
-#### Properties
+#### Agentic access (1)
 
-- [Documentation](https://developer.copper.com/)
-- [Authentication](https://developer.copper.com/introduction/requests.html)
-- [Getting Started](https://developer.copper.com/introduction/quick-start.html)
-- [O Auth](https://developer.copper.com/introduction/oauth-quickstart.html)
-- [Webhooks](https://developer.copper.com/webhooks/general/list-of-webhook-events.html)
-- [Postman Collection](https://developer.copper.com/introduction/postman-collection.html) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [People](https://developer.copper.com/people/)
-- [Companies](https://developer.copper.com/companies/)
-- [Leads](https://developer.copper.com/leads/)
-- [Opportunities](https://developer.copper.com/opportunities/)
-- [Projects](https://developer.copper.com/projects/)
-- [Tasks](https://developer.copper.com/tasks/)
-- [Activities](https://developer.copper.com/activities/)
-- [Custom Fields](https://developer.copper.com/custom-fields/)
-- [Tags](https://developer.copper.com/tags/)
-- [OpenAPI](openapi/copper-developer-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/copper-developer-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/copper-developer-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [AsyncAPI](asyncapi/copper-webhooks-asyncapi.yml) — [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest)
-- [Rules](rules/copper-developer-api-rules.yml)
-- [JSON-LD](json-ld/copper-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Vocabulary](vocabulary/copper-vocabulary.yml)
-- [Capabilities](capabilities/copper-developer-api-capabilities.yml)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-## Common Properties
+- [Copper Agentic Access](https://apis.io/agentic-access/copper/copper-agentic-access/)
 
-- [GitHub Organization](https://github.com/ProsperWorks)
+#### JSON Schema (13)
+
+The data models the API reads and writes.
+
+- [Activity](https://apis.io/schemas/copper/copper-activity/)
+- [Address](https://apis.io/schemas/copper/copper-address/)
+- [Company](https://apis.io/schemas/copper/copper-company/)
+- [CompanySearchRequest](https://apis.io/schemas/copper/copper-companysearchrequest/)
+- [CustomFieldValue](https://apis.io/schemas/copper/copper-customfieldvalue/)
+- [Error](https://apis.io/schemas/copper/copper-error/)
+- [Lead](https://apis.io/schemas/copper/copper-lead/)
+- [LeadSearchRequest](https://apis.io/schemas/copper/copper-leadsearchrequest/)
+- [Opportunity](https://apis.io/schemas/copper/copper-opportunity/)
+- [PeopleSearchRequest](https://apis.io/schemas/copper/copper-peoplesearchrequest/)
+- [Person](https://apis.io/schemas/copper/copper-person/)
+- [Task](https://apis.io/schemas/copper/copper-task/)
+- [Webhook](https://apis.io/schemas/copper/copper-webhook/)
+
+#### JSON Structure (1)
+
+Data models expressed in JSON Structure.
+
+- [Copper Structure](https://apis.io/json-structure/copper/copper-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Copper Context](https://apis.io/jsonld/copper/copper-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Copper Developer API Vocabulary](https://apis.io/vocabularies/copper/copper-vocabulary/)
+
+#### Collections (15)
+
+Postman and Open Collection request collections.
+
+- [Copper Developer Activities API](https://apis.io/collections/copper/open-copper-activities-api/)
+- [Copper Developer Activities Companies API](https://apis.io/collections/copper/open-copper-companies-api/)
+- [Copper Developer API](https://apis.io/collections/copper/open-copper-developer-api/)
+- [Copper Developer Activities Leads API](https://apis.io/collections/copper/open-copper-leads-api/)
+- [Copper Developer Activities Opportunities API](https://apis.io/collections/copper/open-copper-opportunities-api/)
+- [Copper Developer Activities People API](https://apis.io/collections/copper/open-copper-people-api/)
+- [Copper Developer Activities Tasks API](https://apis.io/collections/copper/open-copper-tasks-api/)
+- [Copper Developer Activities Webhooks API](https://apis.io/collections/copper/open-copper-webhooks-api/)
+- [Copper Developer Activities API](https://apis.io/collections/copper/postman-copper-activities-api/)
+- [Copper Developer Activities Companies API](https://apis.io/collections/copper/postman-copper-companies-api/)
+- [Copper Developer Activities Leads API](https://apis.io/collections/copper/postman-copper-leads-api/)
+- [Copper Developer Activities Opportunities API](https://apis.io/collections/copper/postman-copper-opportunities-api/)
+- [Copper Developer Activities People API](https://apis.io/collections/copper/postman-copper-people-api/)
+- [Copper Developer Activities Tasks API](https://apis.io/collections/copper/postman-copper-tasks-api/)
+- [Copper Developer Activities Webhooks API](https://apis.io/collections/copper/postman-copper-webhooks-api/)
+
+#### Governance rules (3)
+
+Spectral rulesets for the provider's contracts.
+
+- [Copper — asyncapi rules](https://apis.io/rules/copper/copper-asyncapi-spectral-rules/)
+- [Copper — developer api rules](https://apis.io/rules/copper/copper-developer-api-rules/)
+- [Copper — jsonschema rules](https://apis.io/rules/copper/copper-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Copper Authentication](https://apis.io/security/copper/copper-authentication/)
+- [Copper Domain Security](https://apis.io/security/copper/copper-domain-security/)
+- [Copper Trust Center](https://apis.io/security/copper/copper-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Copper Plans Pricing](https://apis.io/plans/copper/copper-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Copper Rate Limits](https://apis.io/rate-limits/copper/copper-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Copper Finops](https://apis.io/finops/copper/copper-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.copper.com)
-- [Developer Portal](https://developer.copper.com/)
 - [Documentation](https://developer.copper.com/)
-- [Authentication](https://developer.copper.com/introduction/requests.html)
-- [Getting Started](https://developer.copper.com/introduction/quick-start.html)
-- [Rate Limits](https://developer.copper.com/introduction/requests.html)
-- [Errors](https://developer.copper.com/introduction/responses.html)
+- [Getting started](https://developer.copper.com/introduction/quick-start.html)
 - [Pricing](https://www.copper.com/pricing)
 - [Blog](https://www.copper.com/blog)
-- [Privacy Policy](https://www.copper.com/privacy-policy)
-- [Terms of Service](https://www.copper.com/terms-of-service)
-- [Status Page](https://status.copper.com/)
-- [Twitter](https://twitter.com/copperinc)
-- [LinkedIn](https://www.linkedin.com/company/copperinc/)
-- [YouTube](https://www.youtube.com/c/CopperCRM)
-- [Features](undefined)
-- [Integrations](https://www.copper.com/integrations)
+- [Terms of service](https://www.copper.com/terms-of-service)
+- [Privacy policy](https://www.copper.com/privacy-policy)
+- [GitHub](https://github.com/ProsperWorks)
+- [Status](https://status.copper.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 41.4** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 61.0 |
+| Contract governance | 27.3 |
+| Operational transparency | 23.7 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 26.3 |
+
+**Agent readiness 24.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 21.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/copper/](https://apis.io/providers/copper/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Copper: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/copper/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
